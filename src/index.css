@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  --color-ink: #0b0b0b;
+  --color-paper: #fcfcfb;
+  --color-surface: #ffffff;
+  --color-mist: #f3f3f0;
+  --color-line: #e8e8e3;
+  --color-muted: #6e6e69;
+  --color-soft: #a2a29b;
+  --color-accent: #00e07c;
+  --color-accent-ink: #078a52;
+  --color-accent-deep: #057240;
+  --color-accent-tint: #e9fff3;
+  --color-night: #0a0a0a;
+  --color-night-soft: #131312;
+  --color-night-line: #23231f;
+}
+
+@utility wrap {
+  margin-inline: auto;
+  width: 100%;
+  max-width: 70rem;
+  padding-inline: 1.25rem;
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+}
+
+::selection {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent-deep);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .print-area,
+  .print-area * {
+    visibility: visible;
+  }
+  .print-area {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    box-shadow: none;
+  }
+  .print-area-scroll {
+    overflow: visible !important;
+  }
+}

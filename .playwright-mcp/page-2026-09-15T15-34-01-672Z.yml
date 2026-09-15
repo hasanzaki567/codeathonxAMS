@@ -1,0 +1,481 @@
+- generic [ref=f1e2]:
+  - link "Skip to content" [ref=f1e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f1e4]:
+    - navigation "Primary" [ref=f1e5]:
+      - link "AMSFROST2026" [ref=f1e6] [cursor=pointer]:
+        - /url: "#top"
+      - generic [ref=f1e7]:
+        - link "About" [ref=f1e8] [cursor=pointer]:
+          - /url: "#about"
+        - link "Events" [ref=f1e9] [cursor=pointer]:
+          - /url: "#events"
+        - link "Timeline" [ref=f1e10] [cursor=pointer]:
+          - /url: "#timeline"
+        - link "Prizes" [ref=f1e11] [cursor=pointer]:
+          - /url: "#prizes"
+        - link "FAQ" [ref=f1e12] [cursor=pointer]:
+          - /url: "#faq"
+        - button "Register Now" [ref=f1e13]
+  - main [ref=f1e14]:
+    - generic [ref=f1e17]:
+      - generic [ref=f1e18]:
+        - paragraph [ref=f1e19]: Inter-College Technical Innovation Challenge
+        - heading "AMSFROST 2026" [level=1] [ref=f1e20]:
+          - text: AMSFROST
+          - generic [ref=f1e21]: "2026"
+        - paragraph [ref=f1e22]: Code. Build. Innovate.
+        - paragraph [ref=f1e23]: 01 OCTOBER 2026 • CHENNAI
+        - generic [ref=f1e24]:
+          - button "Register Now" [ref=f1e25]
+          - link "Explore Events" [ref=f1e28] [cursor=pointer]:
+            - /url: "#events"
+      - generic [ref=f1e31]:
+        - paragraph [ref=f1e32]: Starts in
+        - generic "Countdown to 2026-10-01T09:00:00+05:30" [ref=f1e33]:
+          - generic [ref=f1e34]:
+            - generic [ref=f1e35]:
+              - generic [ref=f1e36]: "15"
+              - generic [ref=f1e37]: Days
+            - generic [ref=f1e38]: ":"
+          - generic [ref=f1e39]:
+            - generic [ref=f1e40]:
+              - generic [ref=f1e41]: "11"
+              - generic [ref=f1e42]: Hours
+            - generic [ref=f1e43]: ":"
+          - generic [ref=f1e44]:
+            - generic [ref=f1e45]:
+              - generic [ref=f1e46]: "55"
+              - generic [ref=f1e47]: Minutes
+            - generic [ref=f1e48]: ":"
+          - generic [ref=f1e50]:
+            - generic [ref=f1e51]: "59"
+            - generic [ref=f1e52]: Seconds
+    - region "Event statistics" [ref=f1e53]:
+      - generic [ref=f1e54]:
+        - generic [ref=f1e56]:
+          - generic [ref=f1e57]: "3"
+          - generic [ref=f1e58]: Competitions
+        - generic [ref=f1e60]:
+          - generic [ref=f1e61]: 100%
+          - generic [ref=f1e62]: Student Driven
+        - generic [ref=f1e64]:
+          - generic [ref=f1e65]: "01"
+          - generic [ref=f1e66]: Day
+        - generic [ref=f1e68]:
+          - generic [ref=f1e69]: ₹200
+          - generic [ref=f1e70]: Starting Fee
+    - generic [ref=f1e72]:
+      - generic [ref=f1e73]:
+        - paragraph [ref=f1e74]: 01 / ABOUT
+        - heading "Three ways to compete. One platform to build." [level=2] [ref=f1e75]
+        - paragraph [ref=f1e76]: AMSFROST 2026 brings students together to compete in coding, software innovation, and hardware engineering.
+      - generic [ref=f1e78]:
+        - img "Abstract geometry representing the three competitions" [ref=f1e80]
+        - generic [ref=f1e85]:
+          - generic [ref=f1e86]: "{ }"
+          - generic [ref=f1e87]: ">>_"
+          - generic [ref=f1e88]: ◇▱
+    - generic [ref=f1e90]:
+      - generic [ref=f1e92]:
+        - paragraph [ref=f1e93]: 02 / EVENTS
+        - heading "Choose your challenge." [level=2] [ref=f1e94]
+        - paragraph [ref=f1e95]: One track focuses on pure coding, the next on software innovation, and the third on hardware engineering.
+      - generic [ref=f1e96]:
+        - 'button "{ } 01 Coding & Debugging CRACK THE CODE Individual / 2 Solve. Debug. Outthink. A timed battle of logic, speed, and precision across three rounds. Code Sprint Debugging Arena Final Code Challenge ₹100 / participant Register View Challenge" [ref=f1e98] [cursor=pointer]':
+          - generic [ref=f1e99]:
+            - generic [ref=f1e100]: "{ }"
+            - generic [ref=f1e101]: "01"
+          - paragraph [ref=f1e102]: Coding & Debugging
+          - heading "CRACK THE CODE" [level=3] [ref=f1e103]
+          - generic [ref=f1e104]: Individual / 2
+          - paragraph [ref=f1e106]: Solve. Debug. Outthink.
+          - paragraph [ref=f1e107]: A timed battle of logic, speed, and precision across three rounds.
+          - list [ref=f1e108]:
+            - listitem [ref=f1e109]: Code Sprint
+            - listitem [ref=f1e111]: Debugging Arena
+            - listitem [ref=f1e113]: Final Code Challenge
+          - generic [ref=f1e115]:
+            - generic [ref=f1e116]: ₹100 / participant
+            - generic [ref=f1e117]:
+              - button "Register" [ref=f1e118]
+              - generic [ref=f1e119]: View Challenge
+        - button ">>_ 02 Software & Innovation HACKATHON 2–5 Members Find a problem. Build the solution. A full-day build sprint across technology domains. Problem Identification Prototype Build Pitch & Demo AI/ML Cybersecurity EdTech HealthTech FinTech IoT Open Innovation ₹200 / participant Register View Challenge" [ref=f1e123] [cursor=pointer]:
+          - generic [ref=f1e124]:
+            - generic [ref=f1e125]: ">>_"
+            - generic [ref=f1e126]: "02"
+          - paragraph [ref=f1e127]: Software & Innovation
+          - heading "HACKATHON" [level=3] [ref=f1e128]
+          - generic [ref=f1e129]: 2–5 Members
+          - paragraph [ref=f1e131]: Find a problem. Build the solution.
+          - paragraph [ref=f1e132]: A full-day build sprint across technology domains.
+          - list [ref=f1e133]:
+            - listitem [ref=f1e134]: Problem Identification
+            - listitem [ref=f1e136]: Prototype Build
+            - listitem [ref=f1e138]: Pitch & Demo
+          - generic [ref=f1e140]:
+            - generic [ref=f1e141]: AI/ML
+            - generic [ref=f1e142]: Cybersecurity
+            - generic [ref=f1e143]: EdTech
+            - generic [ref=f1e144]: HealthTech
+            - generic [ref=f1e145]: FinTech
+            - generic [ref=f1e146]: IoT
+            - generic [ref=f1e147]: Open Innovation
+          - generic [ref=f1e148]:
+            - generic [ref=f1e149]: ₹200 / participant
+            - generic [ref=f1e150]:
+              - button "Register" [ref=f1e151]
+              - generic [ref=f1e152]: View Challenge
+        - button "◇▱ 03 Hardware & Engineering TECHFORGE 2–4 Members Design. Build. Demonstrate. Turn ideas into working hardware in a single day. Concept & Design Prototype Build Live Demo Robotics IoT EV Automation Energy Smart Systems ₹200 / participant Register View Challenge" [ref=f1e156] [cursor=pointer]:
+          - generic [ref=f1e157]:
+            - generic [ref=f1e158]: ◇▱
+            - generic [ref=f1e159]: "03"
+          - paragraph [ref=f1e160]: Hardware & Engineering
+          - heading "TECHFORGE" [level=3] [ref=f1e161]
+          - generic [ref=f1e162]: 2–4 Members
+          - paragraph [ref=f1e164]: Design. Build. Demonstrate.
+          - paragraph [ref=f1e165]: Turn ideas into working hardware in a single day.
+          - list [ref=f1e166]:
+            - listitem [ref=f1e167]: Concept & Design
+            - listitem [ref=f1e169]: Prototype Build
+            - listitem [ref=f1e171]: Live Demo
+          - generic [ref=f1e173]:
+            - generic [ref=f1e174]: Robotics
+            - generic [ref=f1e175]: IoT
+            - generic [ref=f1e176]: EV
+            - generic [ref=f1e177]: Automation
+            - generic [ref=f1e178]: Energy
+            - generic [ref=f1e179]: Smart Systems
+          - generic [ref=f1e180]:
+            - generic [ref=f1e181]: ₹200 / participant
+            - generic [ref=f1e182]:
+              - button "Register" [ref=f1e183]
+              - generic [ref=f1e184]: View Challenge
+    - generic [ref=f1e188]:
+      - generic [ref=f1e190]:
+        - paragraph [ref=f1e191]: 03 / THE EXPERIENCE
+        - heading "More than a competition." [level=2] [ref=f1e192]
+      - generic [ref=f1e193]:
+        - generic [ref=f1e195]:
+          - text: "01"
+          - heading "Build real solutions" [level=3] [ref=f1e196]
+          - paragraph [ref=f1e197]: Working software and hardware, judged on outcomes.
+        - generic [ref=f1e199]:
+          - text: "02"
+          - heading "Compete across colleges" [level=3] [ref=f1e200]
+          - paragraph [ref=f1e201]: Go up against students from every institution.
+        - generic [ref=f1e203]:
+          - text: "03"
+          - heading "Showcase your skills" [level=3] [ref=f1e204]
+          - paragraph [ref=f1e205]: A public stage for code, design, and engineering.
+        - generic [ref=f1e207]:
+          - text: "04"
+          - heading "Earn recognition" [level=3] [ref=f1e208]
+          - paragraph [ref=f1e209]: Awards, certificates, and opportunities that count.
+    - generic [ref=f1e211]:
+      - generic [ref=f1e213]:
+        - paragraph [ref=f1e214]: 04 / TIMELINE
+        - heading "The journey." [level=2] [ref=f1e215]
+        - paragraph [ref=f1e216]: Registration dates are confirmed by the organizers — placeholders are marked clearly below.
+      - generic [ref=f1e219]:
+        - generic [ref=f1e220]:
+          - generic [ref=f1e221]:
+            - generic [ref=f1e222]: "1"
+            - generic [ref=f1e223]: TBA
+          - generic [ref=f1e224]:
+            - heading "Registration Opens" [level=3] [ref=f1e225]
+            - paragraph [ref=f1e226]: Registration opens for all three competitions
+        - generic [ref=f1e227]:
+          - generic [ref=f1e228]:
+            - generic [ref=f1e229]: "2"
+            - generic [ref=f1e230]: TBA
+          - generic [ref=f1e231]:
+            - heading "Registration Closes" [level=3] [ref=f1e232]
+            - paragraph [ref=f1e233]: Final date to confirm participation
+        - generic [ref=f1e234]:
+          - generic [ref=f1e235]:
+            - generic [ref=f1e236]: "3"
+            - generic [ref=f1e237]: TBA
+          - generic [ref=f1e238]:
+            - heading "Shortlist / Confirmation" [level=3] [ref=f1e239]
+            - paragraph [ref=f1e240]: Registered teams receive confirmation
+        - generic [ref=f1e241]:
+          - generic [ref=f1e242]:
+            - generic [ref=f1e243]: "4"
+            - generic [ref=f1e244]: 01 OCT 2026
+          - generic [ref=f1e245]:
+            - heading "Event Day●" [level=3] [ref=f1e246]
+            - paragraph [ref=f1e247]: AMSFROST 2026
+        - generic [ref=f1e248]:
+          - generic [ref=f1e249]:
+            - generic [ref=f1e250]: "5"
+            - generic [ref=f1e251]: TBA
+          - generic [ref=f1e252]:
+            - heading "Results & Awards" [level=3] [ref=f1e253]
+            - paragraph [ref=f1e254]: Results announced at the closing ceremony
+    - generic [ref=f1e256]:
+      - generic [ref=f1e258]:
+        - paragraph [ref=f1e259]: 05 / RECOGNITION
+        - heading "Build something worth remembering." [level=2] [ref=f1e260]
+      - generic [ref=f1e261]:
+        - generic [ref=f1e263]:
+          - generic [ref=f1e265]: "2"
+          - heading "2nd Prize" [level=3] [ref=f1e266]
+          - paragraph [ref=f1e267]: ₹XX,XXX
+          - paragraph [ref=f1e268]: Amount to be confirmed.
+        - generic [ref=f1e270]:
+          - generic [ref=f1e272]: "1"
+          - heading "1st Prize" [level=3] [ref=f1e273]
+          - paragraph [ref=f1e274]: ₹XX,XXX
+          - paragraph [ref=f1e275]: Amount to be confirmed.
+        - generic [ref=f1e277]:
+          - generic [ref=f1e279]: "3"
+          - heading "3rd Prize" [level=3] [ref=f1e280]
+          - paragraph [ref=f1e281]: ₹XX,XXX
+          - paragraph [ref=f1e282]: Amount to be confirmed.
+      - generic [ref=f1e283]:
+        - generic [ref=f1e290]:
+          - heading "Participation Certificate" [level=3] [ref=f1e291]
+          - paragraph [ref=f1e292]: For eligible registered participants.
+        - generic [ref=f1e299]:
+          - heading "Internship Opportunities" [level=3] [ref=f1e300]
+          - paragraph [ref=f1e301]: For outstanding performance.
+      - generic [ref=f1e303]:
+        - paragraph [ref=f1e304]: Special Recognitions
+        - list [ref=f1e305]:
+          - listitem [ref=f1e306]: Best Innovation
+          - listitem [ref=f1e307]: Best Technical Implementation
+          - listitem [ref=f1e308]: Best Interdisciplinary Team
+          - listitem [ref=f1e309]: Best Social Impact
+    - generic [ref=f1e312]:
+      - heading "Ready to compete?" [level=2] [ref=f1e313]
+      - paragraph [ref=f1e314]: Pick your challenge. Build your team. Register.
+      - button "Register for AMSFROST" [ref=f1e316]
+    - generic [ref=f1e320]:
+      - generic [ref=f1e322]:
+        - paragraph [ref=f1e323]: 06 / RULES
+        - heading "Know the rules. Play fair." [level=2] [ref=f1e324]
+        - paragraph [ref=f1e325]: Full rule sets are kept short and readable — open any competition for its complete list.
+      - generic [ref=f1e326]:
+        - button [ref=f1e328]:
+          - generic [ref=f1e329]:
+            - paragraph [ref=f1e330]: Coding & Debugging
+            - heading "CRACK THE CODE" [level=3] [ref=f1e331]
+            - paragraph [ref=f1e332]: 6 rules
+        - button [ref=f1e337]:
+          - generic [ref=f1e338]:
+            - paragraph [ref=f1e339]: Software & Innovation
+            - heading "HACKATHON" [level=3] [ref=f1e340]
+            - paragraph [ref=f1e341]: 6 rules
+        - button [ref=f1e346]:
+          - generic [ref=f1e347]:
+            - paragraph [ref=f1e348]: Hardware & Engineering
+            - heading "TECHFORGE" [level=3] [ref=f1e349]
+            - paragraph [ref=f1e350]: 6 rules
+    - generic [ref=f1e355]:
+      - generic [ref=f1e357]:
+        - paragraph [ref=f1e358]: 07 / EVALUATION
+        - heading "How it's judged." [level=2] [ref=f1e359]
+        - paragraph [ref=f1e360]: Each competition is scored on its own weighted criteria — transparency for every participant.
+      - generic [ref=f1e361]:
+        - generic [ref=f1e363]:
+          - generic [ref=f1e364]:
+            - heading "CRACK THE CODE" [level=3] [ref=f1e365]
+            - generic [ref=f1e366]: Individual / 2
+          - list [ref=f1e367]:
+            - listitem [ref=f1e368]:
+              - generic [ref=f1e369]:
+                - generic [ref=f1e370]: Correctness
+                - generic [ref=f1e371]: 40%
+              - 'img "Correctness: 40 percent" [ref=f1e372]'
+            - listitem [ref=f1e373]:
+              - generic [ref=f1e374]:
+                - generic [ref=f1e375]: Problem-solving
+                - generic [ref=f1e376]: 25%
+              - 'img "Problem-solving: 25 percent" [ref=f1e377]'
+            - listitem [ref=f1e378]:
+              - generic [ref=f1e379]:
+                - generic [ref=f1e380]: Code efficiency
+                - generic [ref=f1e381]: 15%
+              - 'img "Code efficiency: 15 percent" [ref=f1e382]'
+            - listitem [ref=f1e383]:
+              - generic [ref=f1e384]:
+                - generic [ref=f1e385]: Debugging
+                - generic [ref=f1e386]: 10%
+              - 'img "Debugging: 10 percent" [ref=f1e387]'
+            - listitem [ref=f1e388]:
+              - generic [ref=f1e389]:
+                - generic [ref=f1e390]: Time management
+                - generic [ref=f1e391]: 10%
+              - 'img "Time management: 10 percent" [ref=f1e392]'
+          - paragraph [ref=f1e393]: Total 100%
+        - generic [ref=f1e395]:
+          - generic [ref=f1e396]:
+            - heading "HACKATHON" [level=3] [ref=f1e397]
+            - generic [ref=f1e398]: 2–5 Members
+          - list [ref=f1e399]:
+            - listitem [ref=f1e400]:
+              - generic [ref=f1e401]:
+                - generic [ref=f1e402]: Problem Identification
+                - generic [ref=f1e403]: 15%
+              - 'img "Problem Identification: 15 percent" [ref=f1e404]'
+            - listitem [ref=f1e405]:
+              - generic [ref=f1e406]:
+                - generic [ref=f1e407]: Innovation
+                - generic [ref=f1e408]: 20%
+              - 'img "Innovation: 20 percent" [ref=f1e409]'
+            - listitem [ref=f1e410]:
+              - generic [ref=f1e411]:
+                - generic [ref=f1e412]: Technical Implementation
+                - generic [ref=f1e413]: 25%
+              - 'img "Technical Implementation: 25 percent" [ref=f1e414]'
+            - listitem [ref=f1e415]:
+              - generic [ref=f1e416]:
+                - generic [ref=f1e417]: Functionality & Demo
+                - generic [ref=f1e418]: 15%
+              - 'img "Functionality & Demo: 15 percent" [ref=f1e419]'
+            - listitem [ref=f1e420]:
+              - generic [ref=f1e421]:
+                - generic [ref=f1e422]: Impact & Scalability
+                - generic [ref=f1e423]: 10%
+              - 'img "Impact & Scalability: 10 percent" [ref=f1e424]'
+            - listitem [ref=f1e425]:
+              - generic [ref=f1e426]:
+                - generic [ref=f1e427]: UI/UX
+                - generic [ref=f1e428]: 5%
+              - 'img "UI/UX: 5 percent" [ref=f1e429]'
+            - listitem [ref=f1e430]:
+              - generic [ref=f1e431]:
+                - generic [ref=f1e432]: Presentation & Q&A
+                - generic [ref=f1e433]: 10%
+              - 'img "Presentation & Q&A: 10 percent" [ref=f1e434]'
+          - paragraph [ref=f1e435]: Total 100%
+        - generic [ref=f1e437]:
+          - generic [ref=f1e438]:
+            - heading "TECHFORGE" [level=3] [ref=f1e439]
+            - generic [ref=f1e440]: 2–4 Members
+          - list [ref=f1e441]:
+            - listitem [ref=f1e442]:
+              - generic [ref=f1e443]:
+                - generic [ref=f1e444]: Problem Relevance
+                - generic [ref=f1e445]: 10%
+              - 'img "Problem Relevance: 10 percent" [ref=f1e446]'
+            - listitem [ref=f1e447]:
+              - generic [ref=f1e448]:
+                - generic [ref=f1e449]: Innovation & Creativity
+                - generic [ref=f1e450]: 15%
+              - 'img "Innovation & Creativity: 15 percent" [ref=f1e451]'
+            - listitem [ref=f1e452]:
+              - generic [ref=f1e453]:
+                - generic [ref=f1e454]: Engineering Design
+                - generic [ref=f1e455]: 20%
+              - 'img "Engineering Design: 20 percent" [ref=f1e456]'
+            - listitem [ref=f1e457]:
+              - generic [ref=f1e458]:
+                - generic [ref=f1e459]: Technical Implementation
+                - generic [ref=f1e460]: 20%
+              - 'img "Technical Implementation: 20 percent" [ref=f1e461]'
+            - listitem [ref=f1e462]:
+              - generic [ref=f1e463]:
+                - generic [ref=f1e464]: Working Prototype & Demo
+                - generic [ref=f1e465]: 20%
+              - 'img "Working Prototype & Demo: 20 percent" [ref=f1e466]'
+            - listitem [ref=f1e467]:
+              - generic [ref=f1e468]:
+                - generic [ref=f1e469]: Practicality & Scalability
+                - generic [ref=f1e470]: 5%
+              - 'img "Practicality & Scalability: 5 percent" [ref=f1e471]'
+            - listitem [ref=f1e472]:
+              - generic [ref=f1e473]:
+                - generic [ref=f1e474]: Presentation & Q&A
+                - generic [ref=f1e475]: 10%
+              - 'img "Presentation & Q&A: 10 percent" [ref=f1e476]'
+          - paragraph [ref=f1e477]: Total 100%
+    - generic [ref=f1e479]:
+      - generic [ref=f1e481]:
+        - paragraph [ref=f1e482]: 08 / FAQ
+        - heading "Questions, answered." [level=2] [ref=f1e483]
+      - generic [ref=f1e484]:
+        - generic [ref=f1e486]:
+          - button "Who can participate?" [expanded] [ref=f1e487]
+          - paragraph [ref=f1e495]: Students of Aalim Muhammed Salegh College of Engineering and, as an inter-college challenge, students of all other colleges as well.
+        - button "Can students from other colleges participate?" [ref=f1e498]
+        - button "What is the team size?" [ref=f1e505]
+        - button "What is the registration fee?" [ref=f1e512]
+        - button "Can I participate in more than one competition? TBC" [ref=f1e519]:
+          - generic [ref=f1e520]: Can I participate in more than one competition?
+          - generic [ref=f1e521]: TBC
+        - button "What should I bring? TBC" [ref=f1e527]:
+          - generic [ref=f1e528]: What should I bring?
+          - generic [ref=f1e529]: TBC
+        - button "Is a college ID required?" [ref=f1e535]
+        - button "Are certificates provided?" [ref=f1e542]
+        - button "Are internships available?" [ref=f1e549]
+        - button "Can interdisciplinary teams participate?" [ref=f1e556]
+    - generic [ref=f1e562]:
+      - generic [ref=f1e564]:
+        - paragraph [ref=f1e565]: CONTACT
+        - heading "Have a question?" [level=2] [ref=f1e566]
+        - paragraph [ref=f1e567]: Contact the organizing team.
+      - generic [ref=f1e568]:
+        - generic [ref=f1e575]:
+          - paragraph [ref=f1e576]: Email
+          - paragraph [ref=f1e577]: TBA
+        - generic [ref=f1e583]:
+          - paragraph [ref=f1e584]: Phone
+          - paragraph [ref=f1e585]: TBA
+        - generic [ref=f1e592]:
+          - paragraph [ref=f1e593]: Instagram
+          - paragraph [ref=f1e594]: TBA
+        - generic [ref=f1e601]:
+          - paragraph [ref=f1e602]: LinkedIn
+          - paragraph [ref=f1e603]: TBA
+        - generic [ref=f1e609]:
+          - paragraph [ref=f1e610]: WhatsApp / Community
+          - paragraph [ref=f1e611]: TBA
+      - paragraph [ref=f1e613]: TBA marks placeholder details — finalized by the organizers soon.
+  - contentinfo [ref=f1e614]:
+    - generic [ref=f1e615]:
+      - generic [ref=f1e616]:
+        - generic [ref=f1e617]:
+          - paragraph [ref=f1e618]: AMSFROST2026
+          - paragraph [ref=f1e619]: Code. Build. Innovate.
+          - list [ref=f1e620]:
+            - listitem [ref=f1e621]:
+              - link "Instagram" [ref=f1e622] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f1e626]:
+              - link "LinkedIn" [ref=f1e627] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f1e631]:
+              - link "Email" [ref=f1e632] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f1e636]:
+              - link "Phone" [ref=f1e637] [cursor=pointer]:
+                - /url: "#contact"
+        - navigation "Footer" [ref=f1e640]:
+          - paragraph [ref=f1e641]: Explore
+          - list [ref=f1e642]:
+            - listitem [ref=f1e643]:
+              - link "About" [ref=f1e644] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f1e645]:
+              - link "Events" [ref=f1e646] [cursor=pointer]:
+                - /url: "#events"
+            - listitem [ref=f1e647]:
+              - link "Timeline" [ref=f1e648] [cursor=pointer]:
+                - /url: "#timeline"
+            - listitem [ref=f1e649]:
+              - link "Prizes" [ref=f1e650] [cursor=pointer]:
+                - /url: "#prizes"
+            - listitem [ref=f1e651]:
+              - link "FAQ" [ref=f1e652] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f1e653]:
+              - button "Register" [ref=f1e654]
+        - generic [ref=f1e655]:
+          - paragraph [ref=f1e656]: Organized by
+          - paragraph [ref=f1e657]: Aalim Muhammed Salegh College of Engineering, Chennai
+      - generic [ref=f1e658]:
+        - paragraph [ref=f1e659]: © 2026 AMSFROST
+        - paragraph [ref=f1e660]: Code. Build. Innovate.
