@@ -111,9 +111,9 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
 
 export function Team() {
   return (
-    <section id="team" className="team relative overflow-hidden bg-black py-24 text-white sm:py-32">
+    <section id="team" className="team relative overflow-hidden bg-mist py-24 text-ink sm:py-32">
       <FerrofluidBackground
-        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}
         scale={1.6}
         turbulence={1}
@@ -131,11 +131,11 @@ export function Team() {
       <div className="team__inner wrap relative z-10">
         <Reveal>
           <header className="team__header text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-neutral-500 sm:text-xs">{TEAM.label}</p>
-            <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
+            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted sm:text-xs">{TEAM.label}</p>
+            <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-ink sm:text-4xl md:text-5xl">
               {TEAM.heading}
             </h2>
-            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-neutral-500 sm:text-base">{TEAM.sub}</p>
+            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-muted sm:text-base">{TEAM.sub}</p>
           </header>
         </Reveal>
 
