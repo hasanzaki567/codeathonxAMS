@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
-import { EVENT, NAV_LINKS } from '../data/site'
+import { EVENT, NAV_LINKS, REGISTRATION_URL } from '../data/site'
 import { useRouter } from '../router'
 
 interface NavbarProps {
@@ -76,7 +76,7 @@ export function Navbar({ solidAtTop = false }: NavbarProps) {
           ))}
           <button
             type="button"
-            onClick={() => navigate('/form')}
+            onClick={() => window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')}
             className="navbar__cta rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-5 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
           >
             Register Now
@@ -123,7 +123,7 @@ export function Navbar({ solidAtTop = false }: NavbarProps) {
                 type="button"
 onClick={() => {
               setOpen(false)
-              navigate('/form')
+              window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')
             }}
             className="navbar__mobile-cta mt-3 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-5 py-3 text-center text-base font-semibold text-night"
               >

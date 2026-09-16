@@ -2,7 +2,7 @@ import { ArrowRight, Check } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { COMPETITION_MAP } from '../data/competitions'
 import { useFlow } from '../flowContext'
-import { useRouter } from '../router'
+import { REGISTRATION_URL } from '../data/site'
 import { Modal } from './ui/Modal'
 
 function Block({ title, children }: { title: string; children: ReactNode }) {
@@ -25,7 +25,6 @@ function Line({ children }: { children: ReactNode }) {
 
 export function CompetitionDetails() {
   const { detailId, closeDetail } = useFlow()
-  const { navigate } = useRouter()
   const competition = detailId ? COMPETITION_MAP[detailId] : null
 
   return (
@@ -117,7 +116,7 @@ export function CompetitionDetails() {
               type="button"
               onClick={() => {
                 closeDetail()
-                navigate('/form')
+                window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')
               }}
               className="details__register inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-7 py-3.5 text-base font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
             >

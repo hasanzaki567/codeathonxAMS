@@ -6,18 +6,36 @@ import type { CompetitionId } from '../data/competitions'
 import { Modal } from './ui/Modal'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Rules() {
   const [selected, setSelected] = useState<CompetitionId | null>(null)
 
   return (
-    <section id="rules" className="rules bg-paper py-24 sm:py-32">
-      <div className="rules__inner wrap">
+    <section id="rules" className="rules relative overflow-hidden bg-black py-24 sm:py-32">
+      <FerrofluidBackground
+        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.3}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="rules__inner wrap relative z-10">
         <Reveal>
           <SectionHeader
             label="06 / RULES"
             heading="Know the rules. Play fair."
             sub="Full rule sets are kept short and readable — open any competition for its complete list."
+            dark
           />
         </Reveal>
 

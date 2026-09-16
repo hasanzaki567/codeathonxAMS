@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowRight } from 'lucide-react'
-import { EVENT, HERO } from '../data/site'
+import { EVENT, HERO, REGISTRATION_URL } from '../data/site'
 import { Countdown } from './Countdown'
 import TextType from './TextType'
-import { useRouter } from '../router'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -14,11 +14,25 @@ const WELCOME_MESSAGES = [
 ]
 
 export function Hero() {
-  const { navigate } = useRouter()
-
   return (
     <section id="top" className="hero relative z-10 min-h-[100dvh] w-full overflow-hidden bg-black text-white">
-      <div className="hero__frame relative">
+      <FerrofluidBackground
+        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.7}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="hero__frame relative z-10">
         <div className="hero__inner wrap flex min-h-[100dvh] flex-col items-center justify-center pb-24 pt-28 text-center sm:pt-32">
           <div className="hero__content flex w-full flex-col items-center">
             <motion.p
@@ -37,9 +51,7 @@ export function Hero() {
               className="hero__title mt-6 font-display text-[clamp(3.2rem,13vw,8.5rem)] font-bold leading-[0.95] tracking-[-0.03em]"
             >
               <span className="text-gradient-shimmer">{EVENT.name}</span>
-              <span className="hero__title-year mt-4 block text-2xl font-medium tracking-[0.2em] text-white/80 sm:text-4xl">
-                {EVENT.year}
-              </span>
+
             </motion.h1>
 
             <motion.div
@@ -75,14 +87,15 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.34, ease }}
               className="hero__ctas mt-10 flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:gap-5"
             >
-              <button
-                type="button"
-                onClick={() => navigate('/form')}
+              <a
+                href={REGISTRATION_URL}
+                target="_blank"
+                rel="noreferrer"
                 className="hero__cta-primary group inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-8 py-4 text-base font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
               >
                 {HERO.primaryCta}
                 <ArrowRight className="hero__cta-primary-icon h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </button>
+              </a>
               <a
                 href="#events"
                 className="hero__cta-secondary inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-4 text-base font-medium text-white transition-colors duration-200 hover:border-white/50 hover:bg-white/5"

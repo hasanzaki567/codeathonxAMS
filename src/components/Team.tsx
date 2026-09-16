@@ -3,6 +3,7 @@ import { Mail } from 'lucide-react'
 import { TEAM } from '../data/site'
 import BorderGlow from './BorderGlow'
 import { Reveal } from './ui/Reveal'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 type IconComponent = (props: { className?: string }) => ReactNode
 
@@ -110,8 +111,24 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
 
 export function Team() {
   return (
-    <section id="team" className="team bg-black py-24 text-white sm:py-32">
-      <div className="team__inner wrap">
+    <section id="team" className="team relative overflow-hidden bg-black py-24 text-white sm:py-32">
+      <FerrofluidBackground
+        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.35}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="team__inner wrap relative z-10">
         <Reveal>
           <header className="team__header text-center">
             <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-neutral-500 sm:text-xs">{TEAM.label}</p>

@@ -1,6 +1,6 @@
 import { Briefcase, Camera, Mail, Phone } from 'lucide-react'
-import { EVENT, FOOTER } from '../data/site'
-import { useRouter } from '../router'
+import { EVENT, FOOTER, REGISTRATION_URL } from '../data/site'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 const SOCIALS: { key: string; label: string; icon: typeof Mail }[] = [
   { key: 'instagram', label: 'Instagram', icon: Camera },
@@ -10,11 +10,23 @@ const SOCIALS: { key: string; label: string; icon: typeof Mail }[] = [
 ]
 
 export function Footer() {
-  const { navigate } = useRouter()
-
   return (
-    <footer className="footer border-t border-night-line bg-night text-white">
-      <div className="footer__inner wrap py-16">
+    <footer className="footer relative overflow-hidden border-t border-night-line bg-night text-white">
+      <FerrofluidBackground
+        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.25}
+        mouseInteraction={false}
+      />
+      <div className="footer__inner wrap relative z-10 py-16">
         <div className="footer__grid grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div className="footer__brand">
             <p className="footer__brand-name font-display text-2xl font-bold tracking-tight">
@@ -52,7 +64,7 @@ export function Footer() {
               <li className="footer__nav-item">
                 <button
                   type="button"
-                  onClick={() => navigate('/form')}
+                  onClick={() => window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')}
                   className="footer__register text-sm text-accent transition-colors hover:text-white"
                 >
                   Register

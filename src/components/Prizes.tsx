@@ -3,13 +3,30 @@ import BorderGlow from './BorderGlow'
 import { PRIZES } from '../data/prizes'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Prizes() {
   const [first, second, third] = PRIZES.podium
 
   return (
-    <section id="prizes" className="prizes bg-mist py-24 sm:py-32">
-      <div className="prizes__inner wrap">
+    <section id="prizes" className="prizes relative overflow-hidden bg-mist py-24 sm:py-32">
+      <FerrofluidBackground
+        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.35}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="prizes__inner wrap relative z-10">
         <Reveal>
           <SectionHeader label={PRIZES.label} heading={PRIZES.heading} align="center" />
         </Reveal>

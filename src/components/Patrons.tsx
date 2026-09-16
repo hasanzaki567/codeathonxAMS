@@ -3,6 +3,7 @@ import BorderGlow from './BorderGlow'
 import { GlareHover } from './GlareHover'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 function Avatar({ className }: { className?: string }) {
   return (
@@ -34,10 +35,11 @@ function Avatar({ className }: { className?: string }) {
 
 interface PatronCardProps {
   title: string
+  image?: string
   featured?: boolean
 }
 
-function PatronCard({ title, featured }: PatronCardProps) {
+function PatronCard({ title, image, featured = false }: PatronCardProps) {
   return (
     <BorderGlow
       edgeSensitivity={30}
@@ -71,8 +73,17 @@ function PatronCard({ title, featured }: PatronCardProps) {
         className="patron-card__glow pointer-events-none absolute -top-24 left-1/2 h-44 w-44 -translate-x-1/2 rounded-full bg-accent/[0.07] blur-3xl opacity-60 transition-opacity duration-300 group-hover:opacity-100"
       />
 
-      <span className="patron-card__avatar relative grid h-20 w-20 place-items-center rounded-full border border-night-line text-accent transition-colors duration-300 group-hover:border-accent/50">
-        <Avatar className="h-11 w-11" />
+      <span className="patron-card__avatar relative grid h-28 w-28 shrink-0 place-items-center overflow-hidden rounded-full border border-night-line bg-night-soft transition-colors duration-300 group-hover:border-accent/50">
+        {image ? (
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            className="patron-card__avatar-img h-full w-full object-cover object-top"
+          />
+        ) : (
+          <Avatar className="h-14 w-14" />
+        )}
       </span>
 
       <div className="patron-card__body relative">
@@ -87,12 +98,28 @@ function PatronCard({ title, featured }: PatronCardProps) {
 
 export function Patrons() {
   return (
-    <section id="patrons" className="patrons relative overflow-hidden bg-black py-24 text-white sm:py-32">
+    <section id="patrons" className="patrons relative overflow-hidden bg-black py-16 text-white sm:py-20">
+      <FerrofluidBackground
+        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.25}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
       <div
-        className="patrons__glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
+        className="patrons__glow pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
         aria-hidden="true"
       />
-      <div className="patrons__inner wrap">
+      <div className="patrons__inner wrap relative z-10">
         <Reveal>
           <SectionHeader
             label={PATRONS.label}
@@ -104,22 +131,22 @@ export function Patrons() {
         </Reveal>
 
         <Reveal delay={0.08}>
-          <p className="patrons__group-label mt-16 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
+          <p className="patrons__group-label mt-10 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
             {PATRONS.groupLabel}
           </p>
-          <div className="patrons__divider mx-auto mt-5 h-px w-14 bg-accent/30" />
+          <div className="patrons__divider mx-auto mt-4 h-px w-14 bg-accent/30" />
         </Reveal>
 
-        <div className="patrons__featured mt-10">
+        <div className="patrons__featured mt-8">
           <Reveal delay={0.12}>
-            <PatronCard title={PATRONS.main[0].title} featured />
+            <PatronCard title={PATRONS.main[0].title} image={PATRONS.main[0].image} featured />
           </Reveal>
         </div>
 
         <div className="patrons__grid mt-5 grid gap-5 sm:grid-cols-3">
           {PATRONS.main.slice(1).map((patron, i) => (
             <Reveal key={patron.title} delay={0.16 + i * 0.08}>
-              <PatronCard title={patron.title} />
+              <PatronCard title={patron.title} image={patron.image} />
             </Reveal>
           ))}
         </div>

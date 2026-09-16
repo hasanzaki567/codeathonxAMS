@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import { REGISTRATION_URL } from '../data/site'
 import { useRouter } from '../router'
 
 export function MobileCTA() {
-  const { navigate } = useRouter()
   const { path } = useRouter()
   const [visible, setVisible] = useState(false)
 
@@ -26,7 +26,7 @@ export function MobileCTA() {
         >
           <button
             type="button"
-            onClick={() => navigate('/form')}
+            onClick={() => window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')}
             className="mobile-cta__button flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] py-4 text-base font-semibold text-night shadow-[0_16px_40px_-12px_rgba(0,0,0,0.4)]"
           >
             Register Now

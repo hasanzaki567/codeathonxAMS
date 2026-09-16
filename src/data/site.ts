@@ -11,6 +11,8 @@ export const EVENT = {
 
 export const COUNTDOWN_TARGET = '2026-10-01T09:00:00+05:30'
 
+export const REGISTRATION_URL = 'https://forms.gle/jt58WXEFwFAdegF96'
+
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Events', href: '#events' },
@@ -53,10 +55,10 @@ export const PATRONS = {
   sub: 'The leadership behind FROST HACKS — championing innovation, learning, and impact at AMS college of engineering.',
   groupLabel: 'MAIN PATRONS',
   main: [
-    { title: 'Secretary & Correspondent', featured: true },
-    { title: 'Advisor' },
-    { title: 'Principal' },
-    { title: 'Vice Principal' },
+    { title: 'Secretary & Correspondent', featured: true, image: '/images/correspondent.jpeg' },
+    { title: 'Advisor', image: '/images/advisor.png' },
+    { title: 'Principal', image: '/images/principal.jpeg' },
+    { title: 'Vice Principal', image: '/images/vice-principal.png' },
   ],
 } as const
 

@@ -4,6 +4,7 @@ import { CONTACT } from '../data/site'
 import BorderGlow from './BorderGlow'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 const ICONS: Record<string, LucideIcon> = {
   email: Mail,
@@ -15,8 +16,24 @@ const ICONS: Record<string, LucideIcon> = {
 
 export function Contact() {
   return (
-    <section id="contact" className="contact bg-mist py-24 sm:py-32">
-      <div className="contact__inner wrap">
+    <section id="contact" className="contact relative overflow-hidden bg-mist py-24 sm:py-32">
+      <FerrofluidBackground
+        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.35}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="contact__inner wrap relative z-10">
         <Reveal>
           <SectionHeader label={CONTACT.label} heading={CONTACT.heading} sub={CONTACT.sub} align="center" />
         </Reveal>

@@ -4,13 +4,30 @@ import { Plus } from 'lucide-react'
 import { FAQ_ITEMS } from '../data/faq'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="faq bg-paper py-24 sm:py-32">
-      <div className="faq__inner wrap">
+    <section id="faq" className="faq relative overflow-hidden bg-paper py-24 sm:py-32">
+      <FerrofluidBackground
+        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.35}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="faq__inner wrap relative z-10">
         <Reveal>
           <SectionHeader label="08 / FAQ" heading="Questions, answered." align="center" />
         </Reveal>

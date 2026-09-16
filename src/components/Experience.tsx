@@ -2,11 +2,28 @@ import { WHY } from '../data/site'
 import BorderGlow from './BorderGlow'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
+import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Experience() {
   return (
-    <section id="experience" className="experience bg-paper py-24 sm:py-32">
-      <div className="experience__inner wrap">
+    <section id="experience" className="experience relative overflow-hidden bg-paper py-24 sm:py-32">
+      <FerrofluidBackground
+        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
+        speed={0.5}
+        scale={1.6}
+        turbulence={1}
+        fluidity={0.1}
+        rimWidth={0.2}
+        sharpness={2.5}
+        shimmer={1.5}
+        glow={2}
+        flowDirection="down"
+        opacity={0.35}
+        mouseInteraction
+        mouseStrength={1}
+        mouseRadius={0.35}
+      />
+      <div className="experience__inner wrap relative z-10">
         <Reveal>
           <SectionHeader label={WHY.label} heading={WHY.heading} />
         </Reveal>
