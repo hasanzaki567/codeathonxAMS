@@ -27,7 +27,7 @@ export function MobileCTA() {
           <button
             type="button"
             onClick={() => navigate('/form')}
-            className="mobile-cta__button flex w-full items-center justify-center gap-2 rounded-full bg-accent py-4 text-base font-semibold text-night shadow-[0_16px_40px_-12px_rgba(0,0,0,0.4)]"
+            className="mobile-cta__button flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] py-4 text-base font-semibold text-night shadow-[0_16px_40px_-12px_rgba(0,0,0,0.4)]"
           >
             Register Now
             <ArrowRight className="mobile-cta__icon h-4 w-4" />

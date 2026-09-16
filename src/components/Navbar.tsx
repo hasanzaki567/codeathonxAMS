@@ -77,7 +77,7 @@ export function Navbar({ solidAtTop = false }: NavbarProps) {
           <button
             type="button"
             onClick={() => navigate('/form')}
-            className="navbar__cta rounded-full bg-accent px-5 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
+            className="navbar__cta rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-5 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
           >
             Register Now
           </button>
@@ -125,7 +125,7 @@ onClick={() => {
               setOpen(false)
               navigate('/form')
             }}
-            className="navbar__mobile-cta mt-3 rounded-full bg-accent px-5 py-3 text-center text-base font-semibold text-night"
+            className="navbar__mobile-cta mt-3 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-5 py-3 text-center text-base font-semibold text-night"
               >
                 Register Now
               </button>

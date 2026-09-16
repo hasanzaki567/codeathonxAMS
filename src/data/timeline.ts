@@ -39,7 +39,7 @@ export const TIMELINE: TimelineItem[] = [
     key: 'event-day',
     label: 'Event Day',
     date: '01 OCT 2026',
-    note: 'AMSFROST 2026',
+    note: 'AMS Codeathon 2026',
     state: 'confirmed',
     editable: false,
   },

@@ -12,7 +12,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Can students from other colleges participate?',
-    a: 'Yes. AMSFROST is an inter-college challenge open to students from any institution.',
+    a: 'Yes. AMS Codeathon is an inter-college challenge open to students from any institution.',
   },
   {
     q: 'What is the team size?',

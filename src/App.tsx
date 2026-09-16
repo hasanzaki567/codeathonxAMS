@@ -5,10 +5,8 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
 import { Events } from './components/Events'
-import { Experience } from './components/Experience'
 import { Timeline } from './components/Timeline'
 import { Prizes } from './components/Prizes'
-import { Registration } from './components/Registration'
 import { Rules } from './components/Rules'
 import { Team } from './components/Team'
 import { FAQ } from './components/FAQ'
@@ -38,10 +36,8 @@ function HomePage() {
           <Patrons />
         </div>
         <Events />
-        <Experience />
         <Timeline />
         <Prizes />
-        <Registration />
         <Rules />
         <Team />
         <FAQ />

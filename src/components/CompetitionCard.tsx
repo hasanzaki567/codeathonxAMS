@@ -90,7 +90,7 @@ export function CompetitionCard({ competition }: CompetitionCardProps) {
               e.stopPropagation()
               navigate('/form')
             }}
-            className="competition-card__register rounded-full bg-accent px-4 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.04] active:scale-[0.97]"
+            className="competition-card__register rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-4 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.04] active:scale-[0.97]"
           >
             Register
           </button>

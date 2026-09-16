@@ -1,5 +1,5 @@
 export const EVENT = {
-  name: 'AMSFROST',
+  name: 'AMS Codeathon',
   year: '2026',
   tagline: 'Code. Build. Innovate.',
   dateLong: '01 October 2026',
@@ -21,7 +21,7 @@ export const NAV_LINKS = [
 
 export const HERO = {
   eyebrow: 'Inter-College Technical Innovation Challenge',
-  title: 'AMSFROST',
+  title: 'AMS Codeathon',
   year: '2026',
   supporting: 'Code. Build. Innovate.',
   meta: '01 OCTOBER 2026 • CHENNAI',
@@ -97,5 +97,5 @@ export const TEAM = {
 export const FOOTER = {
   links: NAV_LINKS,
   college: 'Aalim Muhammed Salegh College of Engineering, Chennai',
-  copyright: '© 2026 AMSFROST',
+  copyright: '© 2026 AMS Codeathon',
 } as const

@@ -119,7 +119,7 @@ export function CompetitionDetails() {
                 closeDetail()
                 navigate('/form')
               }}
-              className="details__register inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-base font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
+              className="details__register inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-7 py-3.5 text-base font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98]"
             >
               Register for {competition.name}
               <ArrowRight className="details__register-icon h-4 w-4" />

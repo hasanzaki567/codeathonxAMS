@@ -81,3 +81,40 @@ body {
     transform: rotate(360deg);
   }
 }
+
+@keyframes text-type-blink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.text-type-cursor {
+  opacity: 1;
+  animation: text-type-blink 0.5s steps(1) infinite;
+  font-weight: 500;
+  color: inherit;
+}
+
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.text-gradient-shimmer {
+  background-image: linear-gradient(135deg, #02a4ff 0%, #34d9b2 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-shift 6s ease infinite;
+}
