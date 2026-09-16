@@ -184,9 +184,3 @@ export const COMPETITIONS: Competition[] = [
 export const COMPETITION_MAP: Record<CompetitionId, Competition> = Object.fromEntries(
   COMPETITIONS.map((c) => [c.id, c]),
 ) as Record<CompetitionId, Competition>
-
-export const EVALUATION = COMPETITIONS.map((c) => ({
-  competition: c.name,
-  teamSize: c.teamSize,
-  scoring: c.scoring,
-}))

@@ -3,13 +3,8 @@ import type { CompetitionId } from './data/competitions'
 
 export interface FlowContextValue {
   detailId: CompetitionId | null
-  wizardOpen: boolean
-  wizardCompetitionId: CompetitionId | null
-  openCount: number
   openDetail: (id: CompetitionId) => void
   closeDetail: () => void
-  openWizard: (id?: CompetitionId) => void
-  closeWizard: () => void
 }
 
 export const FlowContext = createContext<FlowContextValue | null>(null)

@@ -29,18 +29,11 @@ export const HERO = {
   secondaryCta: 'Explore Events',
 } as const
 
-export const STATS = [
-  { value: '3', label: 'Competitions' },
-  { value: '100%', label: 'Student Driven' },
-  { value: '01', label: 'Day' },
-  { value: '₹200', label: 'Starting Fee' },
-] as const
-
 export const ABOUT = {
   label: '01 / ABOUT',
-  heading: 'Three ways to compete. One platform to build.',
+  heading: 'ABOUT',
   description:
-    'AMSFROST 2026 brings students together to compete in coding, software innovation, and hardware engineering.',
+    'CODEATHON 2026 is an inter-college technical innovation challenge organized by Aalim Muhammed Salegh College of Engineering, Avadi, Chennai.It brings students together across coding, software innovation, and hardware engineering, giving them a platform to solve problems, build solutions, compete, and showcase what they can create.',
 } as const
 
 export const WHY = {
@@ -77,6 +70,27 @@ export const CONTACT = {
     { key: 'instagram', label: 'Instagram', value: '', hint: 'Set handle in src/data/site.ts' },
     { key: 'linkedin', label: 'LinkedIn', value: '', hint: 'Set profile in src/data/site.ts' },
     { key: 'whatsapp', label: 'WhatsApp / Community', value: '', hint: 'Set link in src/data/site.ts' },
+  ],
+} as const
+
+export const TEAM = {
+  label: 'TEAM',
+  heading: 'OUR TEAM',
+  sub: 'THE PEOPLE BEHIND IT',
+  lead: {
+    name: 'Arjun Mehta',
+    role: 'Lead Organizer',
+    socials: { email: '#', linkedin: '#', github: '#', instagram: '#' },
+  },
+  directors: [
+    { name: 'Sara Khan', role: 'Event Director', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+    { name: 'Vikram Iyer', role: 'Technical Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+  ],
+  core: [
+    { name: 'Divya Rao', role: 'Design Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+    { name: 'Karthik Nair', role: 'Logistics Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+    { name: 'Fatima Noor', role: 'Outreach Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+    { name: 'Rahul Kumar', role: 'Finance Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
   ],
 } as const
 

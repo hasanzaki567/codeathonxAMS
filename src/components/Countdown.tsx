@@ -37,20 +37,20 @@ export function Countdown() {
   ]
 
   return (
-    <div className="flex items-center gap-3 sm:gap-4" aria-label={`Countdown to ${COUNTDOWN_TARGET}`}>
+    <div className="countdown flex items-center gap-3 sm:gap-4" aria-label={`Countdown to ${COUNTDOWN_TARGET}`}>
       {cells.map((cell, i) => (
-        <div key={cell.label} className="flex items-center gap-3 sm:gap-4">
+        <div key={cell.label} className="countdown__cell flex items-center gap-3 sm:gap-4">
           <div
-            className={`flex flex-col items-start justify-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5 sm:px-4 sm:py-3 ${
+            className={`countdown__cell-box flex flex-col items-start justify-center rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5 sm:px-4 sm:py-3 ${
               cell.wide ? 'w-[68px] sm:w-[84px]' : 'w-[60px] sm:w-[72px]'
             }`}
           >
-            <span className="font-mono text-xl font-medium leading-none text-white sm:text-2xl">{cell.value}</span>
-            <span className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white/40">
+            <span className="countdown__value font-mono text-xl font-medium leading-none text-white sm:text-2xl">{cell.value}</span>
+            <span className="countdown__label mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white/40">
               {cell.label}
             </span>
           </div>
-          {i < cells.length - 1 && <span className="font-mono text-white/25">:</span>}
+          {i < cells.length - 1 && <span className="countdown__separator font-mono text-white/25">:</span>}
         </div>
       ))}
     </div>

@@ -75,3 +75,9 @@ body {
     overflow: visible !important;
   }
 }
+
+@keyframes border-glow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

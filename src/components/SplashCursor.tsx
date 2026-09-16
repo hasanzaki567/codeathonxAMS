@@ -1311,6 +1311,7 @@ export default function SplashCursor({
 
   return (
     <div
+      className="splash-cursor"
       style={{
         position: 'absolute',
         inset: 0,
@@ -1323,6 +1324,7 @@ export default function SplashCursor({
       <canvas
         ref={canvasRef}
         id="fluid"
+        className="splash-cursor__canvas"
         style={{
           width: '100%',
           height: '100%',
