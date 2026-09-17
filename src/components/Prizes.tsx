@@ -33,13 +33,13 @@ export function Prizes() {
         </Reveal>
 
         <div className="prizes__podium mt-16 grid items-end gap-5 md:grid-cols-3">
-          <Reveal delay={0.1}>
+          <Reveal delay={0.1} className="order-2 md:order-1">
             <PodiumCard place={second.place} amount={second.amount} note={second.note} rank="2" borderColor="#c0c0c0" light />
           </Reveal>
-          <Reveal delay={0}>
+          <Reveal delay={0} className="order-1 md:order-2">
             <PodiumCard place={first.place} amount={first.amount} note={first.note} rank="1" borderColor="#f5c518" light featured />
           </Reveal>
-          <Reveal delay={0.2}>
+          <Reveal delay={0.2} className="order-3">
             <PodiumCard place={third.place} amount={third.amount} note={third.note} rank="3" borderColor="#c0c0c0" light />
           </Reveal>
         </div>
