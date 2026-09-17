@@ -38,10 +38,14 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
   @apply bg-paper text-ink font-sans antialiased;
+  width: 100%;
+  max-width: 100%;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
 }
