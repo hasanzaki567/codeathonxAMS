@@ -17,6 +17,8 @@ export interface Props {
   fontFamily?: string
   letterSpacing?: string | number
   lineHeight?: string | number
+  alignY?: 'center' | 'top'
+  alignInset?: number
   className?: string
   style?: CSSProperties
 }
@@ -30,6 +32,8 @@ interface RuntimeProps {
   fontFamily: string
   letterSpacing: string | number
   lineHeight: string | number
+  alignY: 'center' | 'top'
+  alignInset: number
   warpStrength: number
   warpScale: number
   speed: number
@@ -250,7 +254,10 @@ const buildTextCanvas = ({ container, width, height, dpr, props }: BuildTextCanv
     ctx.fillStyle = props.color
   }
 
-  const startY = height / 2 - (lineHeight * (lines.length - 1)) / 2
+  const startY =
+  props.alignY === 'top'
+    ? lineHeight / 2 + height * props.alignInset
+    : height / 2 - (lineHeight * (lines.length - 1)) / 2
   lines.forEach((line, index) => drawLine(ctx, line, width / 2, startY + index * lineHeight, letterSpacing))
 
   return canvas
@@ -283,6 +290,8 @@ const WarpText = ({
   fontFamily = 'inherit',
   letterSpacing = '-0.06em',
   lineHeight = 0.9,
+  alignY = 'center',
+  alignInset = 0,
   className = '',
   style,
 }: Props) => {
@@ -296,6 +305,8 @@ const WarpText = ({
     fontFamily,
     letterSpacing,
     lineHeight,
+    alignY,
+    alignInset,
     warpStrength,
     warpScale,
     speed,
@@ -316,6 +327,8 @@ const WarpText = ({
       fontFamily,
       letterSpacing,
       lineHeight,
+      alignY,
+      alignInset,
       warpStrength,
       warpScale,
       speed,
@@ -338,6 +351,8 @@ const WarpText = ({
     fontFamily,
     letterSpacing,
     lineHeight,
+    alignY,
+    alignInset,
     warpStrength,
     warpScale,
     speed,
@@ -587,7 +602,7 @@ const WarpText = ({
   return (
     <div
       ref={containerRef}
-      className={`relative block min-h-[220px] w-full overflow-hidden isolate ${className}`.trim()}
+      className={`relative block min-h-0 w-full overflow-hidden isolate ${className}`.trim()}
       style={style}
       role="img"
       aria-label={text}

@@ -1,0 +1,420 @@
+- generic [ref=f4e2]:
+  - link "Skip to content" [ref=f4e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f4e4]:
+    - navigation "Primary" [ref=f4e5]:
+      - button "AMS CODEATHON2026" [ref=f4e6]
+      - generic [ref=f4e7]:
+        - button "About" [ref=f4e8]
+        - button "Events" [ref=f4e9]
+        - button "Prizes" [ref=f4e10]
+        - button "FAQ" [ref=f4e11]
+        - button "Register Now" [ref=f4e12]
+  - main [ref=f4e13]:
+    - generic [ref=f4e18]:
+      - generic [ref=f4e19]:
+        - paragraph [ref=f4e20]: Inter-College Technical Innovation Challenge
+        - generic [ref=f4e21]:
+          - heading "AMS CODEATHON" [level=1] [ref=f4e22]
+          - img "AMS CODEATHON" [ref=f4e23]
+        - generic [aria-hidden] [ref=f4e27]: _
+        - paragraph [ref=f4e28]: 01 OCTOBER 2026 • CHENNAI
+        - generic [ref=f4e29]:
+          - link "Register Now" [ref=f4e30] [cursor=pointer]:
+            - /url: https://forms.gle/jt58WXEFwFAdegF96
+          - link "Explore Events" [ref=f4e33] [cursor=pointer]:
+            - /url: "#events"
+      - generic [ref=f4e36]:
+        - paragraph [ref=f4e37]: Starts in
+        - generic "Countdown to 2026-10-01T09:00:00+05:30" [ref=f4e38]:
+          - generic [ref=f4e39]:
+            - generic [ref=f4e40]:
+              - generic [ref=f4e41]: "13"
+              - generic [ref=f4e42]: Days
+            - generic [ref=f4e43]: ":"
+          - generic [ref=f4e44]:
+            - generic [ref=f4e45]:
+              - generic [ref=f4e46]: "18"
+              - generic [ref=f4e47]: Hours
+            - generic [ref=f4e48]: ":"
+          - generic [ref=f4e49]:
+            - generic [ref=f4e50]:
+              - generic [ref=f4e51]: "50"
+              - generic [ref=f4e52]: Minutes
+            - generic [ref=f4e53]: ":"
+          - generic [ref=f4e55]:
+            - generic [ref=f4e56]: "59"
+            - generic [ref=f4e57]: Seconds
+    - generic [ref=f4e62]:
+      - generic [ref=f4e63]:
+        - paragraph [ref=f4e64]: 01 / ABOUT
+        - heading "ABOUT" [level=2] [ref=f4e65]
+        - paragraph [ref=f4e66]: CODEATHON 2026 is an inter-college technical innovation challenge organized by Aalim Muhammed Salegh College of Engineering, Avadi, Chennai.It brings students together across coding, software innovation, and hardware engineering, giving them a platform to solve problems, build solutions, compete, and showcase what they can create.
+      - img "College campus" [ref=f4e70]
+    - generic [ref=f4e74]:
+      - generic [ref=f4e76]:
+        - paragraph [ref=f4e77]: OUR PATRONS
+        - heading "GUIDING THE VISION." [level=2] [ref=f4e78]
+        - paragraph [ref=f4e79]: The leadership behind FROST HACKS — championing innovation, learning, and impact at AMS college of engineering.
+      - paragraph [ref=f4e81]: MAIN PATRONS
+      - generic [ref=f4e86]:
+        - img "Secretary & Correspondent" [ref=f4e89]
+        - heading "Secretary & Correspondent" [level=3] [ref=f4e91]
+      - generic [ref=f4e92]:
+        - generic [ref=f4e95]:
+          - img "Advisor" [ref=f4e97]
+          - heading "Advisor" [level=3] [ref=f4e99]
+        - generic [ref=f4e102]:
+          - img "Principal" [ref=f4e104]
+          - heading "Principal" [level=3] [ref=f4e106]
+        - generic [ref=f4e109]:
+          - img "Vice Principal" [ref=f4e111]
+          - heading "Vice Principal" [level=3] [ref=f4e113]
+    - generic [ref=f4e116]:
+      - generic [ref=f4e118]:
+        - paragraph [ref=f4e119]: 02 / EVENTS
+        - heading "Choose your challenge." [level=2] [ref=f4e120]
+        - paragraph [ref=f4e121]: One track focuses on pure coding, the next on software innovation, and the third on hardware engineering.
+      - generic [ref=f4e122]:
+        - 'button "{ } 01 Coding & Debugging CRACK THE CODE Individual / 2 Solve. Debug. Outthink. A timed battle of logic, speed, and precision across three rounds. ₹100 / participant Hover to flip 01 / Details CRACK THE CODE Stages Code Sprint Debugging Arena Final Code Challenge ₹100 / participant Register View Challenge" [ref=f4e124]':
+          - generic [ref=f4e125]:
+            - generic [ref=f4e127]:
+              - generic [ref=f4e128]:
+                - generic [ref=f4e129]: "{ }"
+                - generic [ref=f4e130]: "01"
+              - paragraph [ref=f4e131]: Coding & Debugging
+              - heading "CRACK THE CODE" [level=3] [ref=f4e132]
+              - generic [ref=f4e133]: Individual / 2
+              - paragraph [ref=f4e135]: Solve. Debug. Outthink.
+              - paragraph [ref=f4e136]: A timed battle of logic, speed, and precision across three rounds.
+              - generic [ref=f4e137]:
+                - generic [ref=f4e138]: ₹100 / participant
+                - generic [ref=f4e139]: Hover to flip
+            - generic [ref=f4e143]:
+              - paragraph [ref=f4e144]: 01 / Details
+              - heading "CRACK THE CODE" [level=3] [ref=f4e145]
+              - generic [ref=f4e146]:
+                - paragraph [ref=f4e147]: Stages
+                - list [ref=f4e148]:
+                  - listitem [ref=f4e149]: Code Sprint
+                  - listitem [ref=f4e151]: Debugging Arena
+                  - listitem [ref=f4e153]: Final Code Challenge
+              - generic [ref=f4e155]:
+                - generic [ref=f4e156]: ₹100 / participant
+                - generic [ref=f4e157]:
+                  - button "Register" [ref=f4e158]
+                  - button "View Challenge" [ref=f4e159]
+        - button ">>_ 02 Software & Innovation HACKATHON 2–5 Members Find a problem. Build the solution. A full-day build sprint across technology domains. ₹200 / participant Hover to flip 02 / Details HACKATHON Stages Problem Identification Prototype Build Pitch & Demo Domains AI/ML Cybersecurity EdTech HealthTech FinTech IoT Open Innovation ₹200 / participant Register View Challenge" [ref=f4e163]:
+          - generic [ref=f4e164]:
+            - generic [ref=f4e166]:
+              - generic [ref=f4e167]:
+                - generic [ref=f4e168]: ">>_"
+                - generic [ref=f4e169]: "02"
+              - paragraph [ref=f4e170]: Software & Innovation
+              - heading "HACKATHON" [level=3] [ref=f4e171]
+              - generic [ref=f4e172]: 2–5 Members
+              - paragraph [ref=f4e174]: Find a problem. Build the solution.
+              - paragraph [ref=f4e175]: A full-day build sprint across technology domains.
+              - generic [ref=f4e176]:
+                - generic [ref=f4e177]: ₹200 / participant
+                - generic [ref=f4e178]: Hover to flip
+            - generic [ref=f4e182]:
+              - paragraph [ref=f4e183]: 02 / Details
+              - heading "HACKATHON" [level=3] [ref=f4e184]
+              - generic [ref=f4e185]:
+                - paragraph [ref=f4e186]: Stages
+                - list [ref=f4e187]:
+                  - listitem [ref=f4e188]: Problem Identification
+                  - listitem [ref=f4e190]: Prototype Build
+                  - listitem [ref=f4e192]: Pitch & Demo
+              - generic [ref=f4e194]:
+                - paragraph [ref=f4e195]: Domains
+                - generic [ref=f4e196]:
+                  - generic [ref=f4e197]: AI/ML
+                  - generic [ref=f4e198]: Cybersecurity
+                  - generic [ref=f4e199]: EdTech
+                  - generic [ref=f4e200]: HealthTech
+                  - generic [ref=f4e201]: FinTech
+                  - generic [ref=f4e202]: IoT
+                  - generic [ref=f4e203]: Open Innovation
+              - generic [ref=f4e204]:
+                - generic [ref=f4e205]: ₹200 / participant
+                - generic [ref=f4e206]:
+                  - button "Register" [ref=f4e207]
+                  - button "View Challenge" [ref=f4e208]
+        - button "◇▱ 03 Hardware & Engineering TECHFORGE 2–4 Members Design. Build. Demonstrate. Turn ideas into working hardware in a single day. ₹200 / participant Hover to flip 03 / Details TECHFORGE Stages Concept & Design Prototype Build Live Demo Domains Robotics IoT EV Automation Energy Smart Systems ₹200 / participant Register View Challenge" [ref=f4e212]:
+          - generic [ref=f4e213]:
+            - generic [ref=f4e215]:
+              - generic [ref=f4e216]:
+                - generic [ref=f4e217]: ◇▱
+                - generic [ref=f4e218]: "03"
+              - paragraph [ref=f4e219]: Hardware & Engineering
+              - heading "TECHFORGE" [level=3] [ref=f4e220]
+              - generic [ref=f4e221]: 2–4 Members
+              - paragraph [ref=f4e223]: Design. Build. Demonstrate.
+              - paragraph [ref=f4e224]: Turn ideas into working hardware in a single day.
+              - generic [ref=f4e225]:
+                - generic [ref=f4e226]: ₹200 / participant
+                - generic [ref=f4e227]: Hover to flip
+            - generic [ref=f4e231]:
+              - paragraph [ref=f4e232]: 03 / Details
+              - heading "TECHFORGE" [level=3] [ref=f4e233]
+              - generic [ref=f4e234]:
+                - paragraph [ref=f4e235]: Stages
+                - list [ref=f4e236]:
+                  - listitem [ref=f4e237]: Concept & Design
+                  - listitem [ref=f4e239]: Prototype Build
+                  - listitem [ref=f4e241]: Live Demo
+              - generic [ref=f4e243]:
+                - paragraph [ref=f4e244]: Domains
+                - generic [ref=f4e245]:
+                  - generic [ref=f4e246]: Robotics
+                  - generic [ref=f4e247]: IoT
+                  - generic [ref=f4e248]: EV
+                  - generic [ref=f4e249]: Automation
+                  - generic [ref=f4e250]: Energy
+                  - generic [ref=f4e251]: Smart Systems
+              - generic [ref=f4e252]:
+                - generic [ref=f4e253]: ₹200 / participant
+                - generic [ref=f4e254]:
+                  - button "Register" [ref=f4e255]
+                  - button "View Challenge" [ref=f4e256]
+      - paragraph [ref=f4e260]: Hover over a card to flip and see details
+    - generic [ref=f4e263]:
+      - generic [ref=f4e265]:
+        - paragraph [ref=f4e266]: 05 / RECOGNITION
+        - heading "Build something worth remembering." [level=2] [ref=f4e267]
+      - generic [ref=f4e268]:
+        - generic [ref=f4e271]:
+          - generic [ref=f4e273]: "2"
+          - heading "2nd Prize" [level=3] [ref=f4e274]
+          - paragraph [ref=f4e275]: ₹2,500
+          - paragraph [ref=f4e276]: Cash prize for the runner-up team.
+        - generic [ref=f4e279]:
+          - generic [ref=f4e281]: "1"
+          - heading "1st Prize" [level=3] [ref=f4e282]
+          - paragraph [ref=f4e283]: ₹5,000
+          - paragraph [ref=f4e284]: Cash prize for the winning team.
+        - generic [ref=f4e287]:
+          - generic [ref=f4e289]: "3"
+          - heading "3rd Prize" [level=3] [ref=f4e290]
+          - paragraph [ref=f4e291]: ₹1,000
+          - paragraph [ref=f4e292]: Cash prize for the third-place team.
+      - generic [ref=f4e293]:
+        - generic [ref=f4e301]:
+          - heading "Participation Certificate" [level=3] [ref=f4e302]
+          - paragraph [ref=f4e303]: For eligible registered participants.
+        - generic [ref=f4e311]:
+          - heading "Internship Opportunities" [level=3] [ref=f4e312]
+          - paragraph [ref=f4e313]: For outstanding performance.
+      - generic [ref=f4e315]:
+        - paragraph [ref=f4e316]: Special Recognitions
+        - list [ref=f4e317]:
+          - listitem [ref=f4e318]: Best Innovation
+          - listitem [ref=f4e319]: Best Technical Implementation
+          - listitem [ref=f4e320]: Best Interdisciplinary Team
+          - listitem [ref=f4e321]: Best Social Impact
+    - generic [ref=f4e324]:
+      - generic [ref=f4e326]:
+        - paragraph [ref=f4e327]: 06 / RULES
+        - heading "Know the rules. Play fair." [level=2] [ref=f4e328]
+        - paragraph [ref=f4e329]: Full rule sets are kept short and readable — open any competition for its complete list.
+      - generic [ref=f4e330]:
+        - button [ref=f4e333]:
+          - generic [ref=f4e334]:
+            - paragraph [ref=f4e335]: Coding & Debugging
+            - heading "CRACK THE CODE" [level=3] [ref=f4e336]
+            - paragraph [ref=f4e337]: 6 rules
+        - button [ref=f4e343]:
+          - generic [ref=f4e344]:
+            - paragraph [ref=f4e345]: Software & Innovation
+            - heading "HACKATHON" [level=3] [ref=f4e346]
+            - paragraph [ref=f4e347]: 6 rules
+        - button [ref=f4e353]:
+          - generic [ref=f4e354]:
+            - paragraph [ref=f4e355]: Hardware & Engineering
+            - heading "TECHFORGE" [level=3] [ref=f4e356]
+            - paragraph [ref=f4e357]: 6 rules
+    - generic [ref=f4e363]:
+      - generic [ref=f4e365]:
+        - paragraph [ref=f4e366]: TEAM
+        - heading "OUR TEAM" [level=2] [ref=f4e367]
+        - paragraph [ref=f4e368]: THE PEOPLE BEHIND IT
+      - generic [ref=f4e372]:
+        - generic [ref=f4e373]: AM
+        - heading "Arjun Mehta" [level=3] [ref=f4e376]
+        - paragraph [ref=f4e377]: Lead Organizer
+        - generic [ref=f4e378]:
+          - link "Arjun Mehta on Email" [ref=f4e379] [cursor=pointer]:
+            - /url: "#"
+          - link "Arjun Mehta on LinkedIn" [ref=f4e383] [cursor=pointer]:
+            - /url: "#"
+          - link "Arjun Mehta on GitHub" [ref=f4e386] [cursor=pointer]:
+            - /url: "#"
+          - link "Arjun Mehta on Instagram" [ref=f4e389] [cursor=pointer]:
+            - /url: "#"
+      - generic [ref=f4e392]:
+        - generic [ref=f4e395]:
+          - generic [ref=f4e396]: SK
+          - heading "Sara Khan" [level=3] [ref=f4e399]
+          - paragraph [ref=f4e400]: Event Director
+          - generic [ref=f4e401]:
+            - link "Sara Khan on Email" [ref=f4e402] [cursor=pointer]:
+              - /url: "#"
+            - link "Sara Khan on LinkedIn" [ref=f4e406] [cursor=pointer]:
+              - /url: "#"
+            - link "Sara Khan on GitHub" [ref=f4e409] [cursor=pointer]:
+              - /url: "#"
+            - link "Sara Khan on Instagram" [ref=f4e412] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f4e417]:
+          - generic [ref=f4e418]: VI
+          - heading "Vikram Iyer" [level=3] [ref=f4e421]
+          - paragraph [ref=f4e422]: Technical Lead
+          - generic [ref=f4e423]:
+            - link "Vikram Iyer on Email" [ref=f4e424] [cursor=pointer]:
+              - /url: "#"
+            - link "Vikram Iyer on LinkedIn" [ref=f4e428] [cursor=pointer]:
+              - /url: "#"
+            - link "Vikram Iyer on GitHub" [ref=f4e431] [cursor=pointer]:
+              - /url: "#"
+            - link "Vikram Iyer on Instagram" [ref=f4e434] [cursor=pointer]:
+              - /url: "#"
+      - generic [ref=f4e437]:
+        - generic [ref=f4e440]:
+          - generic [ref=f4e441]: DR
+          - heading "Divya Rao" [level=3] [ref=f4e444]
+          - paragraph [ref=f4e445]: Design Lead
+          - generic [ref=f4e446]:
+            - link "Divya Rao on Email" [ref=f4e447] [cursor=pointer]:
+              - /url: "#"
+            - link "Divya Rao on LinkedIn" [ref=f4e451] [cursor=pointer]:
+              - /url: "#"
+            - link "Divya Rao on GitHub" [ref=f4e454] [cursor=pointer]:
+              - /url: "#"
+            - link "Divya Rao on Instagram" [ref=f4e457] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f4e462]:
+          - generic [ref=f4e463]: KN
+          - heading "Karthik Nair" [level=3] [ref=f4e466]
+          - paragraph [ref=f4e467]: Logistics Lead
+          - generic [ref=f4e468]:
+            - link "Karthik Nair on Email" [ref=f4e469] [cursor=pointer]:
+              - /url: "#"
+            - link "Karthik Nair on LinkedIn" [ref=f4e473] [cursor=pointer]:
+              - /url: "#"
+            - link "Karthik Nair on GitHub" [ref=f4e476] [cursor=pointer]:
+              - /url: "#"
+            - link "Karthik Nair on Instagram" [ref=f4e479] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f4e484]:
+          - generic [ref=f4e485]: FN
+          - heading "Fatima Noor" [level=3] [ref=f4e488]
+          - paragraph [ref=f4e489]: Outreach Lead
+          - generic [ref=f4e490]:
+            - link "Fatima Noor on Email" [ref=f4e491] [cursor=pointer]:
+              - /url: "#"
+            - link "Fatima Noor on LinkedIn" [ref=f4e495] [cursor=pointer]:
+              - /url: "#"
+            - link "Fatima Noor on GitHub" [ref=f4e498] [cursor=pointer]:
+              - /url: "#"
+            - link "Fatima Noor on Instagram" [ref=f4e501] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f4e506]:
+          - generic [ref=f4e507]: RK
+          - heading "Rahul Kumar" [level=3] [ref=f4e510]
+          - paragraph [ref=f4e511]: Finance Lead
+          - generic [ref=f4e512]:
+            - link "Rahul Kumar on Email" [ref=f4e513] [cursor=pointer]:
+              - /url: "#"
+            - link "Rahul Kumar on LinkedIn" [ref=f4e517] [cursor=pointer]:
+              - /url: "#"
+            - link "Rahul Kumar on GitHub" [ref=f4e520] [cursor=pointer]:
+              - /url: "#"
+            - link "Rahul Kumar on Instagram" [ref=f4e523] [cursor=pointer]:
+              - /url: "#"
+    - generic [ref=f4e528]:
+      - generic [ref=f4e530]:
+        - paragraph [ref=f4e531]: 08 / FAQ
+        - heading "Questions, answered." [level=2] [ref=f4e532]
+      - generic [ref=f4e533]:
+        - generic [ref=f4e535]:
+          - button "Who can participate?" [expanded] [ref=f4e536]
+          - paragraph [ref=f4e544]: Students of Aalim Muhammed Salegh College of Engineering and, as an inter-college challenge, students of all other colleges as well.
+        - button "Can students from other colleges participate?" [ref=f4e547]
+        - button "What is the team size?" [ref=f4e554]
+        - button "What is the registration fee?" [ref=f4e561]
+        - button "Can I participate in more than one competition? TBC" [ref=f4e568]:
+          - generic [ref=f4e569]: Can I participate in more than one competition?
+          - generic [ref=f4e570]: TBC
+        - button "What should I bring? TBC" [ref=f4e576]:
+          - generic [ref=f4e577]: What should I bring?
+          - generic [ref=f4e578]: TBC
+        - button "Is a college ID required?" [ref=f4e584]
+        - button "Are certificates provided?" [ref=f4e591]
+        - button "Are internships available?" [ref=f4e598]
+        - button "Can interdisciplinary teams participate?" [ref=f4e605]
+    - generic [ref=f4e612]:
+      - generic [ref=f4e614]:
+        - paragraph [ref=f4e615]: CONTACT
+        - heading "Have a question?" [level=2] [ref=f4e616]
+        - paragraph [ref=f4e617]: Contact the organizing team.
+      - generic [ref=f4e618]:
+        - generic [ref=f4e626]:
+          - paragraph [ref=f4e627]: Email
+          - paragraph [ref=f4e628]: TBA
+        - generic [ref=f4e635]:
+          - paragraph [ref=f4e636]: Phone
+          - paragraph [ref=f4e637]: TBA
+        - generic [ref=f4e645]:
+          - paragraph [ref=f4e646]: Instagram
+          - paragraph [ref=f4e647]: TBA
+        - generic [ref=f4e655]:
+          - paragraph [ref=f4e656]: LinkedIn
+          - paragraph [ref=f4e657]: TBA
+        - generic [ref=f4e664]:
+          - paragraph [ref=f4e665]: WhatsApp / Community
+          - paragraph [ref=f4e666]: TBA
+      - paragraph [ref=f4e668]: TBA marks placeholder details — finalized by the organizers soon.
+  - contentinfo [ref=f4e669]:
+    - generic [ref=f4e671]:
+      - generic [ref=f4e672]:
+        - generic [ref=f4e673]:
+          - paragraph [ref=f4e674]: AMS CODEATHON2026
+          - paragraph [ref=f4e675]: Code. Build. Innovate.
+          - list [ref=f4e676]:
+            - listitem [ref=f4e677]:
+              - link "Instagram" [ref=f4e678] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f4e682]:
+              - link "LinkedIn" [ref=f4e683] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f4e687]:
+              - link "Email" [ref=f4e688] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=f4e692]:
+              - link "Phone" [ref=f4e693] [cursor=pointer]:
+                - /url: "#contact"
+        - navigation "Footer" [ref=f4e696]:
+          - paragraph [ref=f4e697]: Explore
+          - list [ref=f4e698]:
+            - listitem [ref=f4e699]:
+              - link "About" [ref=f4e700] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=f4e701]:
+              - link "Events" [ref=f4e702] [cursor=pointer]:
+                - /url: "#events"
+            - listitem [ref=f4e703]:
+              - link "Prizes" [ref=f4e704] [cursor=pointer]:
+                - /url: "#prizes"
+            - listitem [ref=f4e705]:
+              - link "FAQ" [ref=f4e706] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=f4e707]:
+              - button "Register" [ref=f4e708]
+        - generic [ref=f4e709]:
+          - paragraph [ref=f4e710]: Organized by
+          - paragraph [ref=f4e711]: Aalim Muhammed Salegh College of Engineering, Chennai
+      - generic [ref=f4e712]:
+        - paragraph [ref=f4e713]: © 2026 AMS Codeathon
+        - paragraph [ref=f4e714]: Code. Build. Innovate.

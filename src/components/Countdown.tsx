@@ -41,12 +41,12 @@ export function Countdown() {
       {cells.map((cell, i) => (
         <div key={cell.label} className="countdown__cell flex items-center gap-3 sm:gap-4">
           <div
-            className={`countdown__cell-box flex flex-col items-start justify-center rounded-xl border border-white/25 bg-white/[0.08] px-4 py-3.5 sm:px-5 sm:py-4 ${
-              cell.wide ? 'w-[92px] sm:w-[112px]' : 'w-[84px] sm:w-[100px]'
+            className={`countdown__cell-box flex flex-col items-start justify-center rounded-xl border border-white/25 bg-white/[0.08] px-3 py-3 sm:px-5 sm:py-4 ${
+              cell.wide ? 'w-[68px] sm:w-[112px]' : 'w-[60px] sm:w-[100px]'
             }`}
           >
-            <span className="countdown__value font-mono text-3xl font-medium leading-none text-white sm:text-4xl">{cell.value}</span>
-            <span className="countdown__label mt-1.5 font-mono text-xs uppercase tracking-[0.18em] text-white/80 sm:text-sm">
+            <span className="countdown__value font-mono text-2xl font-medium leading-none text-white sm:text-4xl">{cell.value}</span>
+            <span className="countdown__label mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white/80 sm:mt-2 sm:text-sm">
               {cell.label}
             </span>
           </div>

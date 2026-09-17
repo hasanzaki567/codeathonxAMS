@@ -1,5 +1,5 @@
 export const EVENT = {
-  name: 'AMS Codeathon',
+  name: 'AMS CODEATHON',
   year: '2026',
   tagline: 'Code. Build. Innovate.',
   dateLong: '01 October 2026',

@@ -132,22 +132,23 @@ function PodiumCard({ place, amount, note, rank, featured }: PodiumCardProps) {
       coneSpread={25}
       animated={false}
       colors={['#c084fc', '#f472b6', '#38bdf8']}
+      className={featured ? 'md:-translate-y-12' : ''}
     >
       <div
         className={`prizes__card relative flex h-full flex-col rounded-2xl border p-7 text-center transition-transform duration-300 hover:-translate-y-1 ${
         featured
-          ? 'prizes__card--featured border-night bg-night text-white shadow-[0_24px_48px_-24px_rgba(0,0,0,0.35)]'
+          ? 'prizes__card--featured border-[#d4af37] bg-night text-white shadow-[0_24px_48px_-24px_rgba(212,175,55,0.45)]'
           : 'prizes__card--regular border-line bg-surface text-ink'
       }`}
     >
       <span
         className={`prizes__card-accent absolute left-1/2 top-0 h-1.5 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full ${
-          featured ? 'bg-accent' : 'bg-line'
+          featured ? 'bg-[#d4af37]' : 'bg-line'
         }`}
       />
       <span
         className={`prizes__card-rank mx-auto grid h-10 w-10 place-items-center rounded-full font-mono text-sm font-semibold ${
-          featured ? 'bg-accent text-night' : 'bg-mist text-muted'
+          featured ? 'bg-[#d4af37] text-night' : 'bg-mist text-muted'
         }`}
       >
         {rank}
