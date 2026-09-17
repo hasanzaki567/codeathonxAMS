@@ -11,7 +11,7 @@ export const EVENT = {
 
 export const COUNTDOWN_TARGET = '2026-10-01T09:00:00+05:30'
 
-export const REGISTRATION_URL = 'https://forms.gle/jt58WXEFwFAdegF96'
+export const REGISTRATION_URL = 'https://forms.gle/NpBTJM6PMTWVmPty9'
 
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
