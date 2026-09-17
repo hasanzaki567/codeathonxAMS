@@ -4,6 +4,7 @@ import { EVENT, HERO, REGISTRATION_URL } from '../data/site'
 import { Countdown } from './Countdown'
 import TextType from './TextType'
 import { FerrofluidBackground } from './FerrofluidBackground'
+import WarpText from './WarpText'
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -44,15 +45,32 @@ export function Hero() {
               {HERO.eyebrow}
             </motion.p>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.08, ease }}
-              className="hero__title mt-6 font-display text-[clamp(3.2rem,13vw,8.5rem)] font-bold leading-[0.95] tracking-[-0.03em]"
+              className="hero__title mt-6 w-full max-w-5xl"
             >
-              <span className="text-gradient-shimmer">{EVENT.name}</span>
-
-            </motion.h1>
+              <h1 className="sr-only">{EVENT.name}</h1>
+              <WarpText
+                text={EVENT.name}
+                color="#f8f5ff"
+                gradient={['#02A4FF', '#34D9B2']}
+                warpStrength={0.08}
+                warpScale={1.7}
+                speed={0.55}
+                pointerInfluence={0.42}
+                pointerStrength={0.38}
+                refraction={0.018}
+                ripple
+                fontSize={116}
+                fontWeight={800}
+                style={{ height: '320px' }}
+                fontFamily="inherit"
+                letterSpacing={-0.06}
+                lineHeight={0.9}
+              />
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
