@@ -12,7 +12,7 @@ export function Rules() {
   const [selected, setSelected] = useState<CompetitionId | null>(null)
 
   return (
-    <section id="rules" className="rules relative overflow-hidden bg-black py-24 sm:py-32">
+    <section id="rules" className="rules relative overflow-hidden bg-paper py-24 sm:py-32">
       <FerrofluidBackground
         colors={['#02A4FF', '#34D9B2', '#02A4FF']}
         speed={0.5}
@@ -35,7 +35,6 @@ export function Rules() {
             label="06 / RULES"
             heading="Know the rules. Play fair."
             sub="Full rule sets are kept short and readable — open any competition for its complete list."
-            dark
           />
         </Reveal>
 
@@ -56,7 +55,7 @@ export function Rules() {
                 <button
                   type="button"
                   onClick={() => setSelected(competition.id)}
-                  className="rules__card group flex w-full items-center justify-between gap-4 rounded-2xl border border-line bg-surface px-6 py-6 text-left transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-[0_16px_32px_-20px_rgba(0,0,0,0.2)]"
+                  className="rules__card group flex w-full items-center justify-between gap-4 rounded-2xl border border-line bg-surface px-6 py-6 text-left shadow-[0_10px_28px_-20px_rgba(0,0,0,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-[0_16px_32px_-20px_rgba(0,0,0,0.2)]"
                 >
                 <div className="rules__card-body">
                   <p className="rules__card-category font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">

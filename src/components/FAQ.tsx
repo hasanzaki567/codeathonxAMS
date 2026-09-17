@@ -10,7 +10,7 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
-    <section id="faq" className="faq relative overflow-hidden bg-black py-24 text-white sm:py-32">
+    <section id="faq" className="faq relative overflow-hidden bg-paper py-24 sm:py-32">
       <FerrofluidBackground
         colors={['#02A4FF', '#34D9B2', '#02A4FF']}
         speed={0.5}
@@ -29,7 +29,7 @@ export function FAQ() {
       />
       <div className="faq__inner wrap relative z-10">
         <Reveal>
-          <SectionHeader label="08 / FAQ" heading="Questions, answered." align="center" dark />
+          <SectionHeader label="08 / FAQ" heading="Questions, answered." align="center" />
         </Reveal>
 
         <div className="faq__list mx-auto mt-12 max-w-3xl">
@@ -38,7 +38,7 @@ export function FAQ() {
             return (
               <Reveal key={item.q} delay={Math.min(i * 0.04, 0.3)}>
                 <div
-                  className={`faq__item border-b border-white/15 ${i === 0 ? 'border-t' : ''}`}
+                  className={`faq__item border-b border-line ${i === 0 ? 'border-t' : ''}`}
                 >
                   <button
                     type="button"
@@ -47,16 +47,16 @@ export function FAQ() {
                     aria-controls={`faq-${i}`}
                     className="faq__question flex w-full items-center justify-between gap-4 py-5 text-left"
                   >
-                    <span className="faq__question-text text-base font-medium text-white sm:text-lg">{item.q}</span>
+                    <span className="faq__question-text text-base font-medium text-ink sm:text-lg">{item.q}</span>
                     <span className="faq__question-actions flex items-center gap-2.5">
                       {item.editable && (
-                        <span className="faq__tbc rounded-full bg-white/10 px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-white/50">
+                        <span className="faq__tbc rounded-full bg-mist px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.12em] text-muted">
                           TBC
                         </span>
                       )}
                       <span
                         className={`faq__toggle grid h-8 w-8 shrink-0 place-items-center rounded-full border transition-all duration-300 ${
-                          open ? 'rotate-45 border-accent bg-accent text-night' : 'border-white/20 text-white/50'
+                          open ? 'rotate-45 border-accent bg-accent text-night' : 'border-line text-muted'
                         }`}
                       >
                         <Plus className="faq__toggle-icon h-4 w-4" />
@@ -73,7 +73,7 @@ export function FAQ() {
                         transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
                         className="faq__answer overflow-hidden"
                       >
-                        <p className="faq__answer-text max-w-2xl pb-6 pr-10 text-[15px] leading-relaxed text-white/60">{item.a}</p>
+                        <p className="faq__answer-text max-w-2xl pb-6 pr-10 text-[15px] leading-relaxed text-muted">{item.a}</p>
                       </motion.div>
                     )}
                   </AnimatePresence>

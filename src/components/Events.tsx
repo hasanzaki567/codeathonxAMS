@@ -7,7 +7,7 @@ import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Events() {
   return (
-    <section id="events" className="events relative overflow-hidden bg-mist py-24 sm:py-32">
+    <section id="events" className="events relative overflow-hidden bg-paper py-24 sm:py-32">
       <FerrofluidBackground
         colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}

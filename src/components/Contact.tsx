@@ -16,7 +16,7 @@ const ICONS: Record<string, LucideIcon> = {
 
 export function Contact() {
   return (
-    <section id="contact" className="contact relative overflow-hidden bg-mist py-24 sm:py-32">
+    <section id="contact" className="contact relative overflow-hidden bg-black py-24 text-white sm:py-32">
       <FerrofluidBackground
         colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}
@@ -35,7 +35,7 @@ export function Contact() {
       />
       <div className="contact__inner wrap relative z-10">
         <Reveal>
-          <SectionHeader label={CONTACT.label} heading={CONTACT.heading} sub={CONTACT.sub} align="center" />
+          <SectionHeader label={CONTACT.label} heading={CONTACT.heading} sub={CONTACT.sub} align="center" dark />
         </Reveal>
 
         <div className="contact__grid mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">

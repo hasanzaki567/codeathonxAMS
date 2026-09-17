@@ -1,3 +1,7 @@
+import crackTheCodeImage from '../assets/crackTheCode.jpeg'
+import hackathonImage from '../assets/hackathon.jpeg'
+import techforgeImage from '../assets/techforge.jpeg'
+
 export type CompetitionId = 'crack-the-code' | 'hackathon' | 'techforge'
 
 export interface ScoringCriterion {
@@ -11,6 +15,7 @@ export interface Competition {
   name: string
   category: string
   teamSize: string
+  image: string
   tagline: string
   description: string
   fee: string
@@ -39,6 +44,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'CRACK THE CODE',
     category: 'Coding & Debugging',
     teamSize: 'Individual / 2',
+    image: crackTheCodeImage,
     tagline: 'Solve. Debug. Outthink.',
     description: 'A timed battle of logic, speed, and precision across three rounds.',
     fee: '₹100 / participant',
@@ -85,6 +91,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'HACKATHON',
     category: 'Software & Innovation',
     teamSize: '2–5 Members',
+    image: hackathonImage,
     tagline: 'Find a problem. Build the solution.',
     description: 'A full-day build sprint across technology domains.',
     fee: '₹200 / participant',
@@ -135,6 +142,7 @@ export const COMPETITIONS: Competition[] = [
     name: 'TECHFORGE',
     category: 'Hardware & Engineering',
     teamSize: '2–4 Members',
+    image: techforgeImage,
     tagline: 'Design. Build. Demonstrate.',
     description: 'Turn ideas into working hardware in a single day.',
     fee: '₹200 / participant',

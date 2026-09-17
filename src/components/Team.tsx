@@ -75,18 +75,18 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
       animated={false}
       colors={['#c084fc', '#f472b6', '#38bdf8']}
     >
-      <div className="team-card group flex h-full flex-col items-center rounded-2xl border border-neutral-800 bg-[#0d0d0d] p-6 text-center shadow-lg transition-colors duration-300 hover:border-neutral-600 sm:p-8">
+      <div className="team-card group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-[#131312] p-6 text-center shadow-[0_20px_40px_-28px_rgba(0,0,0,0.8)] transition-colors duration-300 hover:border-white/25 sm:p-8">
       <div className={`relative mb-5 ${wide ? 'sm:h-28 sm:w-28' : ''}`}>
         <div
-          className="grid h-24 w-24 place-items-center rounded-full border-2 border-neutral-700 object-cover transition-colors duration-300 group-hover:border-neutral-500"
+          className="grid h-24 w-24 place-items-center rounded-full border-2 border-white/20 object-cover transition-colors duration-300 group-hover:border-white/40"
           aria-hidden="true"
         >
-          <span className="font-display text-lg font-bold tracking-tight text-neutral-300">{initials(member.name)}</span>
+          <span className="font-display text-lg font-bold tracking-tight text-white/80">{initials(member.name)}</span>
         </div>
       </div>
       <h3 className="font-display text-base font-bold uppercase tracking-wide text-white">{member.name}</h3>
-      <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-neutral-500 sm:text-[11px]">{member.role}</p>
-      <div className="mt-5 flex items-center justify-center gap-2.5 border-t border-neutral-800 pt-4">
+      <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-white/50 sm:text-[11px]">{member.role}</p>
+      <div className="mt-5 flex items-center justify-center gap-2.5 border-t border-white/10 pt-4">
         {SOCIAL_ICONS.map(({ key, label, Icon }) => {
           const href = member.socials[key]
           if (!href) return null
@@ -97,7 +97,7 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
               target="_blank"
               rel="noreferrer"
               aria-label={`${member.name} on ${label}`}
-              className="grid h-8 w-8 place-items-center rounded-full text-neutral-500 transition-colors duration-200 hover:bg-neutral-800 hover:text-white"
+              className="grid h-8 w-8 place-items-center rounded-full text-white/50 transition-colors duration-200 hover:bg-white/10 hover:text-white"
             >
               <Icon className="h-3.5 w-3.5" />
             </a>
@@ -111,7 +111,7 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
 
 export function Team() {
   return (
-    <section id="team" className="team relative overflow-hidden bg-mist py-24 text-ink sm:py-32">
+    <section id="team" className="team relative overflow-hidden bg-black py-24 text-white sm:py-32">
       <FerrofluidBackground
         colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}
@@ -131,11 +131,11 @@ export function Team() {
       <div className="team__inner wrap relative z-10">
         <Reveal>
           <header className="team__header text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted sm:text-xs">{TEAM.label}</p>
-            <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-ink sm:text-4xl md:text-5xl">
+            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/50 sm:text-xs">{TEAM.label}</p>
+            <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
               {TEAM.heading}
             </h2>
-            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-muted sm:text-base">{TEAM.sub}</p>
+            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-white/50 sm:text-base">{TEAM.sub}</p>
           </header>
         </Reveal>
 
