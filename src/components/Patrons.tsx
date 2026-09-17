@@ -1,6 +1,5 @@
 import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
-import type { MotionValue } from 'framer-motion'
 import { PATRONS } from '../data/site'
 import BorderGlow from './BorderGlow'
 import { GlareHover } from './GlareHover'
@@ -117,19 +116,10 @@ function ScrollPatronCard({ title, image, featured = false, depth = 1 }: PatronC
   )
 }
 
-function StickyPatronHeader({ progress, fadeProgress }: { progress: MotionValue<number>; fadeProgress: MotionValue<number> }) {
-  const y = useTransform(progress, [0, 0.3], [0, -16])
-  const scale = useTransform(progress, [0, 0.5], [1, 0.95])
-  const opacity = useTransform(progress, [0, 0.45, 0.85], [1, 0.9, 0])
-
+function PatronHeader() {
   return (
-    <motion.div className="patrons__sticky sticky top-16 z-20 -mx-4 px-4 pt-2 sm:-mx-6 sm:px-6">
-      <motion.div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 -bottom-4 left-0 right-0 -top-4 z-0 bg-gradient-to-b from-black via-black/70 to-transparent"
-        style={{ opacity: fadeProgress }}
-      />
-      <motion.div style={{ y, scale, opacity }} className="relative z-10">
+    <div className="patrons__sticky -mx-4 px-4 pt-2 sm:-mx-6 sm:px-6">
+      <div className="relative z-10">
         <SectionHeader
           label={PATRONS.label}
           heading={PATRONS.heading}
@@ -141,8 +131,8 @@ function StickyPatronHeader({ progress, fadeProgress }: { progress: MotionValue<
           {PATRONS.groupLabel}
         </p>
         <div className="patrons__divider mx-auto mt-4 h-px w-14 bg-accent/30" />
-      </motion.div>
-    </motion.div>
+      </div>
+    </div>
   )
 }
 
@@ -150,7 +140,6 @@ export function Patrons() {
   const sectionRef = useRef<HTMLElement>(null)
   const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] })
 
-  const fadeProgress = useTransform(scrollYProgress, [0.02, 0.3, 0.75], [0, 1, 1])
   const glowX = useTransform(scrollYProgress, [0, 1], [0, 120])
   const glowY = useTransform(scrollYProgress, [0, 1], [0, -80])
   const orbA = useTransform(scrollYProgress, [0, 1], [0, 160])
@@ -192,7 +181,7 @@ export function Patrons() {
         aria-hidden="true"
       />
       <div className="patrons__inner wrap relative z-10">
-        <StickyPatronHeader progress={scrollYProgress} fadeProgress={fadeProgress} />
+        <PatronHeader />
 
         <div className="patrons__featured mt-8">
           <ScrollPatronCard title={PATRONS.main[0].title} image={PATRONS.main[0].image} featured depth={0.9} />
