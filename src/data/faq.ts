@@ -20,7 +20,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'What is the registration fee?',
-    a: 'Crack the Code — ₹100 per participant. Hackathon — ₹200 per participant. TechForge — ₹200 per participant.',
+    a: 'All events — ₹150 per participant.',
   },
   {
     q: 'Can I participate in more than one competition?',
