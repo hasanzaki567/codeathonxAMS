@@ -16,7 +16,6 @@ export const REGISTRATION_URL = 'https://forms.gle/jt58WXEFwFAdegF96'
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Events', href: '#events' },
-  { label: 'Timeline', href: '#timeline' },
   { label: 'Prizes', href: '#prizes' },
   { label: 'FAQ', href: '#faq' },
 ] as const
