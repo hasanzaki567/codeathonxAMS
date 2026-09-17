@@ -1,7 +1,9 @@
+import { useRef } from 'react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import { PATRONS } from '../data/site'
 import BorderGlow from './BorderGlow'
 import { GlareHover } from './GlareHover'
-import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
@@ -96,58 +98,109 @@ function PatronCard({ title, image, featured = false }: PatronCardProps) {
   )
 }
 
-export function Patrons() {
+function ScrollPatronCard({ title, image, featured = false, depth = 1 }: PatronCardProps & { depth?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.9', 'end 0.1'] })
+  const y = useTransform(scrollYProgress, [0, 1], [60 * depth, -60 * depth])
+  const rotateX = useTransform(scrollYProgress, [0, 0.4, 0.8], [10, 0, -6])
+  const scale = useTransform(scrollYProgress, [0, 0.3], [0.92, 1])
+  const opacity = useTransform(scrollYProgress, [0, 0.12, 0.88, 1], [0, 1, 1, 0.3])
+
   return (
-    <section id="patrons" className="patrons relative overflow-hidden bg-black py-16 text-white sm:py-20">
-      <FerrofluidBackground
-        colors={['#02A4FF', '#34D9B2', '#02A4FF']}
-        speed={0.5}
-        scale={1.6}
-        turbulence={1}
-        fluidity={0.1}
-        rimWidth={0.2}
-        sharpness={2.5}
-        shimmer={1.5}
-        glow={2}
-        flowDirection="down"
-        opacity={0.25}
-        mouseInteraction
-        mouseStrength={1}
-        mouseRadius={0.35}
+    <motion.div
+      ref={ref}
+      className="patron-card-scroll will-change-transform"
+      style={{ y, rotateX, scale, opacity, transformPerspective: 800 }}
+    >
+      <PatronCard title={title} image={image} featured={featured} />
+    </motion.div>
+  )
+}
+
+function StickyPatronHeader({ progress, fadeProgress }: { progress: MotionValue<number>; fadeProgress: MotionValue<number> }) {
+  const y = useTransform(progress, [0, 0.3], [0, -16])
+  const scale = useTransform(progress, [0, 0.5], [1, 0.95])
+  const opacity = useTransform(progress, [0, 0.45, 0.85], [1, 0.9, 0])
+
+  return (
+    <motion.div className="patrons__sticky sticky top-16 z-20 -mx-4 px-4 pt-2 sm:-mx-6 sm:px-6">
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -bottom-4 left-0 right-0 -top-4 z-0 bg-gradient-to-b from-black via-black/70 to-transparent"
+        style={{ opacity: fadeProgress }}
       />
-      <div
-        className="patrons__glow pointer-events-none absolute inset-0 z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
+      <motion.div style={{ y, scale, opacity }} className="relative z-10">
+        <SectionHeader
+          label={PATRONS.label}
+          heading={PATRONS.heading}
+          sub={PATRONS.sub}
+          align="center"
+          dark
+        />
+        <p className="patrons__group-label mt-10 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
+          {PATRONS.groupLabel}
+        </p>
+        <div className="patrons__divider mx-auto mt-4 h-px w-14 bg-accent/30" />
+      </motion.div>
+    </motion.div>
+  )
+}
+
+export function Patrons() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] })
+
+  const fadeProgress = useTransform(scrollYProgress, [0.02, 0.3, 0.75], [0, 1, 1])
+  const glowX = useTransform(scrollYProgress, [0, 1], [0, 120])
+  const glowY = useTransform(scrollYProgress, [0, 1], [0, -80])
+  const orbA = useTransform(scrollYProgress, [0, 1], [0, 160])
+  const orbB = useTransform(scrollYProgress, [0, 1], [0, -120])
+
+  return (
+    <section ref={sectionRef} id="patrons" className="patrons relative overflow-visible bg-black py-16 text-white sm:py-20">
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <FerrofluidBackground
+          colors={['#02A4FF', '#34D9B2', '#02A4FF']}
+          speed={0.5}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.1}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.5}
+          glow={2}
+          flowDirection="down"
+          opacity={0.25}
+          mouseInteraction
+          mouseStrength={1}
+          mouseRadius={0.35}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -top-32 right-[-10%] h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(0,224,124,0.12),transparent_70%)] blur-2xl"
+          style={{ y: orbA }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -bottom-32 left-[-10%] h-[440px] w-[440px] rounded-full bg-[radial-gradient(circle,rgba(2,164,255,0.12),transparent_70%)] blur-2xl"
+          style={{ y: orbB }}
+        />
+      </div>
+      <motion.div
+        className="patrons__glow pointer-events-none absolute inset-x-[-15%] inset-y-[-10%] z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
+        style={{ x: glowX, y: glowY }}
         aria-hidden="true"
       />
       <div className="patrons__inner wrap relative z-10">
-        <Reveal>
-          <SectionHeader
-            label={PATRONS.label}
-            heading={PATRONS.heading}
-            sub={PATRONS.sub}
-            align="center"
-            dark
-          />
-        </Reveal>
-
-        <Reveal delay={0.08}>
-          <p className="patrons__group-label mt-10 text-center font-mono text-[11px] uppercase tracking-[0.3em] text-white/40">
-            {PATRONS.groupLabel}
-          </p>
-          <div className="patrons__divider mx-auto mt-4 h-px w-14 bg-accent/30" />
-        </Reveal>
+        <StickyPatronHeader progress={scrollYProgress} fadeProgress={fadeProgress} />
 
         <div className="patrons__featured mt-8">
-          <Reveal delay={0.12}>
-            <PatronCard title={PATRONS.main[0].title} image={PATRONS.main[0].image} featured />
-          </Reveal>
+          <ScrollPatronCard title={PATRONS.main[0].title} image={PATRONS.main[0].image} featured depth={0.9} />
         </div>
 
         <div className="patrons__grid mt-5 grid gap-5 sm:grid-cols-3">
           {PATRONS.main.slice(1).map((patron, i) => (
-            <Reveal key={patron.title} delay={0.16 + i * 0.08}>
-              <PatronCard title={patron.title} image={patron.image} />
-            </Reveal>
+            <ScrollPatronCard key={patron.title} title={patron.title} image={patron.image} depth={1 + i * 0.15} />
           ))}
         </div>
       </div>

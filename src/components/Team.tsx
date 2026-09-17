@@ -1,8 +1,10 @@
+import { useRef } from 'react'
 import type { ReactNode } from 'react'
 import { Mail } from 'lucide-react'
+import { motion, useScroll, useTransform } from 'framer-motion'
+import type { MotionValue } from 'framer-motion'
 import { TEAM } from '../data/site'
 import BorderGlow from './BorderGlow'
-import { Reveal } from './ui/Reveal'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 type IconComponent = (props: { className?: string }) => ReactNode
@@ -109,55 +111,105 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
   )
 }
 
-export function Team() {
+function ScrollTeamCard({ member, wide = false, depth = 1 }: { member: Member; wide?: boolean; depth?: number }) {
+  const ref = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.95', 'end 0.15'] })
+  const y = useTransform(scrollYProgress, [0, 1], [70 * depth, -70 * depth])
+  const rotateX = useTransform(scrollYProgress, [0, 0.4, 0.75], [14, 0, -8])
+  const scale = useTransform(scrollYProgress, [0, 0.35], [0.9, 1])
+  const opacity = useTransform(scrollYProgress, [0, 0.15, 0.85, 1], [0, 1, 1, 0.55])
+
   return (
-    <section id="team" className="team relative overflow-hidden bg-black py-24 text-white sm:py-32">
-      <FerrofluidBackground
-        colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
-        speed={0.5}
-        scale={1.6}
-        turbulence={1}
-        fluidity={0.1}
-        rimWidth={0.2}
-        sharpness={2.5}
-        shimmer={1.5}
-        glow={2}
-        flowDirection="down"
-        opacity={0.35}
-        mouseInteraction
-        mouseStrength={1}
-        mouseRadius={0.35}
+    <motion.div
+      ref={ref}
+      className="team-card-scroll will-change-transform"
+      style={{ y, rotateX, scale, opacity, transformPerspective: 800 }}
+    >
+      <TeamCard member={member} wide={wide} />
+    </motion.div>
+  )
+}
+
+function StickyTeamHeader({ progress, fadeProgress }: { progress: MotionValue<number>; fadeProgress: MotionValue<number> }) {
+  const y = useTransform(progress, [0, 0.3], [0, -16])
+  const scale = useTransform(progress, [0, 0.5], [1, 0.95])
+  const opacity = useTransform(progress, [0, 0.45, 0.85], [1, 0.9, 0])
+
+  return (
+    <motion.div className="team__sticky sticky top-16 z-20 -mx-4 px-4 pt-2 sm:-mx-6 sm:px-6">
+      <motion.div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -bottom-4 left-0 right-0 -top-4 z-0 bg-gradient-to-b from-black via-black/70 to-transparent"
+        style={{ opacity: fadeProgress }}
       />
+      <motion.header
+        style={{ y, scale, opacity }}
+        className="team__header relative z-10 text-center"
+      >
+        <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/50 sm:text-xs">{TEAM.label}</p>
+        <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
+          {TEAM.heading}
+        </h2>
+        <p className="mt-3 text-sm uppercase tracking-[0.18em] text-white/50 sm:text-base">{TEAM.sub}</p>
+      </motion.header>
+    </motion.div>
+  )
+}
+
+export function Team() {
+  const sectionRef = useRef<HTMLElement>(null)
+  const { scrollYProgress } = useScroll({ target: sectionRef, offset: ['start start', 'end start'] })
+
+  const fadeProgress = useTransform(scrollYProgress, [0.02, 0.35, 0.8], [0, 1, 1])
+  const orbA = useTransform(scrollYProgress, [0, 1], [0, 180])
+  const orbB = useTransform(scrollYProgress, [0, 1], [0, -140])
+
+  return (
+    <section ref={sectionRef} id="team" className="team relative overflow-visible bg-black py-24 text-white sm:py-32">
+      <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+        <FerrofluidBackground
+          colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
+          speed={0.5}
+          scale={1.6}
+          turbulence={1}
+          fluidity={0.1}
+          rimWidth={0.2}
+          sharpness={2.5}
+          shimmer={1.5}
+          glow={2}
+          flowDirection="down"
+          opacity={0.35}
+          mouseInteraction
+          mouseStrength={1}
+          mouseRadius={0.35}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -top-24 right-[-8%] h-[440px] w-[440px] rounded-full bg-[radial-gradient(circle,rgba(192,132,252,0.16),transparent_70%)] blur-2xl"
+          style={{ y: orbA }}
+        />
+        <motion.div
+          aria-hidden="true"
+          className="absolute -bottom-32 left-[-8%] h-[480px] w-[480px] rounded-full bg-[radial-gradient(circle,rgba(2,164,255,0.14),transparent_70%)] blur-2xl"
+          style={{ y: orbB }}
+        />
+      </div>
       <div className="team__inner wrap relative z-10">
-        <Reveal>
-          <header className="team__header text-center">
-            <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-white/50 sm:text-xs">{TEAM.label}</p>
-            <h2 className="mt-4 font-display text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
-              {TEAM.heading}
-            </h2>
-            <p className="mt-3 text-sm uppercase tracking-[0.18em] text-white/50 sm:text-base">{TEAM.sub}</p>
-          </header>
-        </Reveal>
+        <StickyTeamHeader progress={scrollYProgress} fadeProgress={fadeProgress} />
 
         <div className="team__lead mx-auto mt-14 max-w-xl">
-          <Reveal delay={0.05}>
-            <TeamCard member={TEAM.lead} wide />
-          </Reveal>
+          <ScrollTeamCard member={TEAM.lead} wide depth={1} />
         </div>
 
         <div className="team__directors mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
           {TEAM.directors.map((member, i) => (
-            <Reveal key={member.name} delay={0.1 + i * 0.08}>
-              <TeamCard member={member} />
-            </Reveal>
+            <ScrollTeamCard key={member.name} member={member} depth={1 + i * 0.15} />
           ))}
         </div>
 
         <div className="team__core mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {TEAM.core.map((member, i) => (
-            <Reveal key={member.name} delay={0.16 + i * 0.06}>
-              <TeamCard member={member} />
-            </Reveal>
+            <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
         </div>
       </div>
