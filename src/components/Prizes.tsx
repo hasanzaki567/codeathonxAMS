@@ -10,7 +10,7 @@ export function Prizes() {
   const [first, second, third] = PRIZES.podium
 
   return (
-    <section id="prizes" className="prizes relative sticky top-0 z-20 min-h-screen-dvh overflow-hidden bg-black py-24 text-white sm:py-32">
+    <section id="prizes" className="prizes relative min-h-screen-dvh overflow-hidden bg-black py-24 text-white sm:py-32">
       <FerrofluidBackground
         colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}

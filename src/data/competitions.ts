@@ -9,6 +9,12 @@ export interface ScoringCriterion {
   weight: number
 }
 
+export interface CompetitionPrize {
+  place: string
+  amount: string
+  note: string
+}
+
 export interface Competition {
   id: CompetitionId
   index: string
@@ -25,6 +31,7 @@ export interface Competition {
   cta: string
   symbol: string
   stages: string[]
+  prizes: CompetitionPrize[]
   domains?: string[]
   scoring: ScoringCriterion[]
   details: {
@@ -36,6 +43,12 @@ export interface Competition {
     suggestedDomains?: string[]
   }
 }
+
+export const EVENT_PRIZES: CompetitionPrize[] = [
+  { place: '1st Prize', amount: '₹5,000', note: 'Cash prize for the winning team.' },
+  { place: '2nd Prize', amount: '₹2,500', note: 'Cash prize for the runner-up team.' },
+  { place: 'Best Performance', amount: '₹1,000', note: 'Awarded for the standout individual or team.' },
+]
 
 export const COMPETITIONS: Competition[] = [
   {
@@ -54,6 +67,7 @@ export const COMPETITIONS: Competition[] = [
     cta: 'View Challenge',
     symbol: '{ }',
     stages: ['Code Sprint', 'Debugging Arena', 'Final Code Challenge'],
+    prizes: EVENT_PRIZES,
     scoring: [
       { label: 'Correctness', weight: 40 },
       { label: 'Problem-solving', weight: 25 },
@@ -101,6 +115,7 @@ export const COMPETITIONS: Competition[] = [
     cta: 'View Challenge',
     symbol: '>>_',
     stages: ['Problem Identification', 'Prototype Build', 'Pitch & Demo'],
+    prizes: EVENT_PRIZES,
     domains: ['AI/ML', 'Cybersecurity', 'EdTech', 'HealthTech', 'FinTech', 'IoT', 'Open Innovation'],
     scoring: [
       { label: 'Problem Identification', weight: 15 },
@@ -152,6 +167,7 @@ export const COMPETITIONS: Competition[] = [
     cta: 'View Challenge',
     symbol: '◇▱',
     stages: ['Concept & Design', 'Prototype Build', 'Live Demo'],
+    prizes: EVENT_PRIZES,
     domains: ['Robotics', 'IoT', 'EV', 'Automation', 'Energy', 'Smart Systems'],
     scoring: [
       { label: 'Problem Relevance', weight: 10 },

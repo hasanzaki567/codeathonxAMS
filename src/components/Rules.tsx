@@ -5,7 +5,7 @@ import { COMPETITIONS } from '../data/competitions'
 import type { CompetitionId } from '../data/competitions'
 import { Modal } from './ui/Modal'
 import { Reveal } from './ui/Reveal'
-import { SectionHeader } from './ui/SectionHeader'
+// import { SectionHeader } from './ui/SectionHeader'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Rules() {
@@ -30,18 +30,18 @@ export function Rules() {
         mouseRadius={0.35}
       />
       <div className="rules__inner wrap relative z-10">
-        <Reveal>
+        {/* <Reveal>
           <SectionHeader
             label="06 / RULES"
             heading="Know the rules. Play fair."
             sub="Full rule sets are kept short and readable — open any competition for its complete list."
           />
-        </Reveal>
+        </Reveal> */}
 
         <div className="rules__grid mt-14 grid gap-4 md:grid-cols-3">
           {COMPETITIONS.map((competition, i) => (
             <Reveal key={competition.id} delay={i * 0.08}>
-<BorderGlow
+              <BorderGlow
                 edgeSensitivity={30}
                 glowColor="40 80 80"
                 backgroundColor="#120F17"
@@ -57,16 +57,16 @@ export function Rules() {
                   onClick={() => setSelected(competition.id)}
                   className="rules__card group flex w-full items-center justify-between gap-4 rounded-2xl border border-line bg-surface px-6 py-6 text-left shadow-[0_10px_28px_-20px_rgba(0,0,0,0.18)] transition-all duration-200 hover:-translate-y-0.5 hover:border-ink/20 hover:shadow-[0_16px_32px_-20px_rgba(0,0,0,0.2)]"
                 >
-                <div className="rules__card-body">
-                  <p className="rules__card-category font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">
-                    {competition.category}
-                  </p>
-                  <h3 className="rules__card-title mt-1.5 font-display text-lg font-bold tracking-tight text-ink">{competition.name}</h3>
-                  <p className="rules__card-count mt-1 text-sm font-medium text-ink/70">{competition.details.rules.length} rules</p>
-                </div>
-                <span className="rules__card-arrow grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line text-ink transition-transform duration-200 group-hover:translate-x-0.5">
-                  <ArrowRight className="rules__card-arrow-icon h-4 w-4" />
-                </span>
+                  <div className="rules__card-body">
+                    <p className="rules__card-category font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">
+                      {competition.category}
+                    </p>
+                    <h3 className="rules__card-title mt-1.5 font-display text-lg font-bold tracking-tight text-ink">{competition.name}</h3>
+                    <p className="rules__card-count mt-1 text-sm font-medium text-ink/70">{competition.details.rules.length} rules</p>
+                  </div>
+                  <span className="rules__card-arrow grid h-10 w-10 shrink-0 place-items-center rounded-full border border-line text-ink transition-transform duration-200 group-hover:translate-x-0.5">
+                    <ArrowRight className="rules__card-arrow-icon h-4 w-4" />
+                  </span>
                 </button>
               </BorderGlow>
             </Reveal>

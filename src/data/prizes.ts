@@ -5,7 +5,7 @@ export const PRIZES = {
   podium: [
     { place: '1st Prize', amount: '₹5,000', note: 'Cash prize for the winning team.' },
     { place: '2nd Prize', amount: '₹2,500', note: 'Cash prize for the runner-up team.' },
-    { place: 'best performance', amount: '₹1,000', note: 'Cash prize for the third-place team.' },
+    { place: 'Best Performance', amount: '₹1,000', note: 'Awarded for the standout individual or team.' },
   ],
   perks: [
     { title: 'Participation Certificate', note: 'For eligible registered participants.' },

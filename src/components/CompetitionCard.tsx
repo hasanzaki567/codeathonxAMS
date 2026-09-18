@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Trophy } from 'lucide-react'
 import { SpotlightCard } from './SpotlightCard'
 import type { Competition } from '../data/competitions'
 import { useFlow } from '../flowContext'
@@ -43,45 +43,64 @@ export function CompetitionCard({ competition }: CompetitionCardProps) {
       className="competition-card-back flex h-full flex-col rounded-2xl border border-accent-deep/30 bg-night p-6 sm:p-8"
       spotlightColor="rgba(56, 189, 248, 0.2)"
     >
-      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">
-        {competition.index} / Details
-      </p>
-      <h3 className="mt-2 font-display text-xl font-bold tracking-tight text-white">
-        {competition.name}
-      </h3>
-      <p className="mt-1 text-sm font-medium text-white/80">{competition.tagline}</p>
+      <div className="competition-card-back__scroll no-scrollbar min-h-0 flex-1 overflow-y-auto">
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-ink">
+          {competition.index} / Details
+        </p>
+        <h3 className="mt-2 font-display text-xl font-bold tracking-tight text-white">
+          {competition.name}
+        </h3>
+        <p className="mt-1 text-sm font-medium text-white/80">{competition.tagline}</p>
 
-      {competition.stages && (
-        <div className="mt-5">
-          <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.15em] text-soft">Stages</p>
-          <ul className="space-y-1.5">
-            {competition.stages.map((stage) => (
-              <li key={stage} className="flex items-center gap-2 text-sm text-white/70">
-                <span className="h-1 w-1 rounded-full bg-accent" />
-                {stage}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {competition.domains && (
-        <div className="mt-5">
-          <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.15em] text-soft">Domains</p>
-          <div className="flex flex-wrap gap-1.5">
-            {competition.domains.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-white/60"
-              >
-                {tag}
-              </span>
-            ))}
+        {competition.stages && (
+          <div className="mt-5">
+            <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.15em] text-soft">Stages</p>
+            <ul className="space-y-1.5">
+              {competition.stages.map((stage) => (
+                <li key={stage} className="flex items-center gap-2 text-sm text-white/70">
+                  <span className="h-1 w-1 rounded-full bg-accent" />
+                  {stage}
+                </li>
+              ))}
+            </ul>
           </div>
-        </div>
-      )}
+        )}
 
-      <div className="mt-auto flex items-center justify-between gap-4 pt-6">
+        {competition.domains && (
+          <div className="mt-5">
+            <p className="mb-2 font-mono text-[11px] uppercase tracking-[0.15em] text-soft">Domains</p>
+            <div className="flex flex-wrap gap-1.5">
+              {competition.domains.map((tag) => (
+                <span
+                  key={tag}
+                  className="rounded-full border border-white/10 px-2.5 py-1 font-mono text-[11px] tracking-wide text-white/60"
+                >
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {competition.prizes && (
+          <div className="mt-5 rounded-xl border border-accent-deep/25 bg-white/[0.03] p-4">
+            <p className="mb-3 flex items-center gap-1.5 font-mono text-[11px] uppercase tracking-[0.15em] text-accent-ink">
+              <Trophy className="h-3.5 w-3.5" />
+              Prizes
+            </p>
+            <ul className="space-y-2.5">
+              {competition.prizes.map((prize) => (
+                <li key={prize.place} className="flex items-baseline justify-between gap-3">
+                  <span className="text-sm font-medium text-white/80">{prize.place}</span>
+                  <span className="font-mono text-sm font-semibold text-accent">{prize.amount}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+      </div>
+
+      <div className="flex items-center justify-between gap-4 pt-6">
         <span className="font-mono text-sm text-white">{competition.fee}</span>
         <div className="flex items-center gap-3">
           <button

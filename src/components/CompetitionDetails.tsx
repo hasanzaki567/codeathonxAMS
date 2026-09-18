@@ -1,4 +1,4 @@
-import { ArrowRight, Check } from 'lucide-react'
+import { ArrowRight, Check, Trophy } from 'lucide-react'
 import type { ReactNode } from 'react'
 import { COMPETITION_MAP } from '../data/competitions'
 import { useFlow } from '../flowContext'
@@ -44,6 +44,38 @@ export function CompetitionDetails() {
           </div>
           <p className="details__tagline mt-5 text-base font-medium text-ink">{competition.tagline}</p>
           <p className="details__description mt-1.5 text-[15px] leading-relaxed text-muted">{competition.description}</p>
+
+          <div className="details__prizes mt-6 grid gap-px overflow-hidden rounded-xl border border-accent-deep/25 bg-line sm:grid-cols-3">
+            {competition.prizes.map((prize, i) => (
+              <div
+                key={prize.place}
+                className={`details__prize flex flex-col justify-between gap-1.5 p-4 ${
+                  i === 0
+                    ? 'bg-accent-tint'
+                    : i === 1
+                      ? 'bg-surface'
+                      : 'bg-night text-white'
+                }`}
+              >
+                <div className="flex items-center gap-2">
+                  <Trophy className={`details__prize-icon h-4 w-4 ${i === 2 ? 'text-accent' : 'text-accent-ink'}`} />
+                  <p className={`details__prize-place font-mono text-[10px] uppercase tracking-[0.18em] text-soft`}>
+                    {prize.place}
+                  </p>
+                </div>
+                <p className={`details__prize-amount font-display text-lg font-bold tracking-tight ${
+                  i === 2 ? 'text-accent' : 'text-ink'
+                }`}>
+                  {prize.amount}
+                </p>
+                <p className={`details__prize-note text-[13px] leading-snug ${
+                  i === 2 ? 'text-white/50' : 'text-muted'
+                }`}>
+                  {prize.note}
+                </p>
+              </div>
+            ))}
+          </div>
 
           <div className="details__meta my-7 grid grid-cols-2 gap-px overflow-hidden rounded-xl border border-line bg-line sm:grid-cols-3">
             <div className="details__meta-cell bg-surface p-4">

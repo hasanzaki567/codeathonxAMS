@@ -39,12 +39,8 @@ function HomePage() {
           <Patrons />
         </div>
         <Events />
-        <div className="prizes-stage relative h-2x-dvh">
-          <Prizes />
-        </div>
-        <div className="rules-stage relative z-30 neg-mt-screen-dvh">
-          <Rules />
-        </div>
+        <Prizes />
+        <Rules />
         <Team />
         <FAQ />
         <Contact />
