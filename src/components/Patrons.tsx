@@ -179,11 +179,13 @@ export function Patrons() {
           style={{ y: orbB }}
         />
       </div>
-      <motion.div
-        className="patrons__glow pointer-events-none absolute inset-x-[-15%] inset-y-[-10%] z-10 bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
-        style={{ x: glowX, y: glowY }}
-        aria-hidden="true"
-      />
+      <div className="pointer-events-none absolute inset-0 z-10 overflow-hidden">
+        <motion.div
+          className="patrons__glow absolute inset-x-[-15%] inset-y-[-10%] bg-[radial-gradient(ellipse_60%_50%_at_50%_0%,rgba(0,224,124,0.06),transparent_70%)]"
+          style={{ x: glowX, y: glowY }}
+          aria-hidden="true"
+        />
+      </div>
       <div className="patrons__inner wrap relative z-10">
         <PatronHeader />
 
