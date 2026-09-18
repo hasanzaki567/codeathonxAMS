@@ -45,7 +45,7 @@ export function Modal({ open, onClose, children, wide = false }: ModalProps) {
             transition={{ duration: 0.2 }}
           />
           <motion.div
-            className={`modal__panel relative flex max-h-[92dvh] w-full flex-col overflow-hidden rounded-t-2xl bg-surface shadow-2xl sm:max-h-[86dvh] sm:rounded-2xl ${
+            className={`modal__panel relative flex max-h-92-dvh w-full flex-col overflow-hidden rounded-t-2xl bg-surface shadow-2xl sm:max-h-86-dvh sm:rounded-2xl ${
               wide ? 'sm:max-w-3xl' : 'sm:max-w-2xl'
             }`}
             initial={{ opacity: 0, y: 48, scale: 0.98 }}

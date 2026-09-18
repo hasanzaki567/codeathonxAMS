@@ -54,10 +54,10 @@ export const PATRONS = {
   sub: 'The leadership behind FROST HACKS — championing innovation, learning, and impact at AMS college of engineering.',
   groupLabel: 'MAIN PATRONS',
   main: [
-    { title: 'Secretary & Correspondent', featured: true, image: '/images/correspondent.jpeg' },
-    { title: 'Advisor', image: '/images/advisor.png' },
-    { title: 'Principal', image: '/images/principal.jpeg' },
-    { title: 'Vice Principal', image: '/images/vice-principal.png' },
+    { title: 'Secretary & Correspondent', name: 'Mr. H. Mohamed Salegh', featured: true, image: '/images/correspondent.jpeg' },
+    { title: 'Principal', name: 'Dr. K.G. Parthiban', image: '/images/principal.jpeg' },
+    { title: 'Vice Principal', name: 'Dr. AS. Salma Banu', image: '/images/vice-principal.png' },
+    { title: 'Advisor', name: 'Prof. A. Mohamed Abdul Kadher', image: '/images/advisor.png' },
   ],
 } as const
 

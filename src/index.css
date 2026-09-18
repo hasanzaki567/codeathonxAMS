@@ -35,11 +35,64 @@
   }
 }
 
+@utility min-h-screen-dvh {
+  min-height: 100dvh;
+}
+
+@utility h-2x-dvh {
+  height: 200dvh;
+}
+
+@utility neg-mt-screen-dvh {
+  margin-top: -100dvh;
+}
+
+@utility max-h-92-dvh {
+  max-height: 92dvh;
+}
+
+@utility max-h-86-dvh {
+  max-height: 86dvh;
+}
+
+@layer base {
+  .min-h-screen-dvh,
+  .h-2x-dvh,
+  .neg-mt-screen-dvh,
+  .max-h-92-dvh,
+  .max-h-86-dvh {
+    /* 100vh fallbacks for browsers without dvh support (iOS Safari < 15.4, Chrome < 108) */
+  }
+  .min-h-screen-dvh {
+    min-height: 100vh;
+  }
+  .h-2x-dvh {
+    height: 200vh;
+  }
+  .neg-mt-screen-dvh {
+    margin-top: -100vh;
+  }
+  .max-h-92-dvh {
+    max-height: 92vh;
+  }
+  .max-h-86-dvh {
+    max-height: 86vh;
+  }
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
   max-width: 100%;
   overflow-x: hidden;
+  -webkit-text-size-adjust: 100%;
+  overscroll-behavior-x: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
@@ -48,6 +101,13 @@ body {
   max-width: 100%;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
+  overscroll-behavior-y: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
 }
 
 ::selection {

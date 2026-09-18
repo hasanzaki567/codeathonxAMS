@@ -12,7 +12,7 @@ export function FormPage() {
   }, [])
 
   return (
-    <div className="form-page min-h-dvh bg-paper text-ink">
+    <div className="form-page min-h-screen-dvh bg-paper text-ink">
       <Navbar solidAtTop />
       <main id="main" className="page-main">
         <section className="form-hero relative overflow-hidden bg-night py-20 text-white sm:py-24">

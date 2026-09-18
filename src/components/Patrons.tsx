@@ -36,11 +36,12 @@ function Avatar({ className }: { className?: string }) {
 
 interface PatronCardProps {
   title: string
+  name?: string
   image?: string
   featured?: boolean
 }
 
-function PatronCard({ title, image, featured = false }: PatronCardProps) {
+function PatronCard({ title, name, image, featured = false }: PatronCardProps) {
   return (
     <BorderGlow
       edgeSensitivity={30}
@@ -91,13 +92,16 @@ function PatronCard({ title, image, featured = false }: PatronCardProps) {
         <h3 className="patron-card__title font-display text-sm font-bold uppercase tracking-[0.16em] text-white sm:text-base">
           {title}
         </h3>
+        {name && (
+          <p className="patron-card__name mt-2 text-sm font-medium text-white/70">{name}</p>
+        )}
       </div>
     </GlareHover>
     </BorderGlow>
   )
 }
 
-function ScrollPatronCard({ title, image, featured = false, depth = 1 }: PatronCardProps & { depth?: number }) {
+function ScrollPatronCard({ title, name, image, featured = false, depth = 1 }: PatronCardProps & { depth?: number }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.9', 'end 0.1'] })
   const y = useTransform(scrollYProgress, [0, 1], [60 * depth, -60 * depth])
@@ -111,7 +115,7 @@ function ScrollPatronCard({ title, image, featured = false, depth = 1 }: PatronC
       className="patron-card-scroll will-change-transform"
       style={{ y, rotateX, scale, opacity, transformPerspective: 800 }}
     >
-      <PatronCard title={title} image={image} featured={featured} />
+      <PatronCard title={title} name={name} image={image} featured={featured} />
     </motion.div>
   )
 }
@@ -184,12 +188,12 @@ export function Patrons() {
         <PatronHeader />
 
         <div className="patrons__featured mt-8">
-          <ScrollPatronCard title={PATRONS.main[0].title} image={PATRONS.main[0].image} featured depth={0.9} />
+          <ScrollPatronCard title={PATRONS.main[0].title} name={PATRONS.main[0].name} image={PATRONS.main[0].image} featured depth={0.9} />
         </div>
 
         <div className="patrons__grid mt-5 grid gap-5 sm:grid-cols-3">
           {PATRONS.main.slice(1).map((patron, i) => (
-            <ScrollPatronCard key={patron.title} title={patron.title} image={patron.image} depth={1 + i * 0.15} />
+            <ScrollPatronCard key={patron.title} title={patron.title} name={patron.name} image={patron.image} depth={1 + i * 0.15} />
           ))}
         </div>
       </div>

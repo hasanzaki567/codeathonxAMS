@@ -1,6 +1,6 @@
+import { Suspense, lazy } from 'react'
 import { FlowProvider } from './FlowProvider'
 import { RouterProvider, useRouter } from './router'
-import SplashCursor from './components/SplashCursor'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
@@ -13,8 +13,12 @@ import { Contact } from './components/Contact'
 import { Patrons } from './components/Patrons'
 import { Footer } from './components/Footer'
 import { MobileCTA } from './components/MobileCTA'
-import { CompetitionDetails } from './components/CompetitionDetails'
-import { FormPage } from './pages/FormPage'
+
+const SplashCursor = lazy(() => import('./components/SplashCursor'))
+const CompetitionDetails = lazy(() =>
+  import('./components/CompetitionDetails').then((m) => ({ default: m.CompetitionDetails })),
+)
+const FormPage = lazy(() => import('./pages/FormPage').then((m) => ({ default: m.FormPage })))
 
 function HomePage() {
   return (
@@ -28,17 +32,17 @@ function HomePage() {
       <Navbar />
       <main id="main" className="page-main">
         <Hero />
-        <div className="about-stage relative h-[200dvh]">
+        <div className="about-stage relative h-2x-dvh">
           <About />
         </div>
-        <div className="patrons-stage relative z-30 -mt-[100dvh]">
+        <div className="patrons-stage relative z-30 neg-mt-screen-dvh">
           <Patrons />
         </div>
         <Events />
-        <div className="prizes-stage relative h-[200dvh]">
+        <div className="prizes-stage relative h-2x-dvh">
           <Prizes />
         </div>
-        <div className="rules-stage relative z-30 -mt-[100dvh]">
+        <div className="rules-stage relative z-30 neg-mt-screen-dvh">
           <Rules />
         </div>
         <Team />
@@ -47,38 +51,48 @@ function HomePage() {
       </main>
       <Footer />
       <MobileCTA />
-      <CompetitionDetails />
+      <Suspense fallback={null}>
+        <CompetitionDetails />
+      </Suspense>
     </>
   )
 }
 
 function ScreenRouter() {
   const { path } = useRouter()
-  return path === '/form' ? <FormPage /> : <HomePage />
+  return path === '/form' ? (
+    <Suspense fallback={null}>
+      <FormPage />
+    </Suspense>
+  ) : (
+    <HomePage />
+  )
 }
 
 export default function App() {
   return (
     <RouterProvider>
       <FlowProvider>
-        <div
-          aria-hidden="true"
-          className="splash-cursor-global fixed inset-0"
-          style={{ zIndex: 35, pointerEvents: 'none' }}
-        >
-          <SplashCursor
-            DENSITY_DISSIPATION={3.5}
-            VELOCITY_DISSIPATION={2}
-            PRESSURE={0.1}
-            CURL={3}
-            SPLAT_RADIUS={0.2}
-            SPLAT_FORCE={6000}
-            COLOR_UPDATE_SPEED={10}
-            SHADING
-            RAINBOW_MODE
-            COLOR="#A855F7"
-          />
-        </div>
+        <Suspense fallback={null}>
+          <div
+            aria-hidden="true"
+            className="splash-cursor-global fixed inset-0"
+            style={{ zIndex: 35, pointerEvents: 'none' }}
+          >
+            <SplashCursor
+              DENSITY_DISSIPATION={3.5}
+              VELOCITY_DISSIPATION={2}
+              PRESSURE={0.1}
+              CURL={3}
+              SPLAT_RADIUS={0.2}
+              SPLAT_FORCE={6000}
+              COLOR_UPDATE_SPEED={10}
+              SHADING
+              RAINBOW_MODE
+              COLOR="#A855F7"
+            />
+          </div>
+        </Suspense>
         <ScreenRouter />
       </FlowProvider>
     </RouterProvider>

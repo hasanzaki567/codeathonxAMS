@@ -1,10 +1,12 @@
+import { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowRight } from 'lucide-react'
 import { EVENT, HERO, REGISTRATION_URL } from '../data/site'
 import { Countdown } from './Countdown'
 import TextType from './TextType'
 import { FerrofluidBackground } from './FerrofluidBackground'
-import WarpText from './WarpText'
+
+const WarpText = lazy(() => import('./WarpText'))
 
 const ease = [0.22, 1, 0.36, 1] as const
 
@@ -16,7 +18,7 @@ const WELCOME_MESSAGES = [
 
 export function Hero() {
   return (
-    <section id="top" className="hero relative z-10 min-h-[100dvh] w-full overflow-hidden bg-black text-white">
+    <section id="top" className="hero relative z-10 min-h-screen-dvh w-full overflow-hidden bg-black text-white">
       <FerrofluidBackground
         colors={['#02A4FF', '#34D9B2', '#02A4FF']}
         speed={0.5}
@@ -34,7 +36,7 @@ export function Hero() {
         mouseRadius={0.35}
       />
       <div className="hero__frame relative z-10">
-        <div className="hero__inner wrap flex min-h-[100dvh] flex-col items-center justify-center pb-14 pt-12 text-center sm:pb-12 sm:pt-16">
+        <div className="hero__inner wrap flex min-h-screen-dvh flex-col items-center justify-center pb-14 pt-12 text-center sm:pb-12 sm:pt-16">
           <div className="hero__content flex w-full flex-col items-center">
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -52,26 +54,28 @@ export function Hero() {
               className="hero__title mt-3 flex w-full max-w-5xl flex-col items-center sm:mt-8"
             >
               <h1 className="sr-only">{EVENT.name}</h1>
-              <WarpText
-                text={EVENT.name}
-                color="#f8f5ff"
-                gradient={['#02A4FF', '#34D9B2']}
-                warpStrength={0.08}
-                warpScale={1.7}
-                speed={0.55}
-                pointerInfluence={0.42}
-                pointerStrength={0.38}
-                refraction={0.018}
-                ripple
-                fontSize={116}
-                fontWeight={800}
-                style={{ height: 'clamp(150px, 20vw, 230px)' }}
-                fontFamily="inherit"
-                letterSpacing={-0.06}
-                lineHeight={0.9}
-                alignY="top"
-                alignInset={0.26}
-              />
+              <Suspense fallback={null}>
+                <WarpText
+                  text={EVENT.name}
+                  color="#f8f5ff"
+                  gradient={['#02A4FF', '#34D9B2']}
+                  warpStrength={0.08}
+                  warpScale={1.7}
+                  speed={0.55}
+                  pointerInfluence={0.42}
+                  pointerStrength={0.38}
+                  refraction={0.018}
+                  ripple
+                  fontSize={116}
+                  fontWeight={800}
+                  style={{ height: 'clamp(150px, 20vw, 230px)' }}
+                  fontFamily="inherit"
+                  letterSpacing={-0.06}
+                  lineHeight={0.9}
+                  alignY="top"
+                  alignInset={0.26}
+                />
+              </Suspense>
             </motion.div>
 
             <motion.div

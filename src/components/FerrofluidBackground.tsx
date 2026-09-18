@@ -1,6 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { Suspense, lazy, useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
-import Ferrofluid, { type FerrofluidProps } from './Ferrofluid'
+import type { FerrofluidProps } from './Ferrofluid'
+
+const Ferrofluid = lazy(() => import('./Ferrofluid'))
 
 interface FerrofluidBackgroundProps extends FerrofluidProps {
   containerClassName?: string
@@ -42,7 +44,11 @@ export function FerrofluidBackground({
       className={`ferrofluid-bg absolute inset-0 z-0 overflow-hidden ${containerClassName}`}
       style={style}
     >
-      {active && <Ferrofluid className={`h-full w-full ${className ?? ''}`} {...ferrofluidProps} />}
+      {active && (
+        <Suspense fallback={null}>
+          <Ferrofluid className={`h-full w-full ${className ?? ''}`} {...ferrofluidProps} />
+        </Suspense>
+      )}
     </div>
   )
 }
