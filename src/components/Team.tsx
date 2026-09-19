@@ -20,6 +20,7 @@ interface Member {
   name: string
   role: string
   socials: Socials
+  image?: string
 }
 
 function GithubIcon({ className }: { className?: string }) {
@@ -80,10 +81,14 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
       <div className="team-card group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-[#131312] p-6 text-center shadow-[0_20px_40px_-28px_rgba(0,0,0,0.8)] transition-colors duration-300 hover:border-white/25 sm:p-8">
       <div className={`relative mb-5 ${wide ? 'sm:h-28 sm:w-28' : ''}`}>
         <div
-          className="grid h-24 w-24 place-items-center rounded-full border-2 border-white/20 object-cover transition-colors duration-300 group-hover:border-white/40"
+          className="grid h-24 w-24 place-items-center overflow-hidden rounded-full border-2 border-white/20 transition-colors duration-300 group-hover:border-white/40"
           aria-hidden="true"
         >
-          <span className="font-display text-lg font-bold tracking-tight text-white/80">{initials(member.name)}</span>
+          {member.image ? (
+            <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
+          ) : (
+            <span className="font-display text-lg font-bold tracking-tight text-white/80">{initials(member.name)}</span>
+          )}
         </div>
       </div>
       <h3 className="font-display text-base font-bold uppercase tracking-wide text-white">{member.name}</h3>

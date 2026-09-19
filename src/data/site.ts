@@ -1,3 +1,20 @@
+import farithaImg from '../assets/faritha.png'
+import fizalImg from '../assets/fizal.jpeg'
+import zubairImg from '../assets/mohammed zubair.webp'
+import suhailImg from '../assets/mohamed suhail.jpeg'
+import hasanZakiImg from '../assets/hasanzaki.jpg'
+import nihayaImg from '../assets/nihaya.png'
+import aasifImg from '../assets/aasif ibraHim.jpeg'
+import ajayImg from '../assets/ajay.jpeg'
+import rifanImg from '../assets/rifan al deen.jpeg'
+import umarImg from '../assets/mohamed umar.jpeg'
+import balaImg from '../assets/bala p.jpeg'
+import razeethImg from '../assets/abdul razeeth.jpeg'
+import afreenImg from '../assets/afreen.jpeg'
+import joyceImg from '../assets/joyce katherine.jpeg'
+import multhazimImg from '../assets/multhazim.jpeg'
+import sharafahImg from '../assets/sharafah.jpeg'
+
 export const EVENT = {
   name: 'AMS CODEATHON',
   year: '2026',
@@ -80,31 +97,31 @@ export const TEAM = {
   sub: 'THE PEOPLE BEHIND IT',
   organizers: [
     { name: 'Ms M Sukanya', role: 'Event Organizer', socials: {} },
-    { name: 'Ms A Faritha Banu', role: 'Event Organizer', socials: {} },
+    { name: 'Ms A Faritha Banu', role: 'Event Organizer', image: farithaImg, socials: {} },
   ],
   leads: [
-    { name: 'Mohamed Fizal', role: 'Event Lead', socials: {} },
-    { name: 'Mohammed Zubair', role: 'Event Lead', socials: {} },
+    { name: 'Mohamed Fizal', role: 'Event Lead', image: fizalImg, socials: {} },
+    { name: 'Mohammed Zubair', role: 'Event Lead', image: zubairImg, socials: {} },
     { name: 'Arif Basha T', role: 'Event Lead', socials: {} },
-    { name: 'Suhail', role: 'Treasurer', socials: {} },
+    { name: 'Suhail', role: 'Treasurer', image: suhailImg, socials: {} },
   ],
   technicalLeads: [
-    { name: 'Hasan Zaki', role: 'Technical Lead', socials: {} },
-    { name: 'Sharafah S', role: 'Technical Lead', socials: {} },
-    { name: 'Nihaya A', role: 'Technical Lead', socials: {} },
-    { name: 'Aafreen', role: 'Technical Lead', socials: {} },
+    { name: 'Hasan Zaki', role: 'Technical Lead', image: hasanZakiImg, socials: {} },
+    { name: 'Sharafah S', role: 'Technical Lead', image: sharafahImg, socials: {} },
+    { name: 'Nihaya A', role: 'Technical Lead', image: nihayaImg, socials: {} },
+    { name: 'Aafreen', role: 'Technical Lead', image: afreenImg, socials: {} },
   ],
   coordinators: [
-    { name: 'Multhazim', role: 'Event Coordinator', socials: {} },
-    { name: 'Aasif Ibrahim', role: 'Event Coordinator', socials: {} },
-    { name: 'Joyce Katherine', role: 'Event Coordinator', socials: {} },
-    { name: 'Ajay', role: 'Event Coordinator', socials: {} },
+    { name: 'Multhazim', role: 'Event Coordinator', image: multhazimImg, socials: {} },
+    { name: 'Aasif Ibrahim', role: 'Event Coordinator', image: aasifImg, socials: {} },
+    { name: 'Joyce Katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
+    { name: 'Ajay', role: 'Event Coordinator', image: ajayImg, socials: {} },
   ],
   media: [
-    { name: 'Rifan Al Deen', role: 'Media Team', socials: {} },
-    { name: 'Mohammed Umar', role: 'Media Team', socials: {} },
-    { name: 'Bala P', role: 'Media Team', socials: {} },
-    { name: 'Abdur Razeeth', role: 'Media Team', socials: {} },
+    { name: 'Rifan Al Deen', role: 'Media Team', image: rifanImg, socials: {} },
+    { name: 'Mohammed Umar', role: 'Media Team', image: umarImg, socials: {} },
+    { name: 'Bala P', role: 'Media Team', image: balaImg, socials: {} },
+    { name: 'Abdur Razeeth', role: 'Media Team', image: razeethImg, socials: {} },
   ],
 } as const
 
