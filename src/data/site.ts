@@ -4,7 +4,7 @@ import zubairImg from '../assets/mohammed zubair.webp'
 import suhailImg from '../assets/mohamed suhail.jpeg'
 import hasanZakiImg from '../assets/hasanzaki.jpg'
 import nihayaImg from '../assets/nihaya.png'
-import aasifImg from '../assets/aasif ibraHim.jpeg'
+import aasifImg from '../assets/aasif ibraHim.png'
 import ajayImg from '../assets/ajay.jpeg'
 import rifanImg from '../assets/rifan al deen.jpeg'
 import umarImg from '../assets/mohamed umar.jpeg'
@@ -107,13 +107,15 @@ export const TEAM = {
     { name: 'Hasan Zaki', role: 'Technical Lead', image: hasanZakiImg, socials: {} },
     { name: 'Sharafah S', role: 'Technical Lead', image: sharafahImg, socials: {} },
     { name: 'Nihaya A', role: 'Technical Lead', image: nihayaImg, socials: {} },
-    { name: 'Aafreen', role: 'Technical Lead', image: afreenImg, socials: {} },
+    { name: 'Aasif Ibrahim', role: 'Technical Lead', image: aasifImg, socials: {} },
+
   ],
   coordinators: [
+    { name: 'Aafreen', role: 'Event Coordinator', image: afreenImg, socials: {} },
     { name: 'Multhazim', role: 'Event Coordinator', image: multhazimImg, socials: {} },
-    { name: 'Aasif Ibrahim', role: 'Event Coordinator', image: aasifImg, socials: {} },
     { name: 'Joyce Katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
     { name: 'Ajay', role: 'Event Coordinator', image: ajayImg, socials: {} },
+
   ],
   media: [
     { name: 'Rifan Al Deen', role: 'Media Team', image: rifanImg, socials: {} },

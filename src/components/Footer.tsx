@@ -80,7 +80,17 @@ export function Footer() {
         </div>
 
         <div className="footer__bottom mt-14 flex flex-col gap-2 border-t border-night-line pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="footer__copyright text-xs text-white/40">{FOOTER.copyright}</p>
+          <div className="footer__bottom-left flex flex-col gap-2 sm:items-start">
+            <p className="footer__copyright text-xs text-white/40">{FOOTER.copyright}</p>
+            <a
+              href="https://www.linkedin.com/in/hasan-zaki-9083b2344/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer__credit text-xs text-white/40 transition-colors hover:text-white/70"
+            >
+              Designed and developed by HASAN ZAKI
+            </a>
+          </div>
           <p className="footer__bottom-tagline font-mono text-[11px] uppercase tracking-[0.18em] text-white/30">
             {EVENT.tagline}
           </p>
