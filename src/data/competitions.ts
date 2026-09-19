@@ -144,7 +144,7 @@ export const COMPETITIONS: Competition[] = [
         'Teams are free to choose and develop a project based on their own ideas',
         'Pre-built projects are allowed if you clearly demonstrate your contribution and development during the hackathon',
         'A PowerPoint Presentation (PPT) is mandatory',
-        'The presentation must follow the official PPT format/template provided by the organizers',
+        'The presentation must follow the official PPT format From SIH Template',
         'The hackathon consists of 3 rounds',
         'Any malpractice leads to immediate disqualification',
         'Jury and organizing committee decisions are final',
@@ -196,7 +196,7 @@ export const COMPETITIONS: Competition[] = [
       rules: [
         'All work must be original and produced during the event window',
         'No copying or unauthorized assistance from other teams',
-        'Materials and tool usage follow the rules announced at the event',
+
         'Deadlines are strict — protototypes after the cut-off are disqualified',
         'Any malpractice leads to immediate disqualification',
         'Jury and organizing committee decisions are final',
