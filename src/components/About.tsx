@@ -46,12 +46,31 @@ export function About() {
             animated={false}
             colors={['#c084fc', '#f472b6', '#38bdf8']}
           >
-            <div className="about__figure relative mx-auto aspect-[5/4] w-full max-w-md overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm">
+            <div
+              className="about__figure relative mx-auto aspect-[5/4] w-full max-w-md cursor-pointer overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm group"
+              onDoubleClick={() => window.open('https://maps.app.goo.gl/f7iPJ5ENmMyyRgwGA', '_blank', 'noopener,noreferrer')}
+              title="Double click to view location on Google Maps"
+              role="link"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') window.open('https://maps.app.goo.gl/f7iPJ5ENmMyyRgwGA', '_blank', 'noopener,noreferrer')
+              }}
+              aria-label="Double click to view college location on Google Maps"
+            >
             <img
               src={collegeImg}
               alt="College campus"
               className="about__figure-img absolute inset-0 h-full w-full object-cover"
             />
+            <div className="pointer-events-none absolute inset-x-0 top-0 flex items-center justify-center bg-gradient-to-b from-black/45 via-black/10 to-transparent p-3 transition-opacity duration-300">
+              <span className="flex items-center gap-2 rounded-full border border-white/25 bg-black/55 px-3.5 py-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-white/90 shadow-sm backdrop-blur-sm sm:text-[11px]">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5">
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                Double click to view location
+              </span>
+            </div>
             </div>
           </BorderGlow>
         </Reveal>
