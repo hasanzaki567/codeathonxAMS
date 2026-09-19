@@ -5,7 +5,7 @@ import { COMPETITIONS } from '../data/competitions'
 import type { CompetitionId } from '../data/competitions'
 import { Modal } from './ui/Modal'
 import { Reveal } from './ui/Reveal'
-// import { SectionHeader } from './ui/SectionHeader'
+
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Rules() {

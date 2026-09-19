@@ -203,7 +203,7 @@ export const COMPETITIONS: Competition[] = [
       ],
       evaluationNote:
         'Judged on relevance, design maturity, a working prototype demo, and whether the build could scale.',
-      suggestedDomains: ['Robotics', 'IoT', 'EV', 'Automation', 'Energy', 'Smart Systems'],
+      suggestedDomains: ['Robotics', 'IoT', 'EV', 'Automation', 'Energy', 'Smart Systems', 'Open Innovation'],
     },
   },
 ]

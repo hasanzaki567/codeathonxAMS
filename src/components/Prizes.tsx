@@ -1,14 +1,14 @@
-import { Award, Briefcase } from 'lucide-react'
+import { Award, ArrowRight, Briefcase, Trophy } from 'lucide-react'
 import BorderGlow from './BorderGlow'
-import ElectricBorder from './ElectricBorder'
+import { COMPETITIONS, EVENT_PRIZES } from '../data/competitions'
+import type { Competition } from '../data/competitions'
 import { PRIZES } from '../data/prizes'
+import { FlipCard } from './FlipCard'
 import { Reveal } from './ui/Reveal'
 import { SectionHeader } from './ui/SectionHeader'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function Prizes() {
-  const [first, second, third] = PRIZES.podium
-
   return (
     <section id="prizes" className="prizes relative min-h-screen-dvh overflow-hidden bg-black py-24 text-white sm:py-32">
       <FerrofluidBackground
@@ -32,16 +32,28 @@ export function Prizes() {
           <SectionHeader label={PRIZES.label} heading={PRIZES.heading} align="center" dark />
         </Reveal>
 
-        <div className="prizes__podium mt-16 grid items-end gap-5 md:grid-cols-3">
-          <Reveal delay={0.1} className="order-2 md:order-1">
-            <PodiumCard place={second.place} amount={second.amount} note={second.note} rank="2" borderColor="#c0c0c0" light />
-          </Reveal>
-          <Reveal delay={0} className="order-1 md:order-2">
-            <PodiumCard place={first.place} amount={first.amount} note={first.note} rank="1" borderColor="#f5c518" light featured />
-          </Reveal>
-          <Reveal delay={0.2} className="order-3">
-            <PodiumCard place={third.place} amount={third.amount} note={third.note} rank="3" borderColor="#c0c0c0" light />
-          </Reveal>
+        <Reveal delay={0.05}>
+          <div className="prizes__pool mx-auto mt-14 flex max-w-3xl flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-8 text-center backdrop-blur-sm sm:flex-row sm:justify-between sm:gap-6 sm:text-left">
+            <div>
+              <p className="prizes__pool-label font-mono text-[11px] uppercase tracking-[0.25em] text-white/50">
+                Total Prize Pool
+              </p>
+              <p className="prizes__pool-amount mt-1.5 font-display text-4xl font-bold tracking-tight text-accent sm:text-5xl">
+                ₹25,000
+              </p>
+            </div>
+            <p className="prizes__pool-note max-w-xs text-sm leading-relaxed text-white/60">
+              A dedicated prize pool for each event — Crack the Code, HackQuest &amp; TechForge. Every competition shares the same rewards.
+            </p>
+          </div>
+        </Reveal>
+
+        <div className="prizes__events mt-10 grid gap-6 md:grid-cols-3">
+          {COMPETITIONS.map((competition, i) => (
+            <Reveal key={competition.id} delay={i * 0.1}>
+              <EventPrizeCard competition={competition} />
+            </Reveal>
+          ))}
         </div>
 
         <div className="prizes__perks mx-auto mt-8 grid max-w-3xl gap-5 sm:grid-cols-2">
@@ -113,53 +125,61 @@ export function Prizes() {
   )
 }
 
-interface PodiumCardProps {
-  place: string
-  amount: string
-  note: string
-  rank: string
-  borderColor: string
-  light?: boolean
-  featured?: boolean
-}
-
-function PodiumCard({ place, amount, note, rank, borderColor, light = false, featured }: PodiumCardProps) {
-  return (
-    <ElectricBorder
-      color={borderColor}
-      speed={featured ? 0.7 : 1}
-      chaos={featured ? 0.14 : 0.1}
-      thickness={featured ? 2.5 : 2}
-      style={{ borderRadius: 18 }}
-      className={featured ? 'md:-translate-y-12' : ''}
-    >
-      <div
-        className={`prizes__card relative flex h-full flex-col rounded-[14px] p-7 text-center transition-transform duration-300 hover:-translate-y-1 ${
-        light ? 'prizes__card--light text-ink' : 'prizes__card--regular text-white'
-      }`}
-        style={light ? { backgroundColor: borderColor } : undefined}
-    >
-      <span
-        className="prizes__card-accent absolute left-1/2 top-0 h-1.5 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full"
-        style={{ backgroundColor: light ? 'rgba(0,0,0,0.35)' : borderColor }}
-      />
-      <span
-        className="prizes__card-rank mx-auto grid h-10 w-10 place-items-center rounded-full font-mono text-sm font-semibold"
-        style={{
-          backgroundColor: light ? 'rgba(0,0,0,0.18)' : `${borderColor}26`,
-          color: light ? '#1c1c1c' : borderColor,
-        }}
-      >
-        {rank}
-      </span>
-      <h3 className={`prizes__card-place mt-4 font-display text-lg font-bold tracking-tight ${light ? 'text-ink' : 'text-white'}`}>
-        {place}
-      </h3>
-      <p className={`prizes__card-amount mt-2 font-display text-4xl font-bold tracking-tight sm:text-5xl ${light ? 'text-ink' : 'text-white'}`}>
-        {amount}
-      </p>
-      <p className={`prizes__card-note mt-4 text-xs ${light ? 'text-ink/70' : 'text-white/60'}`}>{note}</p>
+function EventPrizeCard({ competition }: { competition: Competition }) {
+  const front = (
+    <div className="prize-event__front flex h-full w-full flex-col rounded-[18px] border border-white/10 bg-[linear-gradient(165deg,#16131f,#0e0c13)] p-6 sm:p-7">
+      <div className="flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <span className="prize-event__index inline-grid h-8 w-8 place-items-center rounded-full border border-accent/30 bg-accent/10 font-mono text-xs font-semibold text-accent">
+            {competition.index}
+          </span>
+          <p className="prize-event__category mt-4 font-mono text-[10px] uppercase tracking-[0.22em] text-white/40">{competition.category}</p>
+          <h3 className="prize-event__name mt-1.5 font-display text-2xl font-bold tracking-tight text-white">{competition.name}</h3>
+          <p className="prize-event__tagline mt-1 text-sm text-white/55">{competition.tagline}</p>
+        </div>
       </div>
-    </ElectricBorder>
+      <div className="my-auto" />
+      <button
+        type="button"
+        className="prize-event__btn mt-7 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-6 py-3.5 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.02] active:scale-[0.98]"
+      >
+        Check Prize Pool
+        <ArrowRight className="h-4 w-4" />
+      </button>
+    </div>
+  )
+
+  const back = (
+    <div className="prize-event__back flex h-full w-full flex-col rounded-[18px] border border-accent/25 bg-[linear-gradient(150deg,rgba(2,164,255,0.12),rgba(52,217,178,0.10))] p-6 sm:p-7">
+      <div className="flex items-center justify-between gap-3">
+        <p className="prize-event__back-label flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
+          <Trophy className="h-4 w-4" />
+          Prizes — {competition.name}
+        </p>
+      </div>
+      <div className="prize-event__list mt-6 flex-1 space-y-3">
+        {EVENT_PRIZES.map((prize) => (
+          <div key={prize.place} className="prize-event__row rounded-xl border border-white/10 bg-black/25 px-4 py-3">
+            <div className="flex items-baseline justify-between gap-3">
+              <span className="text-sm font-medium text-white/85">{prize.place}</span>
+              <span className="font-mono text-base font-semibold text-accent">{prize.amount}</span>
+            </div>
+            <p className="mt-1 text-xs leading-snug text-white/45">{prize.note}</p>
+          </div>
+        ))}
+      </div>
+      <p className="prize-event__back-hint mt-6 text-center font-mono text-[10px] uppercase tracking-[0.2em] text-white/35">
+        Tap to go back
+      </p>
+    </div>
+  )
+
+  return (
+    <FlipCard
+      front={front}
+      back={back}
+      flipOnHover={false}
+      className="prize-event h-[420px]"
+    />
   )
 }

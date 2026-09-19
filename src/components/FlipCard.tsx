@@ -5,17 +5,18 @@ interface FlipCardProps {
   front: ReactNode
   back: ReactNode
   className?: string
+  flipOnHover?: boolean
 }
 
-export function FlipCard({ front, back, className = '' }: FlipCardProps) {
+export function FlipCard({ front, back, className = '', flipOnHover = true }: FlipCardProps) {
   const [flipped, setFlipped] = useState(false)
 
   return (
     <div
       className={`flip-card ${className}`}
       style={{ perspective: 1000 }}
-      onMouseEnter={() => setFlipped(true)}
-      onMouseLeave={() => setFlipped(false)}
+      onMouseEnter={() => (flipOnHover ? setFlipped(true) : undefined)}
+      onMouseLeave={() => (flipOnHover ? setFlipped(false) : undefined)}
       onClick={() => setFlipped((f) => !f)}
       onKeyDown={(e) => {
         if (e.key === 'Enter' || e.key === ' ') {

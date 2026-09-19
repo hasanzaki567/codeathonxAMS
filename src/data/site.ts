@@ -51,7 +51,7 @@ export const WHY = {
 export const PATRONS = {
   label: 'OUR PATRONS',
   heading: 'GUIDING THE VISION.',
-  sub: 'The leadership behind FROST HACKS — championing innovation, learning, and impact at AMS college of engineering.',
+  sub: 'The leadership behind AMS Codeathon — championing innovation, learning, and impact at AMS college of engineering.',
   groupLabel: 'MAIN PATRONS',
   main: [
     { title: 'Secretary & Correspondent', name: 'Mr. H. Mohamed Salegh', featured: true, image: '/images/correspondent.jpeg' },
