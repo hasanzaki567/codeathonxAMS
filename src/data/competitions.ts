@@ -1,5 +1,5 @@
 import crackTheCodeImage from '../assets/crackTheCode.jpeg'
-import hackathonImage from '../assets/hackathon.jpeg'
+import hackImage from '../assets/hack.jpeg'
 import techforgeImage from '../assets/techforge.jpeg'
 
 export type CompetitionId = 'crack-the-code' | 'hackathon' | 'techforge'
@@ -103,10 +103,10 @@ export const COMPETITIONS: Competition[] = [
   {
     id: 'hackathon',
     index: '02',
-    name: 'HACKATHON',
+    name: 'HACKQUEST',
     category: 'Software & Innovation',
     teamSize: '2–4 Members',
-    image: hackathonImage,
+    image: hackImage,
     tagline: 'Find a problem. Build the solution.',
     description: 'An open-innovation build sprint across technology domains.',
     fee: '₹150 / participant',
