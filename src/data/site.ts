@@ -10,7 +10,6 @@ import rifanImg from '../assets/rifan al deen.jpeg'
 import umarImg from '../assets/mohamed umar.jpeg'
 import balaImg from '../assets/bala p.jpeg'
 import razeethImg from '../assets/abdul razeeth.jpeg'
-import afreenImg from '../assets/afreen.jpeg'
 import joyceImg from '../assets/joyce katherine.jpeg'
 import multhazimImg from '../assets/multhazim.jpeg'
 import sharafahImg from '../assets/sharafah.jpeg'
@@ -100,7 +99,7 @@ export const TEAM = {
   leads: [
     { name: 'Mohamed Fizal', role: 'Event Lead', image: fizalImg, socials: {} },
     { name: 'Mohammed Zubair', role: 'Event Lead', image: zubairImg, socials: {} },
-    { name: 'Arif Basha T', role: 'Event Lead', socials: {} },
+    { name: 'Arif Basha ', role: 'Event Lead', socials: {} },
     { name: 'Suhail', role: 'Treasurer', image: suhailImg, socials: {} },
   ],
   technicalLeads: [
@@ -111,7 +110,7 @@ export const TEAM = {
 
   ],
   coordinators: [
-    { name: 'Aafreen', role: 'Event Coordinator', image: afreenImg, socials: {} },
+    { name: 'Aafreen', role: 'Event Coordinator', socials: {} },
     { name: 'Multhazim', role: 'Event Coordinator', image: multhazimImg, socials: {} },
     { name: 'Joyce Katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
     { name: 'Ajay', role: 'Event Coordinator', image: ajayImg, socials: {} },
