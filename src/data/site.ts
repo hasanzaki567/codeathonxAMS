@@ -80,7 +80,7 @@ export const TEAM = {
   sub: 'THE PEOPLE BEHIND IT',
   organizers: [
     { name: 'Ms M Sukanya', role: 'Event Organizer', socials: {} },
-    { name: 'Ms A Faridha Banu', role: 'Event Organizer', socials: {} },
+    { name: 'Ms A Faritha Banu', role: 'Event Organizer', socials: {} },
   ],
   leads: [
     { name: 'Mohamed Fizal', role: 'Event Lead', socials: {} },
