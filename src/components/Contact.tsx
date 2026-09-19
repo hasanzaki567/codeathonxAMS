@@ -7,9 +7,10 @@ import { SectionHeader } from './ui/SectionHeader'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 const ICONS: Record<string, LucideIcon> = {
-  email: Mail,
+  call: Phone,
   phone: Phone,
   instagram: Camera,
+  email: Mail,
   linkedin: Briefcase,
   whatsapp: MessageCircle,
 }
@@ -38,10 +39,9 @@ export function Contact() {
           <SectionHeader label={CONTACT.label} heading={CONTACT.heading} sub={CONTACT.sub} align="center" dark />
         </Reveal>
 
-        <div className="contact__grid mx-auto mt-12 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
+        <div className="contact__grid mx-auto mt-12 grid max-w-3xl grid-cols-3 gap-4 sm:gap-6">
           {CONTACT.channels.map((channel, i) => {
             const Icon = ICONS[channel.key] ?? Phone
-            const filled = channel.value.trim() !== ''
             return (
               <Reveal key={channel.key} delay={i * 0.06}>
 <BorderGlow
@@ -55,30 +55,26 @@ export function Contact() {
                   animated={false}
                   colors={['#c084fc', '#f472b6', '#38bdf8']}
                 >
-                  <div
-                    className={`contact__channel flex h-full flex-col items-center gap-3 rounded-2xl border p-5 text-center ${
-                      filled ? 'border-line bg-surface' : 'border-dashed border-line bg-surface/60'
-                    }`}
+                  <a
+                    href={channel.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${channel.label} ${channel.value}`}
+                    className="contact__channel group flex h-full w-full flex-col items-center gap-3 rounded-2xl border border-white/10 bg-[#131312] p-5 text-center shadow-[0_20px_40px_-28px_rgba(0,0,0,0.8)] transition-colors duration-300 hover:border-white/25"
                   >
-                  <span className="contact__channel-icon grid h-11 w-11 place-items-center rounded-full bg-night">
-                    <Icon className="contact__channel-icon-svg h-5 w-5 text-accent" />
+                  <span className="contact__channel-icon grid h-11 w-11 place-items-center rounded-full border border-white/20 bg-white/5">
+                    <Icon className="contact__channel-icon-svg h-5 w-5 text-white/80" />
                   </span>
                   <div className="contact__channel-body min-w-0">
-                    <p className="contact__channel-label font-mono text-[10px] uppercase tracking-[0.16em] text-soft">{channel.label}</p>
-                    <p className="contact__channel-value mt-1 text-sm font-medium text-ink">
-                      {filled ? channel.value : 'TBA'}
-                    </p>
+                    <p className="contact__channel-label font-mono text-[10px] uppercase tracking-[0.16em] text-white/50">{channel.label}</p>
+                    <p className="contact__channel-value mt-1 text-sm font-medium text-white">{channel.value}</p>
                   </div>
-                  </div>
+                  </a>
                 </BorderGlow>
               </Reveal>
             )
           })}
         </div>
-
-        <Reveal delay={0.2}>
-          <p className="contact__note mt-10 text-center text-xs text-soft">TBA marks placeholder details — finalized by the organizers soon.</p>
-        </Reveal>
       </div>
     </section>
   )

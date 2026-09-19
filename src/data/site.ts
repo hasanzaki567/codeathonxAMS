@@ -83,11 +83,9 @@ export const CONTACT = {
   heading: 'Have a question?',
   sub: 'Contact the organizing team.',
   channels: [
-    { key: 'email', label: 'Email', value: '', hint: 'Set email in src/data/site.ts' },
-    { key: 'phone', label: 'Phone', value: '', hint: 'Set phone in src/data/site.ts' },
-    { key: 'instagram', label: 'Instagram', value: '', hint: 'Set handle in src/data/site.ts' },
-    { key: 'linkedin', label: 'LinkedIn', value: '', hint: 'Set profile in src/data/site.ts' },
-    { key: 'whatsapp', label: 'WhatsApp / Community', value: '', hint: 'Set link in src/data/site.ts' },
+    { key: 'call', label: 'Fizal', value: '9123538846', href: 'https://wa.me/919123538846' },
+    { key: 'instagram', label: 'Instagram', value: '@amscode_x', href: 'https://www.instagram.com/amscode_x?stkn=MXB6MDB5b202NDdjeA==' },
+    { key: 'email', label: 'Email', value: '110123104301@aalimec.ac.in', href: 'mailto:110123104301@aalimec.ac.in' },
   ],
 } as const
 
