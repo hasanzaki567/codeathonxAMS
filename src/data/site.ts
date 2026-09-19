@@ -78,20 +78,33 @@ export const TEAM = {
   label: 'TEAM',
   heading: 'OUR TEAM',
   sub: 'THE PEOPLE BEHIND IT',
-  lead: {
-    name: 'Arjun Mehta',
-    role: 'Lead Organizer',
-    socials: { email: '#', linkedin: '#', github: '#', instagram: '#' },
-  },
-  directors: [
-    { name: 'Sara Khan', role: 'Event Director', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
-    { name: 'Vikram Iyer', role: 'Technical Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+  organizers: [
+    { name: 'Ms M Sukanya', role: 'Event Organizer', socials: {} },
+    { name: 'Ms A Faridha Banu', role: 'Event Organizer', socials: {} },
   ],
-  core: [
-    { name: 'Divya Rao', role: 'Design Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
-    { name: 'Karthik Nair', role: 'Logistics Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
-    { name: 'Fatima Noor', role: 'Outreach Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
-    { name: 'Rahul Kumar', role: 'Finance Lead', socials: { email: '#', linkedin: '#', github: '#', instagram: '#' } },
+  leads: [
+    { name: 'Mohamed Fizal', role: 'Event Lead', socials: {} },
+    { name: 'Mohammed Zubair', role: 'Event Lead', socials: {} },
+    { name: 'Arif Basha T', role: 'Event Lead', socials: {} },
+    { name: 'Suhail', role: 'Treasurer', socials: {} },
+  ],
+  technicalLeads: [
+    { name: 'Hasan Zaki', role: 'Technical Lead', socials: {} },
+    { name: 'Sharafah S', role: 'Technical Lead', socials: {} },
+    { name: 'Nihaya A', role: 'Technical Lead', socials: {} },
+    { name: 'Aafreen', role: 'Technical Lead', socials: {} },
+  ],
+  coordinators: [
+    { name: 'Multhazim', role: 'Event Coordinator', socials: {} },
+    { name: 'Aasif Ibrahim', role: 'Event Coordinator', socials: {} },
+    { name: 'Joyce Katherine', role: 'Event Coordinator', socials: {} },
+    { name: 'Ajay', role: 'Event Coordinator', socials: {} },
+  ],
+  media: [
+    { name: 'Rifan Al Deen', role: 'Media Team', socials: {} },
+    { name: 'Mohammed Umar', role: 'Media Team', socials: {} },
+    { name: 'Bala P', role: 'Media Team', socials: {} },
+    { name: 'Abdur Razeeth', role: 'Media Team', socials: {} },
   ],
 } as const
 

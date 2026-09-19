@@ -197,18 +197,32 @@ export function Team() {
       <div className="team__inner wrap relative z-10">
         <StickyTeamHeader progress={scrollYProgress} fadeProgress={fadeProgress} />
 
-        <div className="team__lead mx-auto mt-14 max-w-xl">
-          <ScrollTeamCard member={TEAM.lead} wide depth={1} />
-        </div>
-
-        <div className="team__directors mx-auto mt-6 grid max-w-3xl gap-6 sm:grid-cols-2">
-          {TEAM.directors.map((member, i) => (
+        <div className="team__organizers mx-auto mt-14 grid max-w-3xl gap-6 sm:grid-cols-2">
+          {TEAM.organizers.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + i * 0.15} />
           ))}
         </div>
 
         <div className="team__core mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {TEAM.core.map((member, i) => (
+          {TEAM.leads.map((member, i) => (
+            <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
+          ))}
+        </div>
+
+        <div className="team__technical mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {TEAM.technicalLeads.map((member, i) => (
+            <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
+          ))}
+        </div>
+
+        <div className="team__coordinators mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {TEAM.coordinators.map((member, i) => (
+            <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
+          ))}
+        </div>
+
+        <div className="team__media mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {TEAM.media.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
         </div>
