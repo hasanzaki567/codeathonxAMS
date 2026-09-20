@@ -46,7 +46,7 @@ export function Countdown() {
             }`}
           >
             <span className="countdown__value font-mono text-2xl font-medium leading-none text-white sm:text-4xl">{cell.value}</span>
-            <span className="countdown__label mt-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-white/80 sm:mt-2 sm:text-sm">
+            <span className="countdown__label mt-1.5 max-w-full font-mono text-[8px] uppercase tracking-[0.05em] text-white/80 sm:mt-2 sm:text-sm sm:tracking-[0.18em]">
               {cell.label}
             </span>
           </div>
