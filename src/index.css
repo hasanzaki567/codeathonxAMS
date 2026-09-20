@@ -40,11 +40,15 @@
 }
 
 @utility h-2x-dvh {
-  height: 200dvh;
+  height: 200svh;
 }
 
 @utility neg-mt-screen-dvh {
-  margin-top: -100dvh;
+  margin-top: -100svh;
+}
+
+@utility min-h-screen-svh {
+  min-height: 100svh;
 }
 
 @utility max-h-92-dvh {
@@ -78,6 +82,9 @@
   .max-h-86-dvh {
     max-height: 86vh;
   }
+  .min-h-screen-svh {
+    min-height: 100vh;
+  }
 }
 
 html {
@@ -86,7 +93,7 @@ html {
   max-width: 100%;
   overflow-x: hidden;
   -webkit-text-size-adjust: 100%;
-  overscroll-behavior-x: none;
+  overscroll-behavior: none;
 }
 
 @media (prefers-reduced-motion: reduce) {

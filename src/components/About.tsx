@@ -6,7 +6,7 @@ import { FerrofluidBackground } from './FerrofluidBackground'
 
 export function About() {
   return (
-    <section id="about" className="about sticky top-0 z-20 flex min-h-screen-dvh flex-col justify-center bg-paper py-16 sm:py-24">
+    <section id="about" className="about sticky top-0 z-20 flex min-h-screen-svh flex-col justify-center bg-paper py-16 sm:py-24">
       <FerrofluidBackground
         colors={['#ffffff', '#f2f2ee', '#e8e8e3']}
         speed={0.5}
