@@ -6,15 +6,16 @@ import hasanZakiImg from '../assets/hasanzaki.jpg'
 import nihayaImg from '../assets/nihaya.png'
 import aasifImg from '../assets/aasif ibraHim.png'
 import ajayImg from '../assets/ajay.jpeg'
-import rifanImg from '../assets/rifan al deen.jpeg'
+import rifanImg from '../assets/rifan al deen.png'
 import umarImg from '../assets/mohamed umar.jpeg'
 import balaImg from '../assets/bala p.jpeg'
-import razeethImg from '../assets/abdul razeeth.jpeg'
+import razeethImg from '../assets/abdul razeeth.png'
 import joyceImg from '../assets/joyce katherine.jpeg'
 import multhazimImg from '../assets/multhazim.jpeg'
 import sharafahImg from '../assets/sharafah.jpeg'
 import arifBashaImg from '../assets/arif basha.jpeg'
 import aafreenImg from '../assets/afreen.jpeg'
+import sukanyaImg from '../assets/sukanya.jpeg'
 
 export const EVENT = {
   name: 'AMS CODEATHON',
@@ -95,7 +96,7 @@ export const TEAM = {
   heading: 'OUR TEAM',
   sub: 'THE PEOPLE BEHIND IT',
   organizers: [
-    { name: 'Ms M Sukanya', role: 'Event Organizer', socials: {} },
+    { name: 'Ms M Sukanya', role: 'Event Organizer', image: sukanyaImg, socials: {} },
     { name: 'Ms A Faritha Banu', role: 'Event Organizer', image: farithaImg, socials: {} },
   ],
   leads: [
