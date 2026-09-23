@@ -116,7 +116,7 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
   )
 }
 
-function ScrollTeamCard({ member, wide = false, depth = 1 }: { member: Member; wide?: boolean; depth?: number }) {
+function ScrollTeamCard({ member, wide = false, depth = 1, className = '' }: { member: Member; wide?: boolean; depth?: number; className?: string }) {
   const ref = useRef<HTMLDivElement>(null)
   const { scrollYProgress } = useScroll({ target: ref, offset: ['start 0.95', 'end 0.15'] })
   const y = useTransform(scrollYProgress, [0, 1], [70 * depth, -70 * depth])
@@ -127,7 +127,7 @@ function ScrollTeamCard({ member, wide = false, depth = 1 }: { member: Member; w
   return (
     <motion.div
       ref={ref}
-      className="team-card-scroll will-change-transform"
+      className={`team-card-scroll will-change-transform ${className}`.trim()}
       style={{ y, rotateX, scale, opacity, transformPerspective: 800 }}
     >
       <TeamCard member={member} wide={wide} />
@@ -208,25 +208,25 @@ export function Team() {
           ))}
         </div>
 
-        <div className="team__core mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5">
+        <div className="team__core mt-12 grid gap-4 min-[480px]:grid-cols-5">
           {TEAM.leads.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
         </div>
 
-        <div className="team__technical mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5">
+        <div className="team__technical mt-12 grid gap-4 min-[480px]:grid-cols-5">
           {TEAM.technicalLeads.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
         </div>
 
-        <div className="team__coordinators mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5 lg:gap-4">
+        <div className="team__coordinators mt-12 grid gap-4 min-[480px]:grid-cols-5 lg:gap-4">
           {TEAM.coordinators.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
         </div>
 
-        <div className="team__media mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="team__media mt-12 grid gap-4 lg:grid-cols-4">
           {TEAM.media.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
