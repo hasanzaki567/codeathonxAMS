@@ -119,7 +119,7 @@ export const TEAM = {
   coordinators: [
     { name: 'Aafreen Taj. N', role: 'Event Coordinator', image: aafreenImg, socials: {} },
     { name: 'Multhazim', role: 'Event Coordinator', image: multhazimImg, socials: {} },
-    { name: 'Joyce katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
+    { name: 'katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
     { name: 'Ajay', role: 'Event Coordinator', image: ajayImg, socials: {} },
     { name: 'Dorai Murugan', role: 'Event Coordinator', image: doraiImg, socials: {} },
 
