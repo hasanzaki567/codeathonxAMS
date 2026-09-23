@@ -24,13 +24,12 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Can I participate in more than one competition?',
-    a: 'To be confirmed against the official rules.',
-    editable: true,
+    a: 'no, one can participate in one event only ',
+
   },
   {
     q: 'What should I bring?',
-    a: 'To be announced — organizers will publish the kit list before the event.',
-    editable: true,
+    a: ' a good lunch , working laptop and extension box ',
   },
   {
     q: 'Is a college ID required?',

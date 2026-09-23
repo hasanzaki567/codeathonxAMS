@@ -1,0 +1,504 @@
+- generic [ref=e2]:
+  - link "Skip to content" [ref=e3] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e4]:
+    - navigation "Primary" [ref=e5]:
+      - button "AMS CODEATHON2026" [ref=e6]
+      - generic [ref=e7]:
+        - button "About" [ref=e8]
+        - button "Events" [ref=e9]
+        - button "Prizes" [ref=e10]
+        - button "FAQ" [ref=e11]
+        - button "Register Now" [ref=e12]
+  - main [ref=e13]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - paragraph [ref=e19]: Inter-College Technical Innovation Challenge
+        - heading "AMS CODEATHON" [level=1] [ref=e20]
+        - generic [ref=e22]:
+          - text: W
+          - generic [aria-hidden] [ref=e23]: _
+        - paragraph [ref=e24]: 01 OCTOBER 2026 • CHENNAI
+        - generic [ref=e25]:
+          - link "Register Now" [ref=e26] [cursor=pointer]:
+            - /url: https://forms.gle/NpBTJM6PMTWVmPty9
+          - link "Explore Events" [ref=e29] [cursor=pointer]:
+            - /url: "#events"
+      - generic [ref=e32]:
+        - paragraph [ref=e33]: Starts in
+        - generic "Countdown to 2026-10-01T09:00:00+05:30" [ref=e34]:
+          - generic [ref=e35]:
+            - generic [ref=e36]:
+              - generic [ref=e37]: "07"
+              - generic [ref=e38]: Days
+            - generic [ref=e39]: ":"
+          - generic [ref=e40]:
+            - generic [ref=e41]:
+              - generic [ref=e42]: "18"
+              - generic [ref=e43]: Hours
+            - generic [ref=e44]: ":"
+          - generic [ref=e45]:
+            - generic [ref=e46]:
+              - generic [ref=e47]: "43"
+              - generic [ref=e48]: Minutes
+            - generic [ref=e49]: ":"
+          - generic [ref=e51]:
+            - generic [ref=e52]: "08"
+            - generic [ref=e53]: Seconds
+    - generic [ref=e57]:
+      - generic [ref=e58]:
+        - paragraph [ref=e59]: 01 / ABOUT
+        - heading "ABOUT" [level=2] [ref=e60]
+        - paragraph [ref=e61]: CODEATHON 2026 is an inter-college technical innovation challenge organized by Aalim Muhammed Salegh College of Engineering, Avadi, Chennai.It brings students together across coding, software innovation, and hardware engineering, giving them a platform to solve problems, build solutions, compete, and showcase what they can create.
+      - link "Double click to view college location on Google Maps" [ref=e64] [cursor=pointer]:
+        - img "College campus" [ref=e65]
+        - generic: Double click to view location
+    - generic [ref=e68]:
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - paragraph [ref=e72]: OUR PATRONS
+          - heading "GUIDING THE VISION." [level=2] [ref=e73]
+          - paragraph [ref=e74]: The leadership behind AMS Codeathon — championing innovation, learning, and impact at AMS college of engineering.
+        - paragraph [ref=e75]: MAIN PATRONS
+      - generic [ref=e80]:
+        - img "Secretary & Correspondent" [ref=e83]
+        - generic [ref=e84]:
+          - heading "Secretary & Correspondent" [level=3] [ref=e85]
+          - paragraph [ref=e86]: Mr. H. Mohamed Salegh
+      - generic [ref=e87]:
+        - generic [ref=e90]:
+          - img "Advisor" [ref=e92]
+          - generic [ref=e93]:
+            - heading "Advisor" [level=3] [ref=e94]
+            - paragraph [ref=e95]: Prof. A. Mohamed Abdul Kadher
+        - generic [ref=e98]:
+          - img "Principal" [ref=e100]
+          - generic [ref=e101]:
+            - heading "Principal" [level=3] [ref=e102]
+            - paragraph [ref=e103]: Dr. K.G. Parthiban
+        - generic [ref=e106]:
+          - img "Vice Principal" [ref=e108]
+          - generic [ref=e109]:
+            - heading "Vice Principal" [level=3] [ref=e110]
+            - paragraph [ref=e111]: Dr. AS. Salma Banu
+    - generic [ref=e114]:
+      - generic [ref=e116]:
+        - paragraph [ref=e117]: 02 / EVENTS
+        - heading "Choose your challenge." [level=2] [ref=e118]
+        - paragraph [ref=e119]: One track focuses on pure coding, the next on software innovation, and the third on hardware engineering.
+      - generic [ref=e120]:
+        - button "CRACK THE CODE 01 Coding & Debugging CRACK THE CODE Flip for details 01 / Details CRACK THE CODE Solve. Optimize. Outthink. Stages Round 1 · Warm-up Round 2 · Advanced Round 3 · Final Challenge Prizes 1st Prize ₹5,000 2nd Prize ₹2,500 Best Performance ₹1,000 ₹150 / participant Register View Challenge" [ref=e122]:
+          - generic [ref=e123]:
+            - generic [ref=e125]:
+              - img "CRACK THE CODE" [ref=e126]
+              - generic [ref=e128]: "01"
+              - generic [ref=e129]:
+                - paragraph [ref=e130]: Coding & Debugging
+                - heading "CRACK THE CODE" [level=3] [ref=e131]
+                - paragraph [ref=e132]: Flip for details
+            - generic [ref=e136]:
+              - generic [ref=e137]:
+                - paragraph [ref=e138]: 01 / Details
+                - heading "CRACK THE CODE" [level=3] [ref=e139]
+                - paragraph [ref=e140]: Solve. Optimize. Outthink.
+                - generic [ref=e141]:
+                  - paragraph [ref=e142]: Stages
+                  - list [ref=e143]:
+                    - listitem [ref=e144]: Round 1 · Warm-up
+                    - listitem [ref=e146]: Round 2 · Advanced
+                    - listitem [ref=e148]: Round 3 · Final Challenge
+                - generic [ref=e150]:
+                  - paragraph [ref=e151]: Prizes
+                  - list [ref=e158]:
+                    - listitem [ref=e159]:
+                      - generic [ref=e160]: 1st Prize
+                      - generic [ref=e161]: ₹5,000
+                    - listitem [ref=e162]:
+                      - generic [ref=e163]: 2nd Prize
+                      - generic [ref=e164]: ₹2,500
+                    - listitem [ref=e165]:
+                      - generic [ref=e166]: Best Performance
+                      - generic [ref=e167]: ₹1,000
+              - generic [ref=e168]:
+                - generic [ref=e169]: ₹150 / participant
+                - generic [ref=e170]:
+                  - button "Register" [ref=e171]
+                  - button "View Challenge" [ref=e172]
+        - button "HACKQUEST 02 Software & Innovation HACKQUEST Flip for details 02 / Details HACKQUEST Find a problem. Build the solution. Stages Idea & PPT Feasibility & Development Final Presentation & Demo Domains AI/ML Cybersecurity EdTech HealthTech FinTech IoT Open Innovation Prizes 1st Prize ₹5,000 2nd Prize ₹2,500 Best Performance ₹1,000 ₹150 / participant Register View Challenge" [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e179]:
+              - img "HACKQUEST" [ref=e180]
+              - generic [ref=e182]: "02"
+              - generic [ref=e183]:
+                - paragraph [ref=e184]: Software & Innovation
+                - heading "HACKQUEST" [level=3] [ref=e185]
+                - paragraph [ref=e186]: Flip for details
+            - generic [ref=e190]:
+              - generic [ref=e191]:
+                - paragraph [ref=e192]: 02 / Details
+                - heading "HACKQUEST" [level=3] [ref=e193]
+                - paragraph [ref=e194]: Find a problem. Build the solution.
+                - generic [ref=e195]:
+                  - paragraph [ref=e196]: Stages
+                  - list [ref=e197]:
+                    - listitem [ref=e198]: Idea & PPT
+                    - listitem [ref=e200]: Feasibility & Development
+                    - listitem [ref=e202]: Final Presentation & Demo
+                - generic [ref=e204]:
+                  - paragraph [ref=e205]: Domains
+                  - generic [ref=e206]:
+                    - generic [ref=e207]: AI/ML
+                    - generic [ref=e208]: Cybersecurity
+                    - generic [ref=e209]: EdTech
+                    - generic [ref=e210]: HealthTech
+                    - generic [ref=e211]: FinTech
+                    - generic [ref=e212]: IoT
+                    - generic [ref=e213]: Open Innovation
+                - generic [ref=e214]:
+                  - paragraph [ref=e215]: Prizes
+                  - list [ref=e222]:
+                    - listitem [ref=e223]:
+                      - generic [ref=e224]: 1st Prize
+                      - generic [ref=e225]: ₹5,000
+                    - listitem [ref=e226]:
+                      - generic [ref=e227]: 2nd Prize
+                      - generic [ref=e228]: ₹2,500
+                    - listitem [ref=e229]:
+                      - generic [ref=e230]: Best Performance
+                      - generic [ref=e231]: ₹1,000
+              - generic [ref=e232]:
+                - generic [ref=e233]: ₹150 / participant
+                - generic [ref=e234]:
+                  - button "Register" [ref=e235]
+                  - button "View Challenge" [ref=e236]
+        - button "TECHFORGE 03 Hardware & Engineering TECHFORGE Flip for details 03 / Details TECHFORGE Design. Build. Demonstrate. Stages Concept & Design Prototype Build Live Demo Domains Robotics IoT EV Automation Energy Smart Systems Prizes 1st Prize ₹5,000 2nd Prize ₹2,500 Best Performance ₹1,000 ₹150 / participant Register View Challenge" [ref=e240]:
+          - generic [ref=e241]:
+            - generic [ref=e243]:
+              - img "TECHFORGE" [ref=e244]
+              - generic [ref=e246]: "03"
+              - generic [ref=e247]:
+                - paragraph [ref=e248]: Hardware & Engineering
+                - heading "TECHFORGE" [level=3] [ref=e249]
+                - paragraph [ref=e250]: Flip for details
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - paragraph [ref=e256]: 03 / Details
+                - heading "TECHFORGE" [level=3] [ref=e257]
+                - paragraph [ref=e258]: Design. Build. Demonstrate.
+                - generic [ref=e259]:
+                  - paragraph [ref=e260]: Stages
+                  - list [ref=e261]:
+                    - listitem [ref=e262]: Concept & Design
+                    - listitem [ref=e264]: Prototype Build
+                    - listitem [ref=e266]: Live Demo
+                - generic [ref=e268]:
+                  - paragraph [ref=e269]: Domains
+                  - generic [ref=e270]:
+                    - generic [ref=e271]: Robotics
+                    - generic [ref=e272]: IoT
+                    - generic [ref=e273]: EV
+                    - generic [ref=e274]: Automation
+                    - generic [ref=e275]: Energy
+                    - generic [ref=e276]: Smart Systems
+                - generic [ref=e277]:
+                  - paragraph [ref=e278]: Prizes
+                  - list [ref=e285]:
+                    - listitem [ref=e286]:
+                      - generic [ref=e287]: 1st Prize
+                      - generic [ref=e288]: ₹5,000
+                    - listitem [ref=e289]:
+                      - generic [ref=e290]: 2nd Prize
+                      - generic [ref=e291]: ₹2,500
+                    - listitem [ref=e292]:
+                      - generic [ref=e293]: Best Performance
+                      - generic [ref=e294]: ₹1,000
+              - generic [ref=e295]:
+                - generic [ref=e296]: ₹150 / participant
+                - generic [ref=e297]:
+                  - button "Register" [ref=e298]
+                  - button "View Challenge" [ref=e299]
+      - paragraph [ref=e303]: Hover over a card to flip and see details
+    - generic [ref=e306]:
+      - generic [ref=e308]:
+        - paragraph [ref=e309]: 05 / RECOGNITION
+        - heading "Build something worth remembering." [level=2] [ref=e310]
+      - generic [ref=e312]:
+        - generic [ref=e313]:
+          - paragraph [ref=e314]: Total Prize Pool
+          - paragraph [ref=e315]: ₹25,000
+        - paragraph [ref=e316]: A dedicated prize pool for each event — Crack the Code, HackQuest & TechForge. Every competition shares the same rewards.
+      - generic [ref=e317]:
+        - button "01 Coding & Debugging CRACK THE CODE Solve. Optimize. Outthink. Check Prize Pool Prizes — CRACK THE CODE 1st Prize ₹5,000 Cash prize for the winning team. 2nd Prize ₹2,500 Cash prize for the runner-up team. Best Performance ₹1,000 Awarded for the standout individual or team. Tap to go back" [ref=e319]:
+          - generic [ref=e320]:
+            - generic [ref=e322]:
+              - generic [ref=e324]:
+                - generic [ref=e325]: "01"
+                - paragraph [ref=e326]: Coding & Debugging
+                - heading "CRACK THE CODE" [level=3] [ref=e327]
+                - paragraph [ref=e328]: Solve. Optimize. Outthink.
+              - button "Check Prize Pool" [ref=e329]
+            - generic [ref=e333]:
+              - paragraph [ref=e335]: Prizes — CRACK THE CODE
+              - generic [ref=e342]:
+                - generic [ref=e343]:
+                  - generic [ref=e344]:
+                    - generic [ref=e345]: 1st Prize
+                    - generic [ref=e346]: ₹5,000
+                  - paragraph [ref=e347]: Cash prize for the winning team.
+                - generic [ref=e348]:
+                  - generic [ref=e349]:
+                    - generic [ref=e350]: 2nd Prize
+                    - generic [ref=e351]: ₹2,500
+                  - paragraph [ref=e352]: Cash prize for the runner-up team.
+                - generic [ref=e353]:
+                  - generic [ref=e354]:
+                    - generic [ref=e355]: Best Performance
+                    - generic [ref=e356]: ₹1,000
+                  - paragraph [ref=e357]: Awarded for the standout individual or team.
+              - paragraph [ref=e358]: Tap to go back
+        - button "02 Software & Innovation HACKQUEST Find a problem. Build the solution. Check Prize Pool Prizes — HACKQUEST 1st Prize ₹5,000 Cash prize for the winning team. 2nd Prize ₹2,500 Cash prize for the runner-up team. Best Performance ₹1,000 Awarded for the standout individual or team. Tap to go back" [ref=e360]:
+          - generic [ref=e361]:
+            - generic [ref=e363]:
+              - generic [ref=e365]:
+                - generic [ref=e366]: "02"
+                - paragraph [ref=e367]: Software & Innovation
+                - heading "HACKQUEST" [level=3] [ref=e368]
+                - paragraph [ref=e369]: Find a problem. Build the solution.
+              - button "Check Prize Pool" [ref=e370]
+            - generic [ref=e374]:
+              - paragraph [ref=e376]: Prizes — HACKQUEST
+              - generic [ref=e383]:
+                - generic [ref=e384]:
+                  - generic [ref=e385]:
+                    - generic [ref=e386]: 1st Prize
+                    - generic [ref=e387]: ₹5,000
+                  - paragraph [ref=e388]: Cash prize for the winning team.
+                - generic [ref=e389]:
+                  - generic [ref=e390]:
+                    - generic [ref=e391]: 2nd Prize
+                    - generic [ref=e392]: ₹2,500
+                  - paragraph [ref=e393]: Cash prize for the runner-up team.
+                - generic [ref=e394]:
+                  - generic [ref=e395]:
+                    - generic [ref=e396]: Best Performance
+                    - generic [ref=e397]: ₹1,000
+                  - paragraph [ref=e398]: Awarded for the standout individual or team.
+              - paragraph [ref=e399]: Tap to go back
+        - button "03 Hardware & Engineering TECHFORGE Design. Build. Demonstrate. Check Prize Pool Prizes — TECHFORGE 1st Prize ₹5,000 Cash prize for the winning team. 2nd Prize ₹2,500 Cash prize for the runner-up team. Best Performance ₹1,000 Awarded for the standout individual or team. Tap to go back" [ref=e401]:
+          - generic [ref=e402]:
+            - generic [ref=e404]:
+              - generic [ref=e406]:
+                - generic [ref=e407]: "03"
+                - paragraph [ref=e408]: Hardware & Engineering
+                - heading "TECHFORGE" [level=3] [ref=e409]
+                - paragraph [ref=e410]: Design. Build. Demonstrate.
+              - button "Check Prize Pool" [ref=e411]
+            - generic [ref=e415]:
+              - paragraph [ref=e417]: Prizes — TECHFORGE
+              - generic [ref=e424]:
+                - generic [ref=e425]:
+                  - generic [ref=e426]:
+                    - generic [ref=e427]: 1st Prize
+                    - generic [ref=e428]: ₹5,000
+                  - paragraph [ref=e429]: Cash prize for the winning team.
+                - generic [ref=e430]:
+                  - generic [ref=e431]:
+                    - generic [ref=e432]: 2nd Prize
+                    - generic [ref=e433]: ₹2,500
+                  - paragraph [ref=e434]: Cash prize for the runner-up team.
+                - generic [ref=e435]:
+                  - generic [ref=e436]:
+                    - generic [ref=e437]: Best Performance
+                    - generic [ref=e438]: ₹1,000
+                  - paragraph [ref=e439]: Awarded for the standout individual or team.
+              - paragraph [ref=e440]: Tap to go back
+      - generic [ref=e441]:
+        - generic [ref=e449]:
+          - heading "Participation Certificate" [level=3] [ref=e450]
+          - paragraph [ref=e451]: For eligible registered participants.
+        - generic [ref=e459]:
+          - heading "Internship Opportunities" [level=3] [ref=e460]
+          - paragraph [ref=e461]: For outstanding performance.
+      - generic [ref=e463]:
+        - paragraph [ref=e464]: Special Recognitions
+        - list [ref=e465]:
+          - listitem [ref=e466]: Best Innovation
+          - listitem [ref=e467]: Best Technical Implementation
+          - listitem [ref=e468]: Best Interdisciplinary Team
+          - listitem [ref=e469]: Best Social Impact
+    - generic [ref=e473]:
+      - button [ref=e476]:
+        - generic [ref=e477]:
+          - paragraph [ref=e478]: Coding & Debugging
+          - heading "CRACK THE CODE" [level=3] [ref=e479]
+          - paragraph [ref=e480]: 8 rules
+      - button [ref=e486]:
+        - generic [ref=e487]:
+          - paragraph [ref=e488]: Software & Innovation
+          - heading "HACKQUEST" [level=3] [ref=e489]
+          - paragraph [ref=e490]: 8 rules
+      - button [ref=e496]:
+        - generic [ref=e497]:
+          - paragraph [ref=e498]: Hardware & Engineering
+          - heading "TECHFORGE" [level=3] [ref=e499]
+          - paragraph [ref=e500]: 5 rules
+    - generic [ref=e505]:
+      - generic [ref=e507]:
+        - paragraph [ref=e508]: TEAM
+        - heading "OUR TEAM" [level=2] [ref=e509]
+        - paragraph [ref=e510]: THE PEOPLE BEHIND IT
+      - generic [ref=e511]:
+        - generic [ref=e514]:
+          - heading "Ms. M Sukanya" [level=3] [ref=e518]
+          - paragraph [ref=e519]: Event Organizer
+        - generic [ref=e522]:
+          - heading "Ms. A Faritha Banu" [level=3] [ref=e526]
+          - paragraph [ref=e527]: Event Organizer
+      - generic [ref=e528]:
+        - generic [ref=e531]:
+          - heading "Abu Aaseem K" [level=3] [ref=e535]
+          - paragraph [ref=e536]: Treasurer
+        - generic [ref=e539]:
+          - heading "Zubair" [level=3] [ref=e543]
+          - paragraph [ref=e544]: Event Lead
+        - generic [ref=e547]:
+          - heading "Mohamed Fizal" [level=3] [ref=e551]
+          - paragraph [ref=e552]: Event Lead
+        - generic [ref=e555]:
+          - heading "Arif Basha" [level=3] [ref=e559]
+          - paragraph [ref=e560]: Event Lead
+        - generic [ref=e563]:
+          - heading "Suhail" [level=3] [ref=e567]
+          - paragraph [ref=e568]: Treasurer
+      - generic [ref=e569]:
+        - generic [ref=e572]:
+          - heading "Hasan Zaki" [level=3] [ref=e576]
+          - paragraph [ref=e577]: Technical Lead
+        - generic [ref=e580]:
+          - heading "Sharafah S" [level=3] [ref=e584]
+          - paragraph [ref=e585]: Technical Lead
+        - generic [ref=e588]:
+          - heading "Nihaya A" [level=3] [ref=e592]
+          - paragraph [ref=e593]: Technical Lead
+        - generic [ref=e596]:
+          - heading "Aasif Ibrahim" [level=3] [ref=e600]
+          - paragraph [ref=e601]: Technical Lead
+        - generic [ref=e604]:
+          - heading "Abdul Maajid" [level=3] [ref=e608]
+          - paragraph [ref=e609]: Technical Lead
+      - generic [ref=e610]:
+        - generic [ref=e613]:
+          - heading "Aafreen Taj. N" [level=3] [ref=e617]
+          - paragraph [ref=e618]: Event Coordinator
+        - generic [ref=e621]:
+          - heading "Multhazim" [level=3] [ref=e625]
+          - paragraph [ref=e626]: Event Coordinator
+        - generic [ref=e629]:
+          - heading "katherine" [level=3] [ref=e633]
+          - paragraph [ref=e634]: Event Coordinator
+        - generic [ref=e637]:
+          - heading "Ajay" [level=3] [ref=e641]
+          - paragraph [ref=e642]: Event Coordinator
+        - generic [ref=e645]:
+          - heading "Dorai Murugan" [level=3] [ref=e649]
+          - paragraph [ref=e650]: Event Coordinator
+      - generic [ref=e651]:
+        - generic [ref=e654]:
+          - heading "Rifan Al Deen" [level=3] [ref=e658]
+          - paragraph [ref=e659]: Media lead
+        - generic [ref=e662]:
+          - heading "Mohammed Umar" [level=3] [ref=e666]
+          - paragraph [ref=e667]: Media team
+        - generic [ref=e670]:
+          - heading "Bala P" [level=3] [ref=e674]
+          - paragraph [ref=e675]: Media Team
+        - generic [ref=e678]:
+          - heading "Abdur Razeeth" [level=3] [ref=e682]
+          - paragraph [ref=e683]: Media Team
+    - generic [ref=e686]:
+      - generic [ref=e688]:
+        - paragraph [ref=e689]: 08 / FAQ
+        - heading "Questions, answered." [level=2] [ref=e690]
+      - generic [ref=e691]:
+        - generic [ref=e693]:
+          - button "Who can participate?" [expanded] [ref=e694]
+          - paragraph [ref=e702]: Students of Aalim Muhammed Salegh College of Engineering and, as an inter-college challenge, students of all other colleges as well.
+        - button "Can students from other colleges participate?" [ref=e705]
+        - button "What is the team size?" [ref=e712]
+        - button "What is the registration fee?" [ref=e719]
+        - button "Can I participate in more than one competition? TBC" [ref=e726]:
+          - generic [ref=e727]: Can I participate in more than one competition?
+          - generic [ref=e728]: TBC
+        - button "What should I bring? TBC" [ref=e734]:
+          - generic [ref=e735]: What should I bring?
+          - generic [ref=e736]: TBC
+        - button "Is a college ID required?" [ref=e742]
+        - button "Are certificates provided?" [ref=e749]
+        - button "Are internships available?" [ref=e756]
+        - button "Can interdisciplinary teams participate?" [ref=e763]
+    - generic [ref=e770]:
+      - generic [ref=e772]:
+        - paragraph [ref=e773]: CONTACT
+        - heading "Have a question?" [level=2] [ref=e774]
+        - paragraph [ref=e775]: Contact the organizing team.
+      - generic [ref=e776]:
+        - link "Fizal 9123538846" [ref=e779] [cursor=pointer]:
+          - /url: https://wa.me/919123538846
+          - generic [ref=e783]:
+            - paragraph [ref=e784]: Fizal
+            - paragraph [ref=e785]: "9123538846"
+        - link "Instagram @amscode_x" [ref=e788] [cursor=pointer]:
+          - /url: https://www.instagram.com/amscode_x?stkn=MXB6MDB5b202NDdjeA==
+          - generic [ref=e793]:
+            - paragraph [ref=e794]: Instagram
+            - paragraph [ref=e795]: "@amscode_x"
+        - link "Email 110123104301@aalimec.ac.in" [ref=e798] [cursor=pointer]:
+          - /url: mailto:110123104301@aalimec.ac.in
+          - generic [ref=e803]:
+            - paragraph [ref=e804]: Email
+            - paragraph [ref=e805]: 110123104301@aalimec.ac.in
+  - contentinfo [ref=e806]:
+    - generic [ref=e808]:
+      - generic [ref=e809]:
+        - generic [ref=e810]:
+          - paragraph [ref=e811]: AMS CODEATHON2026
+          - paragraph [ref=e812]: Code. Build. Innovate.
+          - list [ref=e813]:
+            - listitem [ref=e814]:
+              - link "Instagram" [ref=e815] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e819]:
+              - link "LinkedIn" [ref=e820] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e824]:
+              - link "Email" [ref=e825] [cursor=pointer]:
+                - /url: "#contact"
+            - listitem [ref=e829]:
+              - link "Phone" [ref=e830] [cursor=pointer]:
+                - /url: "#contact"
+        - navigation "Footer" [ref=e833]:
+          - paragraph [ref=e834]: Explore
+          - list [ref=e835]:
+            - listitem [ref=e836]:
+              - link "About" [ref=e837] [cursor=pointer]:
+                - /url: "#about"
+            - listitem [ref=e838]:
+              - link "Events" [ref=e839] [cursor=pointer]:
+                - /url: "#events"
+            - listitem [ref=e840]:
+              - link "Prizes" [ref=e841] [cursor=pointer]:
+                - /url: "#prizes"
+            - listitem [ref=e842]:
+              - link "FAQ" [ref=e843] [cursor=pointer]:
+                - /url: "#faq"
+            - listitem [ref=e844]:
+              - button "Register" [ref=e845]
+        - generic [ref=e846]:
+          - paragraph [ref=e847]: Organized by
+          - paragraph [ref=e848]: Aalim Muhammed Salegh College of Engineering, Chennai
+      - generic [ref=e849]:
+        - generic [ref=e850]:
+          - paragraph [ref=e851]: © 2026 AMS Codeathon
+          - link "Designed and developed by HASAN ZAKI" [ref=e852] [cursor=pointer]:
+            - /url: https://www.linkedin.com/in/hasan-zaki-9083b2344/
+        - paragraph [ref=e853]: Code. Build. Innovate.

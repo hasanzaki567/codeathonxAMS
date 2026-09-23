@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface ColorRGB {
   r: number;
@@ -79,9 +79,28 @@ export default function SplashCursor({
 }: SplashCursorProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
+  // The splash is a pointer-cursor effect: on touch devices there is no
+  // hovering pointer to feed it, so skip it entirely to avoid holding a
+  // full-viewport WebGL context (mobile WebGL context budgets are tiny).
+  const [enabled, setEnabled] = useState(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return true;
+    return window.matchMedia('(pointer: fine)').matches;
+  });
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return;
+    const mq = window.matchMedia('(pointer: fine)');
+    const update = () => setEnabled(mq.matches);
+    update();
+    mq.addEventListener?.('change', update);
+    return () => mq.removeEventListener?.('change', update);
+  }, []);
+
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
+    if (!enabled) return;
+    const canvasEl: HTMLCanvasElement = canvas;
 
     let pointers: Pointer[] = [pointerPrototype()];
 
@@ -863,19 +882,49 @@ export default function SplashCursor({
     }
 
     updateKeywords();
+    resizeCanvas();
     initFramebuffers();
 
     let lastUpdateTime = Date.now();
     let colorUpdateTimer = 0.0;
+    let contextLost = false;
+    let rafId = 0;
+    let resizeObserver: ResizeObserver | null = null;
+
+    function destroyCanvas() {
+      contextLost = true;
+      if (rafId) cancelAnimationFrame(rafId);
+      rafId = 0;
+      if (resizeObserver) {
+        resizeObserver.disconnect();
+        resizeObserver = null;
+      }
+      try {
+        gl.getExtension('WEBGL_lose_context')?.loseContext();
+      } catch {
+        /* noop */
+      }
+      if (canvasEl.parentNode) canvasEl.parentNode.removeChild(canvasEl);
+    }
+
+    function onContextLost(event: Event) {
+      if (typeof event.preventDefault === 'function') event.preventDefault();
+      destroyCanvas();
+    }
 
     function updateFrame() {
+      if (contextLost) return;
       const dt = calcDeltaTime();
-      if (resizeCanvas()) initFramebuffers();
       updateColors(dt);
       applyInputs();
-      step(dt);
-      render(null);
-      requestAnimationFrame(updateFrame);
+      try {
+        step(dt);
+        render(null);
+      } catch {
+        destroyCanvas();
+        return;
+      }
+      rafId = requestAnimationFrame(updateFrame);
     }
 
     function calcDeltaTime() {
@@ -896,6 +945,13 @@ export default function SplashCursor({
       }
       return false;
     }
+
+    resizeObserver = new ResizeObserver(() => {
+      if (contextLost) return;
+      if (resizeCanvas()) initFramebuffers();
+    });
+    resizeObserver.observe(canvas);
+    canvas.addEventListener('webglcontextlost', onContextLost, false);
 
     function updateColors(dt: number) {
       colorUpdateTimer += dt * config.COLOR_UPDATE_SPEED;
@@ -1290,7 +1346,13 @@ export default function SplashCursor({
         updatePointerUpData(pointer);
       }
     });
+
+    return () => {
+      canvas.removeEventListener('webglcontextlost', onContextLost, false);
+      destroyCanvas();
+    };
   }, [
+    enabled,
     SIM_RESOLUTION,
     DYE_RESOLUTION,
     CAPTURE_RESOLUTION,
@@ -1308,6 +1370,8 @@ export default function SplashCursor({
     RAINBOW_MODE,
     COLOR
   ]);
+
+  if (!enabled) return null;
 
   return (
     <div

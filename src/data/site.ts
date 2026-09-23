@@ -127,8 +127,8 @@ export const TEAM = {
 
   ],
   media: [
-    { name: 'Rifan Al Deen', role: 'Media team', image: rifanImg, socials: {} },
-    { name: 'Mohammed Umar', role: 'Media lead', image: umarImg, socials: {} },
+    { name: 'Rifan Al Deen', role: 'Media lead', image: rifanImg, socials: {} },
+    { name: 'Mohammed Umar', role: 'Media Team', image: umarImg, socials: {} },
     { name: 'Bala P', role: 'Media Team', image: balaImg, socials: {} },
     { name: 'Abdur Razeeth', role: 'Media Team', image: razeethImg, socials: {} },
   ],

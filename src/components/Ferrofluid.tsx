@@ -259,6 +259,19 @@ const Ferrofluid = ({
     canvas.style.display = 'block';
     container.appendChild(canvas);
 
+    let contextLost = false;
+    const stopFluid = () => {
+      contextLost = true;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      rafRef.current = 0;
+      if (canvas.parentElement === container) container.removeChild(canvas);
+    };
+    const onContextLost = (event: Event) => {
+      if (event && typeof event.preventDefault === 'function') event.preventDefault();
+      stopFluid();
+    };
+    canvas.addEventListener('webglcontextlost', onContextLost, false);
+
     const { arr, count, avg } = prepColors(colors);
 
     const uniforms = {
@@ -299,6 +312,7 @@ const Ferrofluid = ({
     meshRef.current = mesh;
 
     const resize = () => {
+      if (contextLost) return;
       const rect = container.getBoundingClientRect();
       renderer.setSize(rect.width, rect.height);
       uniforms.iResolution.value = [gl.drawingBufferWidth, gl.drawingBufferHeight, 1];
@@ -309,6 +323,7 @@ const Ferrofluid = ({
     ro.observe(container);
 
     const onPointerMove = (e: PointerEvent) => {
+      if (contextLost) return;
       const rect = canvas.getBoundingClientRect();
       const sc = renderer.dpr || 1;
       const x = (e.clientX - rect.left) * sc;
@@ -323,6 +338,7 @@ const Ferrofluid = ({
     }
 
     const loop = (t: number) => {
+      if (contextLost) return;
       rafRef.current = requestAnimationFrame(loop);
       uniforms.iTime.value = t * 0.001;
       if (mouseDampening > 0) {
@@ -343,6 +359,7 @@ const Ferrofluid = ({
         try {
           renderer.render({ scene: meshRef.current });
         } catch (e) {
+          if (contextLost) return;
           console.error(e);
         }
       }
@@ -350,6 +367,7 @@ const Ferrofluid = ({
     rafRef.current = requestAnimationFrame(loop);
 
     return () => {
+      canvas.removeEventListener('webglcontextlost', onContextLost, false);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
       if (mouseInteraction) canvas.removeEventListener('pointermove', onPointerMove);
       ro.disconnect();
