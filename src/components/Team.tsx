@@ -78,22 +78,22 @@ function TeamCard({ member, wide = false }: { member: Member; wide?: boolean }) 
       animated={false}
       colors={['#c084fc', '#f472b6', '#38bdf8']}
     >
-      <div className="team-card group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-[#131312] p-6 text-center shadow-[0_20px_40px_-28px_rgba(0,0,0,0.8)] transition-colors duration-300 hover:border-white/25 sm:p-8">
-      <div className={`relative mb-5 ${wide ? 'sm:h-28 sm:w-28' : ''}`}>
+      <div className="team-card group flex h-full flex-col items-center rounded-2xl border border-white/10 bg-[#131312] p-4 text-center shadow-[0_20px_40px_-28px_rgba(0,0,0,0.8)] transition-colors duration-300 hover:border-white/25 sm:p-5">
+      <div className={`relative mb-3 ${wide ? 'sm:h-28 sm:w-28' : ''}`}>
         <div
-          className="grid h-24 w-24 place-items-center overflow-hidden rounded-full border-2 border-white/20 transition-colors duration-300 group-hover:border-white/40"
+          className="grid h-20 w-20 place-items-center overflow-hidden rounded-full border-2 border-white/20 transition-colors duration-300 group-hover:border-white/40"
           aria-hidden="true"
         >
           {member.image ? (
             <img src={member.image} alt={member.name} className="h-full w-full object-cover" />
           ) : (
-            <span className="font-display text-lg font-bold tracking-tight text-white/80">{initials(member.name)}</span>
+            <span className="font-display text-base font-bold tracking-tight text-white/80">{initials(member.name)}</span>
           )}
         </div>
       </div>
-      <h3 className="font-display text-base font-bold uppercase tracking-wide text-white">{member.name}</h3>
-      <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.22em] text-white/50 sm:text-[11px]">{member.role}</p>
-      <div className="mt-5 flex items-center justify-center gap-2.5 border-t border-white/10 pt-4">
+      <h3 className="font-display text-sm font-bold uppercase tracking-wide text-white sm:text-base">{member.name}</h3>
+      <p className="mt-1 font-mono text-[9px] uppercase tracking-[0.18em] text-white/50 sm:text-[10px]">{member.role}</p>
+      <div className="mt-3 flex items-center justify-center gap-2 border-t border-white/10 pt-3">
         {SOCIAL_ICONS.map(({ key, label, Icon }) => {
           const href = member.socials[key]
           if (!href) return null
@@ -208,7 +208,7 @@ export function Team() {
           ))}
         </div>
 
-        <div className="team__core mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="team__core mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5">
           {TEAM.leads.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}
@@ -220,7 +220,7 @@ export function Team() {
           ))}
         </div>
 
-        <div className="team__coordinators mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="team__coordinators mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5 lg:gap-4">
           {TEAM.coordinators.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}

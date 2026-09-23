@@ -16,6 +16,8 @@ import sharafahImg from '../assets/sharafah.jpeg'
 import arifBashaImg from '../assets/arif basha.jpeg'
 import aafreenImg from '../assets/afreen.jpeg'
 import sukanyaImg from '../assets/sukanya.jpeg'
+import doraiImg from '../assets/dorai.png'
+import abuWaseemImg from '../assets/abu-waseem.jpeg'
 
 export const EVENT = {
   name: 'AMS CODEATHON',
@@ -96,14 +98,16 @@ export const TEAM = {
   heading: 'OUR TEAM',
   sub: 'THE PEOPLE BEHIND IT',
   organizers: [
-    { name: 'Ms M Sukanya', role: 'Event Organizer', image: sukanyaImg, socials: {} },
-    { name: 'Ms A Faritha Banu', role: 'Event Organizer', image: farithaImg, socials: {} },
+    { name: 'Ms. M Sukanya', role: 'Event Organizer', image: sukanyaImg, socials: {} },
+    { name: 'Ms. A Faritha Banu', role: 'Event Organizer', image: farithaImg, socials: {} },
   ],
   leads: [
+    { name: 'Abu Aaseem K', role: 'Treasurer', image: abuWaseemImg, socials: {} },
+    { name: 'Zubair', role: 'Event Lead', image: zubairImg, socials: {} },
     { name: 'Mohamed Fizal', role: 'Event Lead', image: fizalImg, socials: {} },
-    { name: 'Mohammed Zubair', role: 'Event Lead', image: zubairImg, socials: {} },
     { name: 'Arif Basha ', role: 'Event Lead', image: arifBashaImg, socials: {} },
     { name: 'Suhail', role: 'Treasurer', image: suhailImg, socials: {} },
+
   ],
   technicalLeads: [
     { name: 'Hasan Zaki', role: 'Technical Lead', image: hasanZakiImg, socials: {} },
@@ -115,12 +119,13 @@ export const TEAM = {
   coordinators: [
     { name: 'Aafreen Taj. N', role: 'Event Coordinator', image: aafreenImg, socials: {} },
     { name: 'Multhazim', role: 'Event Coordinator', image: multhazimImg, socials: {} },
-    { name: 'Joyce Katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
+    { name: 'Joyce katherine', role: 'Event Coordinator', image: joyceImg, socials: {} },
     { name: 'Ajay', role: 'Event Coordinator', image: ajayImg, socials: {} },
+    { name: 'Dorai Murugan', role: 'Event Coordinator', image: doraiImg, socials: {} },
 
   ],
   media: [
-    { name: 'Rifan Al Deen', role: 'Media Team', image: rifanImg, socials: {} },
+    { name: 'Rifan Al Deen', role: 'Media lead', image: rifanImg, socials: {} },
     { name: 'Mohammed Umar', role: 'Media Team', image: umarImg, socials: {} },
     { name: 'Bala P', role: 'Media Team', image: balaImg, socials: {} },
     { name: 'Abdur Razeeth', role: 'Media Team', image: razeethImg, socials: {} },
