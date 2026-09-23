@@ -20,7 +20,7 @@ export function CompetitionCard({ competition }: CompetitionCardProps) {
         className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-night/90 via-night/20 to-transparent" />
-      <span className="absolute right-4 top-4 rounded-full border border-white/15 bg-night/50 px-2.5 py-1 font-mono text-xs tracking-[0.2em] text-white/80 backdrop-blur-sm">
+      <span className="absolute right-4 top-4 rounded-full border border-white/15 bg-night/70 px-2.5 py-1 font-mono text-xs tracking-[0.2em] text-white/80">
         {competition.index}
       </span>
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6">

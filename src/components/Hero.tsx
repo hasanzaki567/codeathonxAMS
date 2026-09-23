@@ -18,7 +18,7 @@ const WELCOME_MESSAGES = [
 
 export function Hero() {
   return (
-    <section id="top" className="hero relative z-10 min-h-screen-dvh w-full overflow-hidden bg-black text-white">
+    <section id="top" className="hero relative z-10 min-h-screen-svh w-full overflow-hidden bg-black text-white">
       <FerrofluidBackground
         colors={['#02A4FF', '#34D9B2', '#02A4FF']}
         speed={0.5}
@@ -36,7 +36,7 @@ export function Hero() {
         mouseRadius={0.35}
       />
       <div className="hero__frame relative z-10">
-        <div className="hero__inner wrap flex min-h-screen-dvh flex-col items-center justify-center pb-14 pt-12 text-center sm:pb-12 sm:pt-16">
+        <div className="hero__inner wrap flex min-h-screen-svh flex-col items-center justify-center pb-14 pt-12 text-center sm:pb-12 sm:pt-16">
           <div className="hero__content flex w-full flex-col items-center">
             <motion.p
               initial={{ opacity: 0, y: 16 }}

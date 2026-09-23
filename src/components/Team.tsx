@@ -214,7 +214,7 @@ export function Team() {
           ))}
         </div>
 
-        <div className="team__technical mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="team__technical mt-12 grid grid-cols-2 gap-4 min-[480px]:grid-cols-5">
           {TEAM.technicalLeads.map((member, i) => (
             <ScrollTeamCard key={member.name} member={member} depth={1 + (i % 2) * 0.2} />
           ))}

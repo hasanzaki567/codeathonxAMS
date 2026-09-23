@@ -91,7 +91,7 @@ html {
   scroll-behavior: smooth;
   scroll-padding-top: 4.5rem;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow-x: clip;
   -webkit-text-size-adjust: 100%;
   overscroll-behavior: none;
 }
@@ -106,9 +106,9 @@ body {
   @apply bg-paper text-ink font-sans antialiased;
   width: 100%;
   max-width: 100%;
+  overscroll-behavior-y: contain;
   text-rendering: optimizeLegibility;
   font-optical-sizing: auto;
-  overscroll-behavior-y: none;
 }
 
 input,
@@ -188,4 +188,48 @@ textarea {
   background-clip: text;
   color: transparent;
   animation: gradient-shift 6s ease infinite;
+}
+
+/* ---- iOS / older WebKit fallbacks ---- */
+
+/* Leadership cards: explicit layout + fixed avatar slot so WebKit never
+   collapses the wrapper or collapses the image to zero size. */
+.patron-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+
+.patron-card__avatar {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  width: 7rem; /* h-28 */
+  height: 7rem; /* w-28 */
+  min-width: 7rem;
+  min-height: 7rem;
+  overflow: hidden;
+}
+
+.patron-card__avatar-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* Flex/grid `gap` fallback for browsers without gap support (older iOS/WebKit). */
+@supports not (gap: 1rem) {
+  .patron-card__avatar {
+    margin-bottom: 1.5rem; /* gap-6 */
+  }
+
+  .patrons__grid > * {
+    margin-bottom: 1.25rem; /* gap-5 */
+  }
+  .patrons__grid > :last-child {
+    margin-bottom: 0;
+  }
 }

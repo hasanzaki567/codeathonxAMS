@@ -33,7 +33,7 @@ export function Prizes() {
         </Reveal>
 
         <Reveal delay={0.05}>
-          <div className="prizes__pool mx-auto mt-14 flex max-w-3xl flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/[0.03] px-8 py-8 text-center backdrop-blur-sm sm:flex-row sm:justify-between sm:gap-6 sm:text-left">
+          <div className="prizes__pool mx-auto mt-14 flex max-w-3xl flex-col items-center gap-4 rounded-2xl border border-white/10 bg-white/5 px-8 py-8 text-center sm:flex-row sm:justify-between sm:gap-6 sm:text-left">
             <div>
               <p className="prizes__pool-label font-mono text-[11px] uppercase tracking-[0.25em] text-white/50">
                 Total Prize Pool

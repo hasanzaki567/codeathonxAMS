@@ -37,7 +37,7 @@ export function Modal({ open, onClose, children, wide = false }: ModalProps) {
           <motion.button
             type="button"
             aria-label="Close dialog"
-            className="modal__backdrop absolute inset-0 cursor-default bg-night/70 backdrop-blur-sm"
+            className="modal__backdrop absolute inset-0 cursor-default bg-night/75"
             onClick={onClose}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -48,7 +48,7 @@ export function Navbar({ solidAtTop = false }: NavbarProps) {
   return (
     <header
       className={`navbar fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
-        solid ? 'border-b border-line bg-paper/85 backdrop-blur-md' : 'border-b border-transparent bg-transparent'
+        solid ? 'border-b border-line bg-paper/90' : 'border-b border-transparent bg-transparent'
       }`}
     >
       <nav className="navbar__inner wrap flex h-16 items-center justify-between" aria-label="Primary">

@@ -5,6 +5,7 @@ import suhailImg from '../assets/mohamed suhail.jpeg'
 import hasanZakiImg from '../assets/hasanzaki.jpg'
 import nihayaImg from '../assets/nihaya.png'
 import aasifImg from '../assets/aasif ibraHim.png'
+import maajidImg from '../assets/abdul-maajid.png'
 import ajayImg from '../assets/ajay.jpeg'
 import rifanImg from '../assets/rifan al deen.png'
 import umarImg from '../assets/mohamed umar.jpeg'
@@ -114,6 +115,7 @@ export const TEAM = {
     { name: 'Sharafah S', role: 'Technical Lead', image: sharafahImg, socials: {} },
     { name: 'Nihaya A', role: 'Technical Lead', image: nihayaImg, socials: {} },
     { name: 'Aasif Ibrahim', role: 'Technical Lead', image: aasifImg, socials: {} },
+    { name: 'Abdul Maajid', role: 'Technical Lead', image: maajidImg, socials: {} },
 
   ],
   coordinators: [
