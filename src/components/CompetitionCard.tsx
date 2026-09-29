@@ -2,7 +2,7 @@ import { ArrowRight, Trophy } from 'lucide-react'
 import { SpotlightCard } from './SpotlightCard'
 import type { Competition } from '../data/competitions'
 import { useFlow } from '../flowContext'
-import { REGISTRATION_URL } from '../data/site'
+import { useRegistration } from '../registration'
 import { FlipCard } from './FlipCard'
 
 interface CompetitionCardProps {
@@ -10,6 +10,7 @@ interface CompetitionCardProps {
 }
 
 export function CompetitionCard({ competition }: CompetitionCardProps) {
+  const { register } = useRegistration()
   const { openDetail } = useFlow()
 
   const front = (
@@ -107,7 +108,7 @@ export function CompetitionCard({ competition }: CompetitionCardProps) {
             type="button"
             onClick={(e) => {
               e.stopPropagation()
-              window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')
+              register()
             }}
             className="rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-4 py-2 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.04] active:scale-[0.97]"
           >

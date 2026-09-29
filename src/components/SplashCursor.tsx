@@ -44,6 +44,17 @@ interface TextureFormat {
   format: number;
 }
 
+interface WebGLContextResult {
+  gl: WebGL2RenderingContext;
+  ext: {
+    formatRGBA: TextureFormat;
+    formatRG: TextureFormat;
+    formatR: TextureFormat;
+    halfFloatTexType: number;
+    supportLinearFiltering: boolean;
+  };
+}
+
 function pointerPrototype(): Pointer {
   return {
     id: -1,
@@ -124,15 +135,21 @@ export default function SplashCursor({
       COLOR
     };
 
-    const { gl, ext } = getWebGLContext(canvas);
-    if (!gl || !ext) return;
+    let ctx: WebGLContextResult | null = null;
+    try {
+      ctx = getWebGLContext(canvas);
+    } catch (err) {
+      console.warn('[SplashCursor] WebGL unavailable, disabling cursor effect.', err);
+    }
+    if (!ctx) return;
+    const { gl, ext } = ctx;
 
     if (!ext.supportLinearFiltering) {
       config.DYE_RESOLUTION = 256;
       config.SHADING = false;
     }
 
-    function getWebGLContext(canvas: HTMLCanvasElement) {
+    function getWebGLContext(canvas: HTMLCanvasElement): WebGLContextResult | null {
       const params = {
         alpha: true,
         depth: false,
@@ -149,7 +166,7 @@ export default function SplashCursor({
       }
 
       if (!gl) {
-        throw new Error('Unable to initialize WebGL.');
+        return null;
       }
 
       const isWebGL2 = 'drawBuffers' in gl;
@@ -196,7 +213,7 @@ export default function SplashCursor({
       }
 
       if (!formatRGBA || !formatRG || !formatR) {
-        throw new Error('Unable to initialize WebGL render texture formats.');
+        return null;
       }
 
       return {

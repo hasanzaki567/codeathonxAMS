@@ -1,6 +1,7 @@
 import { Suspense, lazy } from 'react'
 import { FlowProvider } from './FlowProvider'
 import { RouterProvider, useRouter } from './router'
+import { REGISTRATION_CLOSED, REGISTRATION_CLOSED_PATH } from './data/site'
 import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { About } from './components/About'
@@ -19,6 +20,9 @@ const CompetitionDetails = lazy(() =>
   import('./components/CompetitionDetails').then((m) => ({ default: m.CompetitionDetails })),
 )
 const FormPage = lazy(() => import('./pages/FormPage').then((m) => ({ default: m.FormPage })))
+const RegistrationClosed = lazy(() =>
+  import('./pages/RegistrationClosed').then((m) => ({ default: m.RegistrationClosed })),
+)
 
 function HomePage() {
   return (
@@ -56,6 +60,16 @@ function HomePage() {
 
 function ScreenRouter() {
   const { path } = useRouter()
+  const wantsRegistration = path === '/form' || path === REGISTRATION_CLOSED_PATH
+
+  if (REGISTRATION_CLOSED && wantsRegistration) {
+    return (
+      <Suspense fallback={null}>
+        <RegistrationClosed />
+      </Suspense>
+    )
+  }
+
   return path === '/form' ? (
     <Suspense fallback={null}>
       <FormPage />

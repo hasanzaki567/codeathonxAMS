@@ -35,6 +35,11 @@ export const COUNTDOWN_TARGET = '2026-10-01T09:00:00+05:30'
 
 export const REGISTRATION_URL = 'https://forms.gle/NpBTJM6PMTWVmPty9'
 
+// Flip to false to reopen registrations.
+export const REGISTRATION_CLOSED = true
+
+export const REGISTRATION_CLOSED_PATH = '/registration-closed'
+
 export const NAV_LINKS = [
   { label: 'About', href: '#about' },
   { label: 'Events', href: '#events' },

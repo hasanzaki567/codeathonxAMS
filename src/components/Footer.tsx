@@ -1,5 +1,6 @@
 import { Briefcase, Camera, Mail, Phone } from 'lucide-react'
-import { EVENT, FOOTER, REGISTRATION_URL } from '../data/site'
+import { EVENT, FOOTER } from '../data/site'
+import { useRegistration } from '../registration'
 import { FerrofluidBackground } from './FerrofluidBackground'
 
 const SOCIALS: { key: string; label: string; icon: typeof Mail }[] = [
@@ -10,6 +11,7 @@ const SOCIALS: { key: string; label: string; icon: typeof Mail }[] = [
 ]
 
 export function Footer() {
+  const { register } = useRegistration()
   return (
     <footer className="footer relative overflow-hidden border-t border-night-line bg-night text-white">
       <FerrofluidBackground
@@ -64,7 +66,7 @@ export function Footer() {
               <li className="footer__nav-item">
                 <button
                   type="button"
-                  onClick={() => window.open(REGISTRATION_URL, '_blank', 'noopener,noreferrer')}
+                  onClick={register}
                   className="footer__register text-sm text-accent transition-colors hover:text-white"
                 >
                   Register

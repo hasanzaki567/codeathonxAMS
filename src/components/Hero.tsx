@@ -1,7 +1,8 @@
 import { Suspense, lazy } from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, ArrowRight } from 'lucide-react'
-import { EVENT, HERO, REGISTRATION_URL } from '../data/site'
+import { EVENT, HERO } from '../data/site'
+import { useRegistration } from '../registration'
 import { Countdown } from './Countdown'
 import TextType from './TextType'
 import { FerrofluidBackground } from './FerrofluidBackground'
@@ -17,6 +18,8 @@ const WELCOME_MESSAGES = [
 ]
 
 export function Hero() {
+  const { register } = useRegistration()
+
   return (
     <section id="top" className="hero relative z-10 min-h-screen-svh w-full overflow-hidden bg-black text-white">
       <FerrofluidBackground
@@ -111,15 +114,14 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.34, ease }}
               className="hero__ctas mt-5 flex flex-col items-center gap-3 sm:mt-6 sm:flex-row sm:items-center sm:gap-5"
             >
-              <a
-                href={REGISTRATION_URL}
-                target="_blank"
-                rel="noreferrer"
+              <button
+                type="button"
+                onClick={register}
                 className="hero__cta-primary group inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#02A4FF_0%,#34D9B2_100%)] px-7 py-3.5 text-sm font-semibold text-night transition-transform duration-200 hover:scale-[1.03] active:scale-[0.98] sm:px-8 sm:py-4 sm:text-base"
               >
                 {HERO.primaryCta}
                 <ArrowRight className="hero__cta-primary-icon h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" />
-              </a>
+              </button>
               <a
                 href="#events"
                 className="hero__cta-secondary inline-flex items-center gap-2 rounded-full border border-white/20 px-7 py-3.5 text-sm font-medium text-white transition-colors duration-200 hover:border-white/50 hover:bg-white/5 sm:px-8 sm:py-4 sm:text-base"
